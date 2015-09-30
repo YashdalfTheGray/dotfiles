@@ -89,3 +89,6 @@ export NVM_DIR="/Users/yash/.nvm"
 eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
+
+alias fbd="firebase deploy"
+alias fbo="firebase open"
