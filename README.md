@@ -1,5 +1,8 @@
 # terminal-config
-Oh my zsh config files
+
+OSX terminal rc files
+
+## Oh my zsh
 
 This file relies on [this awesome utility](https://github.com/nvbn/thefuck) to be installed. Well, maybe not relies on but it's nice to have it installed. 
 
@@ -11,3 +14,7 @@ Installed plugins
  * sublime
 
 Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme. 
+
+## Vim
+
+Uses the `delek` syntax theme and the [Emmet.vim](http://vimawesome.com/plugin/emmet-vim) and [vim-javascript](http://vimawesome.com/plugin/vim-javascript) plugins.
