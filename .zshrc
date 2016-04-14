@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias ohmyzsh="cd ~/.oh-my-zsh"
 
 export NVM_DIR="/Users/yash/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -92,3 +92,7 @@ eval "$(thefuck --alias FUCK)"
 
 alias fbd="firebase deploy"
 alias fbo="firebase open"
+
+alias c="clear"
+
+alias weather="curl -4 wttr.in"
