@@ -93,6 +93,16 @@ eval "$(thefuck --alias FUCK)"
 alias fbd="firebase deploy"
 alias fbo="firebase open"
 
+alias cra="cordova run android"
+alias cri="cordova run ios"
+alias crad="cra --device"
+alias crid="cri --device"
+alias ccrad="cd cordova && crad && cd .."
+alias ccrid="cd cordova && crid && cd .."
+
+# why not
+alias sourcream="source ~/.zshrc"
+
 alias c="clear"
 
 alias weather="curl -4 wttr.in"
