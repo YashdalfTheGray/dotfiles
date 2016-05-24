@@ -97,8 +97,16 @@ alias cra="cordova run android"
 alias cri="cordova run ios"
 alias crad="cra --device"
 alias crid="cri --device"
+
 alias ccrad="cd cordova && crad && cd .."
 alias ccrid="cd cordova && crid && cd .."
+
+alias tccrad="tab ccrad"
+alias tccrid="tab ccrid"
+alias tccriad="tccrad && tccrid"
+alias tccraid="tccriad"
+
+alias serve="python -m SimpleHTTPServer 3001 &"
 
 # why not
 alias sourcream="source ~/.zshrc"
