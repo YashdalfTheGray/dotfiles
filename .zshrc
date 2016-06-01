@@ -90,6 +90,25 @@ eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
 
+function close_other_tabs() {
+  local the_app=$(_omz_osx_get_frontmost_app)
+
+  if [[ "$the_app" == 'Terminal' ]]; then
+    # Discarding stdout to quash "tab N of window id XXX" output
+    osascript >/dev/null <<EOF
+      tell application "System Events"
+        tell process "Terminal" to keystroke "w" using {command down, option down}
+      end tell
+EOF
+  fi
+}
+
+alias cot="close_other_tabs"
+
+alias att="atom ."
+
+alias c="clear"
+
 alias fbd="firebase deploy"
 alias fbo="firebase open"
 
@@ -103,14 +122,11 @@ alias ccrid="cd cordova && crid && cd .."
 
 alias tccrad="tab ccrad"
 alias tccrid="tab ccrid"
-alias tccriad="tccrad && tccrid"
 alias tccraid="tccriad"
 
 alias serve="python -m SimpleHTTPServer 3001 &"
 
 # why not
 alias sourcream="source ~/.zshrc"
-
-alias c="clear"
 
 alias weather="curl -4 wttr.in"
