@@ -117,8 +117,8 @@ alias cri="cordova run ios"
 alias crad="cra --device"
 alias crid="cri --device"
 
-alias ccrad="cd cordova && crad && cd .."
-alias ccrid="cd cordova && crid && cd .."
+alias ccrad="pushd cordova && crad && popd"
+alias ccrid="pushd cordova && crid && popd"
 
 alias tccrad="tab ccrad"
 alias tccrid="tab ccrid"
