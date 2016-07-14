@@ -103,7 +103,7 @@ EOF
   fi
 }
 
-function close_current_tabs() {
+function close_current_tab() {
   local the_app=$(_omz_osx_get_frontmost_app)
 
   if [[ "$the_app" == 'Terminal' ]]; then
