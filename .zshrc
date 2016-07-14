@@ -103,7 +103,21 @@ EOF
   fi
 }
 
+function close_current_tabs() {
+  local the_app=$(_omz_osx_get_frontmost_app)
+
+  if [[ "$the_app" == 'Terminal' ]]; then
+    # Discarding stdout to quash "tab N of window id XXX" output
+    osascript >/dev/null <<EOF
+      tell application "System Events"
+        tell process "Terminal" to keystroke "w" using command down
+      end tell
+EOF
+  fi
+}
+
 alias cot="close_other_tabs"
+alias cct="close_current_tab"
 
 alias att="atom ."
 
