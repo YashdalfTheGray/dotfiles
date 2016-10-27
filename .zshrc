@@ -116,6 +116,14 @@ EOF
   fi
 }
 
+function to-atom() {
+    open -fn -a /Applications/Atom.app
+}
+
+function adb-screencap() {
+    adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > $1
+}
+
 alias cot="close_other_tabs"
 alias cct="close_current_tab"
 
