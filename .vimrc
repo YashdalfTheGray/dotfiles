@@ -1,49 +1,77 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" -*- mode: vimrc -*-
+"vim: ft=vim
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" dotspacevim/auto-install {{{
+" Automatic installation of spacevim.
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+if empty(glob('~/.vim/autoload/spacevim.vim'))
+    silent !curl -sSfLo ~/.vim/autoload/spacevim.vim --create-dirs
+          \ https://raw.githubusercontent.com/ctjhoa/spacevim/master/autoload/spacevim.vim
+endif
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+" }}}
 
-Plugin 'pangloss/vim-javascript'
-Plugin 'mattn/emmet-vim'
+" dotspacevim/init {{{
+" This code is called at the very startup of Spacevim initialization
+" before layers configuration.
+" You should not put any user code in there besides modifying the variable
+" values."
+" IMPORTANT: For the moment, any changes in plugins or layers needs
+" a vim restart and :PlugInstall
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+  let g:dotspacevim_distribution_mode = 1
 
-colorscheme delek
-syntax on
+  let g:dotspacevim_configuration_layers = [
+  \  'core/.*',
+  \  'git',
+  \  'syntax-checking'
+  \]
+
+  let g:dotspacevim_additional_plugins = ['morhetz/gruvbox']
+
+  let g:dotspacevim_excluded_plugins = []
+
+  " let g:dotspacevim_escape_key_sequence = 'fd'
+
+" }}}
+
+" dotspacevim/user-init {{{
+" Initialization for user code.
+" It is compute immediately after `dotspacemacs/init', before layer
+" configuration executes.
+" This function is mostly useful for variables that need to be set
+" before plugins are loaded. If you are unsure, you should try in setting
+" them in `dotspacevim/user-config' first."
+
+  let mapleader = ' '
+  let g:leaderGuide_vertical = 1
+
+" }}}
+
+call spacevim#bootstrap()
+
+" dotspacevim/user-config {{{
+" Configuration for user code.
+" This is computed at the very end of Spacevim initialization after
+" layers configuration.
+" This is the place where most of your configurations should be done.
+" Unless it is explicitly specified that
+" a variable should be set before a plugin is loaded,
+" you should place your code here."
+
+  let g:onedark_termcolors=256
+
+  set background=dark
+  colorscheme onedark
+  set number
+
+  set foldmethod=indent
+  set foldnestmax=10
+  set nofoldenable
+  set foldlevel=2
+  
+  map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+  map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+  map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+
+" }}}
