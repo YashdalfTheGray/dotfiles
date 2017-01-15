@@ -69,9 +69,14 @@ call spacevim#bootstrap()
   set foldnestmax=10
   set nofoldenable
   set foldlevel=2
-  
+
+  set tabstop=4
+  set shiftwidth=4
+  set expandtab
+
   map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
   map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
   map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+  map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
 
 " }}}
