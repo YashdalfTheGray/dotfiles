@@ -5,7 +5,7 @@ export ZSH=/Users/yash/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME=ys
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,11 +49,11 @@ ZSH_THEME=ys
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(adb git lol osx sublime)
+plugins=(adb atom git gulp lol osx sublime)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -73,22 +73,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="cd ~/.oh-my-zsh"
-
-export NVM_DIR="/Users/yash/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-eval "$(thefuck --alias)"
-# You can use whatever you want as an alias, like for Mondays:
-eval "$(thefuck --alias FUCK)"
 
 function close_other_tabs() {
   local the_app=$(_omz_osx_get_frontmost_app)
@@ -124,35 +108,59 @@ function adb-screencap() {
     adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > $1
 }
 
-alias cot="close_other_tabs"
-alias cct="close_current_tab"
+function nukedis() {
+    gpristine
+    if [[ $1 == '--nvm' ]]; then
+  	nvm use
+    fi
+    npm i
+}
 
-alias att="atom ."
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# set the GOPATH
+export GOPATH="/Users/yash/go-vendor"
+export PATH="$PATH:$GOPATH/bin"
+
+export NVM_DIR="/Users/yash/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+eval "$(thefuck --alias)"
+# You can use whatever you want as an alias, like for Mondays:
+eval "$(thefuck --alias FUCK)"
+
+alias playground="~/playground"
+
+alias gai="git add -i"
+
+alias att="open . -a /Applications/Atom.app"
+
+alias fbd="firebase deploy:hosting"
+alias fbo="firebase open"
+alias crad="cordova run android --device"
+alias crid="cordova run ios --device"
+
+alias django-admin="python3 /usr/local/bin/django-admin.py"
+
+alias serve-pwd="python -m SimpleHTTPServer"
+
+alias adblog="adb logcat jxcore-log:v cordova*:v *:s"
+alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
 
 alias c="clear"
+alias weather="curl http://wttr.in/"
 
-alias fbd="firebase deploy"
-alias fbo="firebase open"
-
-alias cra="cordova run android"
-alias cri="cordova run ios"
-alias crad="cra --device"
-alias crid="cri --device"
-
-alias ccrad="pushd cordova && crad && popd"
-alias ccrid="pushd cordova && crid && popd"
-
-alias tccrad="tab ccrad"
-alias tccrid="tab ccrid"
-alias tccraid="tccriad"
-
-alias serve="python -m SimpleHTTPServer 3001 &"
-
-alias man='LESS_TERMCAP_md=$'\''\e[1;31m'\'' LESS_TERMCAP_me=$'\''\e[0m'\'' LESS_TERMCAP_se=$'\''\e[0m'\'' LESS_TERMCAP_so=$'\''\e[1;44;33m'\'' LESS_TERMCAP_ue=$'\''\e[0m'\'' LESS_TERMCAP_us=$'\''\e[1;32m'\'' man'
-alias nukethis="gpristine && nvm use && npm i"
-alias fmc="grep -lr '<<<<<<<' ."
-
-# why not
 alias sourcream="source ~/.zshrc"
 
-alias weather="curl -4 wttr.in"
+# added by travis gem
+[ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
