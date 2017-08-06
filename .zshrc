@@ -113,7 +113,15 @@ function nukedis() {
     if [[ $1 == '--nvm' ]]; then
   	nvm use
     fi
-    npm i
+    npm i      
+}
+
+function clean-containers() {
+    docker rm $(docker ps -a -q)
+}
+
+function clean-images() {
+    docker rmi $(docker images -q)
 }
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -146,8 +154,6 @@ alias fbd="firebase deploy:hosting"
 alias fbo="firebase open"
 alias crad="cordova run android --device"
 alias crid="cordova run ios --device"
-
-alias django-admin="python3 /usr/local/bin/django-admin.py"
 
 alias serve-pwd="python -m SimpleHTTPServer"
 
