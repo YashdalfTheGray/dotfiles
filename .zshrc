@@ -53,7 +53,9 @@ plugins=(adb atom git gulp lol osx sublime)
 
 # User configuration
 
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
+eval "$(rbenv init -)"
+
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -113,7 +115,7 @@ function nukedis() {
     if [[ $1 == '--nvm' ]]; then
   	nvm use
     fi
-    npm i      
+    npm i
 }
 
 function clean-containers() {
@@ -122,6 +124,15 @@ function clean-containers() {
 
 function clean-images() {
     docker rmi $(docker images -q)
+}
+
+function chromecast-force-update() {
+    if [ $# -eq 0 ]; then
+        echo "This function needs an IP address to work"
+        echo "Usage: chromecast-force-update <ip_address>"
+        return 1
+    fi
+    curl -X POST -H "Content-Type: application/json" -d '{"params": "ota foreground"}' http://$1:8008/setup/reboot -v
 }
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -144,6 +155,8 @@ eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
 
+alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm"
+
 alias playground="~/playground"
 
 alias gai="git add -i"
@@ -161,6 +174,7 @@ alias adblog="adb logcat jxcore-log:v cordova*:v *:s"
 alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
 
 alias c="clear"
+alias l="exa -abhHlS"
 alias weather="curl http://wttr.in/"
 
 alias sourcream="source ~/.zshrc"
