@@ -155,7 +155,7 @@ eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
 
-alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm"
+alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-install"
 
 alias playground="~/playground"
 
