@@ -17,4 +17,4 @@ Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme.
 
 ## `vim`
 
-Uses the `delek` syntax theme and the [Emmet.vim](http://vimawesome.com/plugin/emmet-vim) and [vim-javascript](http://vimawesome.com/plugin/vim-javascript) plugins.
+Uses the [onedark](https://vimawesome.com/plugin/onedark-vim) syntax theme and the [Emmet.vim](http://vimawesome.com/plugin/emmet-vim) and [vim-javascript](http://vimawesome.com/plugin/vim-javascript) plugins for language. 
