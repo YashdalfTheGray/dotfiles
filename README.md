@@ -17,4 +17,6 @@ Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme.
 
 ## `vim`
 
+Uses [Vundle](https://github.com/VundleVim/Vundle.vim) as the package manager. 
+
 Uses the [onedark](https://vimawesome.com/plugin/onedark-vim) syntax theme and the [Emmet.vim](http://vimawesome.com/plugin/emmet-vim) and [vim-javascript](http://vimawesome.com/plugin/vim-javascript) plugins for language. 
