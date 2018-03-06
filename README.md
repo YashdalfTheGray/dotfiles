@@ -1,4 +1,4 @@
-# terminal-config
+# dotfiles
 
 OSX terminal rc files
 
