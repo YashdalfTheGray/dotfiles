@@ -143,6 +143,7 @@ function chromecast-force-update() {
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias vimconfig="vim ~/.vimrc"
 
 # set the GOPATH
 export GOPATH="/Users/yash/go-vendor"
@@ -155,9 +156,10 @@ eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
 
-alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-install"
+alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli"
 
 alias playground="~/playground"
+alias browse-things="open -a Finder ~/things"
 
 alias gai="git add -i"
 
@@ -172,6 +174,9 @@ alias serve-pwd="python -m SimpleHTTPServer"
 
 alias adblog="adb logcat jxcore-log:v cordova*:v *:s"
 alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
+
+alias tmuxa="tmux attach -t"
+alias tmuxn="tmux new -s"
 
 alias c="clear"
 alias l="exa -abhHlS"
