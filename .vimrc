@@ -25,12 +25,17 @@ Plugin 'tpope/vim-surround'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kien/ctrlp.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'raimondi/delimitmate'
+Plugin 'yggdroot/indentline'
+Plugin 'ap/vim-css-color'
 
 " Themes
 Plugin 'nlknguyen/papercolor-theme'
 Plugin 'joshdick/onedark.vim'
 Plugin 'devnul1/heman'
 Plugin 'badacadabra/vim-archery'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,9 +59,11 @@ set termguicolors
 colorscheme onedark
 set number
 set noshowmode
+set backspace=indent,eol,start
 
 " vim options that make plugins better
 set updatetime=100
+set laststatus=2
 
 " enable folding and stuff
 set foldmethod=indent
@@ -123,3 +130,9 @@ let g:lightline = {
 " Emmet only enabled for HTML/CSS
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" vim-multiple-cursors
+let g:multi_cursor_next_key='<C-d>'
+let g:multi_cursor_prev_key='<C-S-D>'
+let g:multi_cursor_skip_key='<C-A-d>'
+let g:multi_cursor_quit_key='<Esc>'
