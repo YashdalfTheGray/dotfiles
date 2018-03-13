@@ -144,6 +144,7 @@ function chromecast-force-update() {
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vimrc"
+alias tmuxconfig="vim ~/.tmux.conf"
 
 # set the GOPATH
 export GOPATH="/Users/yash/go-vendor"
@@ -162,6 +163,7 @@ alias playground="~/playground"
 alias browse-things="open -a Finder ~/things"
 
 alias gai="git add -i"
+alias gms="git merge --squash"
 
 alias att="open . -a /Applications/Atom.app"
 
@@ -177,6 +179,7 @@ alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
 
 alias tmuxa="tmux attach -t"
 alias tmuxn="tmux new -s"
+alias tmuxk="tmux kill -t"
 
 alias c="clear"
 alias l="exa -abhHlS"
