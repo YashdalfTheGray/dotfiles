@@ -20,3 +20,7 @@ Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme.
 Uses [Vundle](https://github.com/VundleVim/Vundle.vim) as the package manager. 
 
 Uses the [onedark](https://vimawesome.com/plugin/onedark-vim) syntax theme and the [Emmet.vim](http://vimawesome.com/plugin/emmet-vim) and [vim-javascript](http://vimawesome.com/plugin/vim-javascript) plugins for language. 
+
+## `tmux`
+
+The `.tmux.conf` file sets some shortcuts and a theme for `tmux`. This has been tested on tmux version 2.6 and newer. 
