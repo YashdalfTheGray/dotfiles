@@ -24,3 +24,8 @@ Uses the [onedark](https://vimawesome.com/plugin/onedark-vim) syntax theme and t
 ## `tmux`
 
 The `.tmux.conf` file sets some shortcuts and a theme for `tmux`. This has been tested on tmux version 2.6 and newer. 
+
+### Resources
+
+* [tmux cheat sheet](https://gist.github.com/MohamedAlaa/2961058)
+* [tmux color sheet](https://i.stack.imgur.com/e63et.png)
