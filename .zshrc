@@ -49,7 +49,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(adb atom git gulp lol osx sublime)
+plugins=(atom docker docker-compose git kubectl lol node npm npx nvm osx)
 
 # User configuration
 
@@ -164,8 +164,6 @@ alias browse-things="open -a Finder ~/things"
 
 alias gai="git add -i"
 alias gms="git merge --squash"
-
-alias att="open . -a /Applications/Atom.app"
 
 alias fbd="firebase deploy:hosting"
 alias fbo="firebase open"
