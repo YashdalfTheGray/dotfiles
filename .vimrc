@@ -51,6 +51,11 @@ set backspace=indent,eol,start
 set updatetime=100
 set laststatus=2
 
+" indentation stuff
+set autoindent
+set smartindent
+set pastetoggle=<F2>
+
 " enable folding and stuff
 set foldmethod=indent
 set foldnestmax=10
