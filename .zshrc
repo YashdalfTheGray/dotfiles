@@ -49,7 +49,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(atom docker docker-compose git kubectl lol node npm npx nvm osx)
+plugins=(atom docker docker-compose git golang kubectl lol node npm npx nvm osx)
 
 # User configuration
 
@@ -147,7 +147,7 @@ alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
 
 # set the GOPATH
-export GOPATH="/Users/yash/go-vendor"
+export GOPATH="/Users/yash/go"
 export PATH="$PATH:$GOPATH/bin"
 
 export NVM_DIR="/Users/yash/.nvm"
@@ -160,6 +160,8 @@ eval "$(thefuck --alias FUCK)"
 alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli"
 
 alias playground="~/playground"
+alias godev="~/go"
+alias gitdir="~/git-yash"
 alias browse-things="open -a Finder ~/things"
 
 alias gai="git add -i"
@@ -178,6 +180,13 @@ alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
 alias tmuxa="tmux attach -t"
 alias tmuxn="tmux new -s"
 alias tmuxk="tmux kill -t"
+
+alias de="dep ensure"
+alias dea="dep ensure -add"
+alias deu="dep ensure -update"
+alias ds="dep status"
+
+alias docker-exit-code="docker inspect --format='{{.State.ExitCode}}'"
 
 alias c="clear"
 alias l="exa -abhHlS"
