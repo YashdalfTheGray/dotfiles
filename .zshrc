@@ -185,6 +185,7 @@ alias de="dep ensure"
 alias dea="dep ensure -add"
 alias deu="dep ensure -update"
 alias ds="dep status"
+alias depgraph="dep status -dot | dot -T png | open -f -a /Applications/Preview.app"
 
 alias docker-exit-code="docker inspect --format='{{.State.ExitCode}}'"
 
