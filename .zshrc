@@ -180,6 +180,7 @@ alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
 alias tmuxa="tmux attach -t"
 alias tmuxn="tmux new -s"
 alias tmuxk="tmux kill -t"
+alias tmuxl="tmux ls"
 
 alias de="dep ensure"
 alias dea="dep ensure -add"
