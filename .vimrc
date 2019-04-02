@@ -28,6 +28,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'raimondi/delimitmate'
 Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
+Plug 'leafgarland/typescript-vim'
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
@@ -40,10 +41,8 @@ call plug#end()
 
 " UI stuff
 syntax on
-set background=dark
-set termguicolors
-colorscheme onedark
 set number
+set background=dark
 set noshowmode
 set backspace=indent,eol,start
 
@@ -63,9 +62,12 @@ set nofoldenable
 set foldlevel=2
 
 " tabs and spaces
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
+
+" mouse support
+set mouse=a
 
 " shortcuts for tabs and splits
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
