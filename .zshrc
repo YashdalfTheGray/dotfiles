@@ -49,13 +49,13 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(atom docker docker-compose git golang kubectl lol node npm npx nvm osx)
+plugins=(docker docker-compose git golang kubectl lol node npm npx nvm osx zsh-autosuggestions)
 
 # User configuration
 
 eval "$(rbenv init -)"
 
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin:/Users/yash/bin:/Users/yash/flutter/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -102,8 +102,8 @@ EOF
   fi
 }
 
-function to-atom() {
-    open -fn -a /Applications/Atom.app
+function to-code() {
+    open -fn -a /Applications/Visual\ Studio\ Code.app
 }
 
 function adb-screencap() {
@@ -153,11 +153,11 @@ export PATH="$PATH:$GOPATH/bin"
 export NVM_DIR="/Users/yash/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
-eval "$(thefuck --alias FUCK)"
+# eval "$(thefuck --alias FUCK)"
 
-alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli"
+alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli ndb"
 
 alias playground="~/playground"
 alias godev="~/go"
@@ -166,6 +166,9 @@ alias browse-things="open -a Finder ~/things"
 
 alias gai="git add -i"
 alias gms="git merge --squash"
+alias gaom="git ls-files --modified | xargs git add"
+
+alias att="open . -a /Applications/Atom.app"
 
 alias fbd="firebase deploy:hosting"
 alias fbo="firebase open"
@@ -192,6 +195,7 @@ alias docker-exit-code="docker inspect --format='{{.State.ExitCode}}'"
 
 alias c="clear"
 alias l="exa -abhHlS"
+alias cat="bat"
 alias weather="curl http://wttr.in/"
 
 alias sourcream="source ~/.zshrc"
@@ -201,3 +205,5 @@ alias sourcream="source ~/.zshrc"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
