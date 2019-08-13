@@ -49,7 +49,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker docker-compose git golang kubectl lol node npm npx nvm osx zsh-autosuggestions)
+plugins=(docker docker-compose git golang kubectl lol node npm npx nvm osx zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -84,19 +84,6 @@ function close_other_tabs() {
     osascript >/dev/null <<EOF
       tell application "System Events"
         tell process "Terminal" to keystroke "w" using {command down, option down}
-      end tell
-EOF
-  fi
-}
-
-function close_current_tab() {
-  local the_app=$(_omz_osx_get_frontmost_app)
-
-  if [[ "$the_app" == 'Terminal' ]]; then
-    # Discarding stdout to quash "tab N of window id XXX" output
-    osascript >/dev/null <<EOF
-      tell application "System Events"
-        tell process "Terminal" to keystroke "w" using command down
       end tell
 EOF
   fi
@@ -158,6 +145,7 @@ export NVM_DIR="/Users/yash/.nvm"
 # eval "$(thefuck --alias FUCK)"
 
 alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli ndb"
+alias npm-dryrun-publish="npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
 
 alias playground="~/playground"
 alias godev="~/go"
@@ -167,8 +155,6 @@ alias browse-things="open -a Finder ~/things"
 alias gai="git add -i"
 alias gms="git merge --squash"
 alias gaom="git ls-files --modified | xargs git add"
-
-alias att="open . -a /Applications/Atom.app"
 
 alias fbd="firebase deploy:hosting"
 alias fbo="firebase open"
@@ -200,6 +186,8 @@ alias weather="curl http://wttr.in/"
 
 alias sourcream="source ~/.zshrc"
 
+alias sloc="git ls-files | xargs wc -l"
+
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
 
@@ -207,3 +195,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
