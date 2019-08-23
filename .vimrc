@@ -29,13 +29,12 @@ Plug 'raimondi/delimitmate'
 Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 Plug 'leafgarland/typescript-vim'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
 Plug 'joshdick/onedark.vim'
-Plug 'devnul1/heman'
-Plug 'badacadabra/vim-archery'
-Plug 'dracula/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -116,9 +115,9 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " Lightline theme
-let g:lightline = {
-      \ 'colorscheme': 'Dracula',
-      \ }
+" let g:lightline = {
+"      \ 'colorscheme': 'PaperColor',
+"      \ }
 
 " Emmet only enabled for HTML/CSS
 let g:user_emmet_install_global = 0
