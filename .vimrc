@@ -30,6 +30,9 @@ Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 Plug 'leafgarland/typescript-vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'dense-analysis/ale'
+Plug 'palantir/tslint'
+Plug 'quramy/tsuquyomi'
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
@@ -44,6 +47,10 @@ set number
 set background=dark
 set noshowmode
 set backspace=indent,eol,start
+
+" Omnifunction
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " vim options that make plugins better
 set updatetime=100
@@ -79,6 +86,25 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-t> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Typescript stuff
+let g:tsuquyomi_completion_detail = 1
+
+" Linting
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint'],
+\   'vue': ['eslint']
+\}
+
+let g:ale_fixers = {
+\    'javascript': ['eslint'],
+\    'typescript': ['prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\}
+let g:ale_fix_on_save = 1
 
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
