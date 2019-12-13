@@ -122,6 +122,16 @@ function chromecast-force-update() {
     curl -X POST -H "Content-Type: application/json" -d '{"params": "ota foreground"}' http://$1:8008/setup/reboot -v
 }
 
+show-npm-scripts () {
+    FILE=package.json
+    if [ -f "$FILE" ]; then
+        /bin/cat package.json | jq '.scripts'
+    else
+        echo "Current directory does not contain a package.json"
+        return 1
+    fi
+}
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
