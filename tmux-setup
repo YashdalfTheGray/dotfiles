@@ -1,0 +1,10 @@
+#! /bin/bash
+
+$(tmux has-session -t dev 2>/dev/null)
+session_exists=$?
+
+if [ $session_exists -ne 0 ]; then
+  tmux new -s dev
+else
+  tmux a -t dev
+fi
