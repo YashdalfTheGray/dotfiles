@@ -49,13 +49,13 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker docker-compose git golang kubectl lol node npm npx nvm osx zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(autojump docker docker-compose git golang kubectl lol node npm npx nvm osx zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
 eval "$(rbenv init -)"
 
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin:/Users/yash/bin:/Users/yash/flutter/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin:/Users/yash/bin:/Users/yash/flutter/bin:/Users/yash/Library/Python/3.7/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -122,13 +122,13 @@ function chromecast-force-update() {
     curl -X POST -H "Content-Type: application/json" -d '{"params": "ota foreground"}' http://$1:8008/setup/reboot -v
 }
 
-show-npm-scripts () {
+function show-npm-scripts() {
     FILE=package.json
     if [ -f "$FILE" ]; then
-        /bin/cat package.json | jq '.scripts'
+      /bin/cat package.json | jq '.scripts'
     else
-        echo "Current directory does not contain a package.json"
-        return 1
+      echo "Current directory does not contain a package.json"
+      return 1
     fi
 }
 
@@ -176,9 +176,10 @@ alias serve-pwd="python -m SimpleHTTPServer"
 alias adblog="adb logcat jxcore-log:v cordova*:v *:s"
 alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
 
+alias tmux="tmux -2"
 alias tmuxa="tmux attach -t"
 alias tmuxn="tmux new -s"
-alias tmuxk="tmux kill -t"
+alias tmuxk="tmux kill-session -t"
 alias tmuxl="tmux ls"
 
 alias de="dep ensure"
@@ -191,7 +192,6 @@ alias docker-exit-code="docker inspect --format='{{.State.ExitCode}}'"
 
 alias c="clear"
 alias l="exa -abhHlS"
-alias cat="bat"
 alias weather="curl http://wttr.in/"
 
 alias sourcream="source ~/.zshrc"
