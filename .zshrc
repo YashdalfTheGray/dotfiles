@@ -90,46 +90,46 @@ EOF
 }
 
 function to-code() {
-    open -fn -a /Applications/Visual\ Studio\ Code.app
+  open -fn -a /Applications/Visual\ Studio\ Code.app
 }
 
 function adb-screencap() {
-    adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > $1
+  adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > $1
 }
 
 function nukedis() {
-    gpristine
-    if [[ $1 == '--nvm' ]]; then
-  	nvm use
-    fi
+  gpristine
+  if [[ $1 == '--nvm' ]]; then
+    nvm use
+  fi
     npm i
 }
 
 function clean-containers() {
-    docker rm $(docker ps -a -q)
+  docker rm $(docker ps -a -q)
 }
 
 function clean-images() {
-    docker rmi $(docker images -q)
+  docker rmi $(docker images -q)
 }
 
 function chromecast-force-update() {
-    if [ $# -eq 0 ]; then
-        echo "This function needs an IP address to work"
-        echo "Usage: chromecast-force-update <ip_address>"
-        return 1
-    fi
-    curl -X POST -H "Content-Type: application/json" -d '{"params": "ota foreground"}' http://$1:8008/setup/reboot -v
+  if [ $# -eq 0 ]; then
+    echo "This function needs an IP address to work"
+    echo "Usage: chromecast-force-update <ip_address>"
+    return 1
+  fi
+  curl -X POST -H "Content-Type: application/json" -d '{"params": "ota foreground"}' http://$1:8008/setup/reboot -v
 }
 
 function show-npm-scripts() {
-    FILE=package.json
-    if [ -f "$FILE" ]; then
-      /bin/cat package.json | jq '.scripts'
-    else
-      echo "Current directory does not contain a package.json"
-      return 1
-    fi
+  FILE=package.json
+  if [ -f "$FILE" ]; then
+    /bin/cat package.json | jq '.scripts'
+  else
+    echo "Current directory does not contain a package.json"
+    return 1
+  fi
 }
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
