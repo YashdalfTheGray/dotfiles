@@ -132,6 +132,16 @@ function show-npm-scripts() {
   fi
 }
 
+function curl-from-github-and-save() {
+  if [ $# -eq 0 ]; then
+    echo "Get raw files from GitHub and store them with the same name as the URL."
+    echo "Usage: curl-from-github-and-save user/repository/branch/filename"
+    return 1
+  fi
+
+  curl -OJ https://raw.githubusercontent.com/$1
+}
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -197,6 +207,8 @@ alias weather="curl http://wttr.in/"
 alias sourcream="source ~/.zshrc"
 
 alias sloc="git ls-files | xargs wc -l"
+
+alias gcurl="curl-from-github-and-save"
 
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
