@@ -102,7 +102,8 @@ function nukedis() {
   if [[ $1 == '--nvm' ]]; then
     nvm use
   fi
-    npm i
+
+  npm i
 }
 
 function clean-containers() {
@@ -141,6 +142,27 @@ function curl-from-github-and-save() {
 
   curl -OJ https://raw.githubusercontent.com/$1
 }
+
+function curl-pipe-to-jq() {
+  output=$(curl -vs "$@" 2>&1)
+  curl_command_exit_code=$?
+
+  if [ $curl_command_exit_code -ne 0 ]; then
+    printf '%s\n' "$output"
+  else
+    response_code=$(printf '%s' "$output" | sed -En 's/< HTTP\/(.*) ([1-5][0-9]{2}) (.*)/\2/ p')
+    response_text=$(printf '%s' "$output" | sed -En 's/< HTTP\/(.*) ([1-5][0-9]{2}) (.*)/\3/ p')
+
+    if [[ $response_code == "200" ]]; then
+      json_body=$(printf '%s' "$output" | sed -En 's/(\{.*\})/\1/ p')
+
+      printf '%s' $json_body | jq
+    else
+      printf '%s %s\n' "$response_code" "$response_text"
+    fi
+  fi
+}
+
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -209,6 +231,7 @@ alias sourcream="source ~/.zshrc"
 alias sloc="git ls-files | xargs wc -l"
 
 alias gcurl="curl-from-github-and-save"
+alias jqcurl="curl-pipe-to-jq"
 
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
