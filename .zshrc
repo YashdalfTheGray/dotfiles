@@ -243,6 +243,8 @@ alias sloc="git ls-files | xargs wc -l"
 
 alias gcurl="curl-from-github-and-save"
 alias jqcurl="curl-pipe-to-jq"
+alias get-aws-account="aws sts get-caller-identity | jq -r '.Account'"
+alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy"
 
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
