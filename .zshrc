@@ -9,7 +9,6 @@ ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -53,10 +52,10 @@ plugins=(autojump docker docker-compose git golang kubectl lol node npm npx nvm 
 
 # User configuration
 
-eval "$(rbenv init -)"
-
 export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin:/Users/yash/bin:/Users/yash/flutter/bin:/Users/yash/Library/Python/3.7/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+eval "$(rbenv init -)"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -163,6 +162,17 @@ function curl-pipe-to-jq() {
   fi
 }
 
+function go-doc-piped-to-less() {
+  output=$(go doc "$@")
+  go_doc_exit_code=$?
+
+  if [ $go_doc_exit_code -ne 0 ]; then
+    printf '%s' $output
+  else
+    printf '%s' $output | less
+  fi
+}
+
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -219,6 +229,7 @@ alias dea="dep ensure -add"
 alias deu="dep ensure -update"
 alias ds="dep status"
 alias depgraph="dep status -dot | dot -T png | open -f -a /Applications/Preview.app"
+alias gdocl="go-doc-piped-to-less"
 
 alias docker-exit-code="docker inspect --format='{{.State.ExitCode}}'"
 
