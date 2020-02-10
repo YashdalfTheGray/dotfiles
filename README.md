@@ -1,17 +1,26 @@
 # dotfiles
 
-OSX terminal rc files
+My terminal config files, mostly grouped by os
 
 ## `oh-my-zsh`
 
-This file relies on [this awesome utility](https://github.com/nvbn/thefuck) to be installed. Well, maybe not relies on but it's nice to have it installed. 
+Expects `rbenv`, `nvm`, and iTerm2 to be used in conjunction with this file. You can also just comment those pieces out. 
 
 Installed plugins
- * adb
- * git
- * lol
- * osx
- * sublime
+* autojump
+* docker
+* docker-compose
+* git
+* golang
+* kubectl
+* lol
+* node
+* npm
+* npx
+* nvm
+* osx
+* zsh-autosuggestions
+* zsh-syntax-highlighting
 
 Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme. 
 
@@ -19,11 +28,11 @@ Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme.
 
 Uses [vim-plug](https://github.com/junegunn/vim-plug) as the package manager. 
 
-Uses the [onedark](https://vimawesome.com/plugin/onedark-vim) syntax theme and the [Emmet.vim](http://vimawesome.com/plugin/emmet-vim) and [vim-javascript](http://vimawesome.com/plugin/vim-javascript) plugins for language. 
+Pulls the theme from the terminal color scheme, has mouse support, NERDTree and FZF support, as well as git markers for files and the gutter. 
 
 ## `tmux`
 
-The `.tmux.conf` file sets some shortcuts and a theme for `tmux`. This has been tested on tmux version 2.6 and newer. 
+The `.tmux.conf` file sets some shortcuts and a theme for `tmux`. This has been tested on tmux version 2.9 and newer. To make it work for tmux <2.8, you'll need to change the `-style` commands into their own separate commands. That's a change that was brought around by version 2.9. 
 
 ### Resources
 
