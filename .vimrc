@@ -81,6 +81,10 @@ map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
 map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
 map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
 
+" shortcuts for ctrl-a and ctrl-e in insert mode
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
