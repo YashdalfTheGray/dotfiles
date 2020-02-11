@@ -21,12 +21,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sheerun/vim-polyglot'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'kien/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'raimondi/delimitmate'
-Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 Plug 'leafgarland/typescript-vim'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
@@ -47,6 +45,7 @@ set number
 set background=dark
 set noshowmode
 set backspace=indent,eol,start
+" colorscheme PaperColor
 
 " Omnifunction
 filetype plugin on
@@ -152,9 +151,3 @@ let g:NERDTreeIndicatorMapCustom = {
 " Emmet only enabled for HTML/CSS
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
-" vim-multiple-cursors
-let g:multi_cursor_next_key='<C-d>'
-let g:multi_cursor_prev_key='<C-S-D>'
-let g:multi_cursor_skip_key='<C-A-d>'
-let g:multi_cursor_quit_key='<Esc>'
