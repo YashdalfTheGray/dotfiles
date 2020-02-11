@@ -31,6 +31,8 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'dense-analysis/ale'
 Plug 'palantir/tslint'
 Plug 'quramy/tsuquyomi'
+Plug 'frazrepo/vim-rainbow'
+Plug '/usr/local/opt/fzf'
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
@@ -84,6 +86,9 @@ map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
 " shortcuts for ctrl-a and ctrl-e in insert mode
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
+
+" invoke FZF when <C-p> is pressed
+nnoremap <C-p> :FZF <CR>
 
 " Nerdtree
 autocmd StdinReadPre * let s:std_in=1
@@ -152,3 +157,6 @@ let g:NERDTreeIndicatorMapCustom = {
 " Emmet only enabled for HTML/CSS
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" enable rainbow parens for everything
+let g:rainbow_active = 1
