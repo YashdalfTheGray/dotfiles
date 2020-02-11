@@ -45,6 +45,7 @@ set number
 set background=dark
 set noshowmode
 set backspace=indent,eol,start
+set conceallevel=0
 " colorscheme PaperColor
 
 " Omnifunction
