@@ -207,6 +207,7 @@ alias browse-things="open -a Finder ~/things"
 alias gai="git add -i"
 alias gms="git merge --squash"
 alias gaom="git ls-files --modified | xargs git add"
+alias gfsd="git file-size-diff"
 
 alias fbd="firebase deploy:hosting"
 alias fbo="firebase open"
