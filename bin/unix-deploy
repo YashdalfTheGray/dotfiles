@@ -3,6 +3,18 @@
 # set up a backup place
 backup_folder=$HOME/dotfiles_backup
 
+# ask the user if they want to proceed
+echo "This script will place a bunch of files in the right places so that"
+echo "things like zsh, vim, tmux will pick up the right configuration."
+echo "This will change files that you might have edited but those files"
+echo "will be backed up $backup_folder. Do you wish to continue?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) break;;
+        No ) exit;;
+    esac
+done
+
 # store the paths of where these files should be
 zshrc_location=$HOME/.zshrc
 tmuxconf_location=$HOME/.tmux.conf
@@ -23,7 +35,7 @@ case "$platform" in
 esac
 
 
-backup_and_replace_zshrc () {
+function backup_and_replace_zshrc() {
   if [[ -f $zshrc_location ]]; then
     echo "Found a .zshrc in $USER's home directory"
     echo "Backing it up at $backup_folder/.zshrc"
