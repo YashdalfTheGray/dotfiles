@@ -36,8 +36,8 @@ esac
 
 function backup_and_replace_file() {
   file_to_replace=$1
-  location=$3
-  platform=$2
+  location=$2
+  platform=$3
 
   if [[ -f $location ]]; then
     echo "Found a $file_to_replace in $USER's home directory"
@@ -53,14 +53,6 @@ function backup_and_replace_file() {
 
 
 function backup_and_replace_zshrc() {
-  if [[ -f $zshrc_location ]]; then
-    echo "Found a .zshrc in $USER's home directory"
-    echo "Backing it up at $backup_folder/.zshrc"
-
-    mkdir -p $backup_folder
-    mv $HOME/.zshrc $backup_folder/.zshrc
-  fi
-
-  rm $HOME/.zshrc
-  mv $1/.zshrc $HOME/.zshrc
+  platform=$1
+  backup_and_replace_file ".zshrc" "$zshrc_location" "$1"
 }
