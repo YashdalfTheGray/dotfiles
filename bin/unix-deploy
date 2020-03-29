@@ -3,6 +3,11 @@
 # set up a backup place
 backup_folder=$HOME/dotfiles_backup
 
+# store the paths of where these files should be
+zshrc_location=$HOME/.zshrc
+tmuxconf_location=$HOME/.tmux.conf
+vimrc_location=$HOME/.vimrc
+
 # what platform are we running on
 platform=`uname`
 
