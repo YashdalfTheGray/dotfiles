@@ -9,10 +9,10 @@ echo "things like zsh, vim, tmux will pick up the right configuration."
 echo "This will change files that you might have edited but those files"
 echo "will be backed up $backup_folder. Do you wish to continue?"
 select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) break;;
-        No ) exit;;
-    esac
+  case $yn in
+    Yes ) break;;
+    No ) exit;;
+  esac
 done
 
 # store the paths of where these files should be
