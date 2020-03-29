@@ -34,6 +34,23 @@ case "$platform" in
     ;;
 esac
 
+function backup_and_replace_file() {
+  file_to_replace=$1
+  location=$3
+  platform=$2
+
+  if [[ -f $location ]]; then
+    echo "Found a $file_to_replace in $USER's home directory"
+    echo "Backing it up at $backup_folder/$file_to_replace"
+
+    mkdir -p $backup_folder
+    mv $HOME/$file_to_replace $backup_folder/$file_to_replace
+  fi
+
+  rm $HOME/$file_to_replace
+  mv $platform/$file_to_replace $HOME/$file_to_replace
+}
+
 
 function backup_and_replace_zshrc() {
   if [[ -f $zshrc_location ]]; then
