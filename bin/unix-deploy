@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# set up a backup place
+backup_folder=$HOME/dotfiles_backup
+
+# what platform are we running on
+platform=`uname`
+
+case "$platform" in
+  Darwin*)
+    echo "Detected OS to be macOS"
+    exit 0
+    ;;
+  *)
+    echo "The OS is not supported by this repo. Exiting."
+    exit 2
+    ;;
+esac
