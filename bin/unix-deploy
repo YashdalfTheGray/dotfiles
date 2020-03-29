@@ -21,3 +21,17 @@ case "$platform" in
     exit 2
     ;;
 esac
+
+
+backup_and_replace_zshrc () {
+  if [[ -f $zshrc_location ]]; then
+    echo "Found a .zshrc in $USER's home directory"
+    echo "Backing it up at $backup_folder/.zshrc"
+
+    mkdir -p $backup_folder
+    mv $HOME/.zshrc $backup_folder/.zshrc
+  fi
+
+  rm $HOME/.zshrc
+  mv $1/.zshrc $HOME/.zshrc
+}
