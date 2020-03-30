@@ -54,15 +54,15 @@ function backup_and_replace_file() {
 
 function backup_and_replace_zshrc() {
   platform=$1
-  backup_and_replace_file ".zshrc" "$zshrc_location" "$1"
+  backup_and_replace_file ".zshrc" "$zshrc_location" "$platform"
 }
 
 function backup_and_replace_tmuxconf() {
   platform=$1
-  backup_and_replace_file ".tmux.conf" "$tmuxconf_location" "$1"
+  backup_and_replace_file ".tmux.conf" "$tmuxconf_location" "$platform"
 }
 
 function backup_and_replace_vimrc() {
   platform=$1
-  backup_and_replace_file ".vimrc" "$vimrc_location" "$1"
+  backup_and_replace_file ".vimrc" "$vimrc_location" "$platform"
 }
