@@ -34,7 +34,7 @@ case "$platform" in
     ;;
 esac
 
-function backup_and_replace_file() {
+backup_and_replace_file() {
   file_to_replace=$1
   location=$2
   platform=$3
@@ -52,17 +52,17 @@ function backup_and_replace_file() {
 }
 
 
-function backup_and_replace_zshrc() {
+backup_and_replace_zshrc() {
   platform=$1
   backup_and_replace_file ".zshrc" "$zshrc_location" "$platform"
 }
 
-function backup_and_replace_tmuxconf() {
+backup_and_replace_tmuxconf() {
   platform=$1
   backup_and_replace_file ".tmux.conf" "$tmuxconf_location" "$platform"
 }
 
-function backup_and_replace_vimrc() {
+backup_and_replace_vimrc() {
   platform=$1
   backup_and_replace_file ".vimrc" "$vimrc_location" "$platform"
 }
