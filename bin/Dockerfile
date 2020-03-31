@@ -5,8 +5,7 @@ FROM debian:buster
 # dotfiles in this repository and their content.
 
 # put down some bin files
-RUN mkdir /root/bin
-RUN touch /root/bin/test
+RUN mkdir /root/bin && touch /root/bin/test
 RUN echo "echo \"this is a test\"" > /root/bin/test
 RUN chmod +x /root/bin/test
 
