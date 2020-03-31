@@ -4,7 +4,11 @@ FROM debian:buster
 # my deploy scripts. It has nothing to do with the actual
 # dotfiles in this repository and their content.
 
-ARG generate_bin=false
+# put down some bin files
+RUN mkdir /root/bin
+RUN touch /root/bin/test
+RUN echo "echo \"this is a test\"" > /root/bin/test
+RUN chmod +x /root/bin/test
 
 # Make the folder for all the code
 RUN mkdir -p /root/git-projects/dotfiles
