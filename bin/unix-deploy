@@ -3,6 +3,11 @@
 # set up a backup place
 backup_folder=$HOME/dotfiles_backup
 
+# store the paths of where these files should be
+zshrc_location=$HOME/.zshrc
+tmuxconf_location=$HOME/.tmux.conf
+vimrc_location=$HOME/.vimrc
+
 # ask the user if they want to proceed
 echo "This script will place a bunch of files in the right places so that"
 echo "things like zsh, vim, tmux will pick up the right configuration."
@@ -14,11 +19,6 @@ select yn in "Yes" "No"; do
     No ) exit;;
   esac
 done
-
-# store the paths of where these files should be
-zshrc_location=$HOME/.zshrc
-tmuxconf_location=$HOME/.tmux.conf
-vimrc_location=$HOME/.vimrc
 
 # what platform are we running on
 platform=`uname`
