@@ -31,8 +31,6 @@ case "$platform" in
   Linux*)
     echo "Detected OS to be linux"
     backup_and_replace_zshrc "macos"
-    backup_and_replace_vimrc "macos"
-    backup_and_replace_tmuxconf "macos"
     exit 0
     ;;
   *)
