@@ -8,6 +8,43 @@ zshrc_location=$HOME/.zshrc
 tmuxconf_location=$HOME/.tmux.conf
 vimrc_location=$HOME/.vimrc
 
+backup_and_replace_file()
+{
+  file_to_replace=$1
+  location=$2
+  platform=$3
+
+  if [[ -f $location ]]; then
+    echo "Found a $file_to_replace in $USER's home directory"
+    echo "Backing it up at $backup_folder/$file_to_replace"
+
+    mkdir -p $backup_folder
+    mv $HOME/$file_to_replace $backup_folder/$file_to_replace
+  fi
+
+  rm $HOME/$file_to_replace
+  mv $platform/$file_to_replace $HOME/$file_to_replace
+}
+
+
+backup_and_replace_zshrc()
+{
+  platform=$1
+  backup_and_replace_file ".zshrc" "$zshrc_location" "$platform"
+}
+
+backup_and_replace_tmuxconf()
+{
+  platform=$1
+  backup_and_replace_file ".tmux.conf" "$tmuxconf_location" "$platform"
+}
+
+backup_and_replace_vimrc()
+{
+  platform=$1
+  backup_and_replace_file ".vimrc" "$vimrc_location" "$platform"
+}
+
 # ask the user if they want to proceed
 echo "This script will place a bunch of files in the right places so that"
 echo "things like zsh, vim, tmux will pick up the right configuration."
