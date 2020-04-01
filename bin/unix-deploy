@@ -45,6 +45,13 @@ backup_and_replace_vimrc()
   backup_and_replace_file ".vimrc" "$vimrc_location" "$platform"
 }
 
+get_basedir()
+{
+  script="$0"
+  basedir="$(dirname $script)"
+  return $basedir
+}
+
 # ask the user if they want to proceed
 echo "This script will place a bunch of files in the right places so that"
 echo "things like zsh, vim, tmux will pick up the right configuration."
