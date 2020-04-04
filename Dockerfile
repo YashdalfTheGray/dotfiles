@@ -4,7 +4,13 @@ FROM debian:buster
 # environment, set up to the best approximation
 
 # pull down some dependencies
-RUN apt-get update && apt-get install -y tmux git vim zsh wget
+RUN apt-get update && apt-get install -y \
+  git \
+  jq \
+  tmux \
+  vim \
+  wget \
+  zsh
 
 # install oh-my-zsh, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
