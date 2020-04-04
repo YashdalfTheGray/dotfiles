@@ -22,3 +22,5 @@ RUN mkdir -p $HOME/git-projects
 
 # set our working directory as the git projects directory
 WORKDIR $HOME/git-projects
+
+CMD [ "zsh" ]
