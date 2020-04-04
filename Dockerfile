@@ -16,9 +16,9 @@ RUN apt-get update && apt-get install -y \
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 
 # copy the files that need to be in place
-COPY macos/.zshrc $HOME/.zshrc
-COPY macos/.tmux.conf $HOME/.tmux.conf
-COPY macos/.vimrc $HOME/.vimrc
+COPY linux/.zshrc $HOME/.zshrc
+COPY linux/.tmux.conf $HOME/.tmux.conf
+COPY linux/.vimrc $HOME/.vimrc
 
 # make ourselves a git directory
 RUN mkdir -p $HOME/git-projects
