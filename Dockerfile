@@ -6,9 +6,6 @@ FROM debian:buster
 # pull down some dependencies
 RUN apt-get update && apt-get install -y tmux git vim zsh wget
 
-# change the shell to zsh
-RUN chsh -s /usr/bin/zsh root
-
 # install oh-my-zsh, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 
