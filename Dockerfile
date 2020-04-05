@@ -5,6 +5,7 @@ FROM debian:buster
 
 # pull down some dependencies
 RUN apt-get update && apt-get install -y \
+  fzf \
   git \
   jq \
   tmux \
@@ -14,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 # install oh-my-zsh, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # copy the files that need to be in place
 COPY linux/.zshrc $HOME/.zshrc
