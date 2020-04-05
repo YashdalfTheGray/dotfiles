@@ -4,7 +4,7 @@ FROM debian:buster
 # environment, set up to the best approximation
 
 # pull down some dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade apt-get install -y \
   fzf \
   git \
   jq \
@@ -13,10 +13,17 @@ RUN apt-get update && apt-get install -y \
   wget \
   zsh
 
-# install oh-my-zsh, because otherwise, what's the point
+# install oh-my-zsh and a couple of added tools, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# install some other tools
+RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+RUN wget -q https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer -O- | bash
+
+# set up home directory for users
+RUN mkdir -p /home
 
 # copy the files that need to be in place
 COPY linux/.zshrc $HOME/.zshrc
