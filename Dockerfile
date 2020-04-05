@@ -3,8 +3,11 @@ FROM debian:buster
 # This Dockerfile contains the entire development
 # environment, set up to the best approximation
 
+ARG USERNAME=dev
+ARG USERPASSWORD=dev
+
 # pull down some dependencies
-RUN apt-get update && apt-get upgrade apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   fzf \
   git \
   jq \
