@@ -29,12 +29,7 @@ RUN wget -q https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-instal
 RUN mkdir -p /home
 
 # copy the files that need to be in place
-COPY linux/.zshrc $HOME/.zshrc
-COPY linux/.tmux.conf $HOME/.tmux.conf
-COPY linux/.vimrc $HOME/.vimrc
-
-# make ourselves a git directory
-RUN mkdir -p $HOME/git-projects
+COPY linux/.zshrc linux/.tmux.conf linux/.vimrc $HOME
 
 # set our working directory as the git projects directory
 WORKDIR $HOME/git-projects
