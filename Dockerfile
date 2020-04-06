@@ -23,10 +23,13 @@ RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUS
 
 # install some other tools
 RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-RUN wget -q https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer -O- | bash
+RUN wget -qO- https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 
-# set up home directory for users
-RUN mkdir -p /home
+# install golang manually
+RUN cd $HOME/tmp \
+  && wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz \
+  && mv go /usr/local/go \
+  && mkdir -p /home/dev/go
 
 # copy the files that need to be in place
 COPY linux/.zshrc linux/.tmux.conf linux/.vimrc $HOME
