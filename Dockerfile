@@ -28,8 +28,8 @@ RUN wget -qO- https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-inst
 # install golang manually
 RUN cd $HOME/tmp \
   && wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz \
-  && mv go /usr/local/go \
-  && mkdir -p /home/dev/go
+  && tar xvfz go1.13.linux-amd64.tar.gz \
+  && mv go /usr/local/go
 
 # copy the files that need to be in place
 COPY linux/.zshrc linux/.tmux.conf linux/.vimrc $HOME
