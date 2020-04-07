@@ -26,6 +26,11 @@ RUN adduser --quiet --disabled-password --shell /bin/zsh --home /home/${USERNAME
 # switch to the user so that everything is installed for it
 USER ${USERNAME}
 
+# make some directories
+RUN mkdir -p /home/${USERNAME}/git-projects \
+  && mkdir -p /home/${USERNAME}/tmp \
+  && mkdir -p /home/${USERNAME}/go
+
 # install oh-my-zsh and a couple of added tools, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
