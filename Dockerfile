@@ -19,6 +19,10 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 # set up home directory for users
 RUN mkdir -p /home
 
+# create a new user inside the docker container
+RUN adduser --quiet --disabled-password --shell /bin/zsh --home /home/${USERNAME} --gecos "User" ${USERNAME} \
+  && echo "${USERNAME}:${USERPASSWORD}" | chpasswd && usermod -aG sudo ${USERNAME}
+
 # install oh-my-zsh and a couple of added tools, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
