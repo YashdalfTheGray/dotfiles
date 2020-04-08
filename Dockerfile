@@ -32,7 +32,7 @@ RUN mkdir -p /home/${USERNAME}/git-projects \
   && mkdir -p /home/${USERNAME}/go
 
 # Setup our env - gopath, goroot, and path
-ENV GOROOT="/usr/local/go" \
+ENV GOROOT="/usr/local/go/bin" \
   GOPATH="/home/${USERNAME}/go" \
   PATH="${GOPATH}/bin:${GOROOT}/bin:/home/${USERNAME}/.rbenv/bin:/home/${USERNAME}/.rbenv/shims:${PATH}"
 
