@@ -52,7 +52,7 @@ RUN cd $HOME/tmp \
   && mv go /usr/local/go
 
 # copy the files that need to be in place
-COPY linux/.zshrc linux/.tmux.conf linux/.vimrc $HOME
+COPY linux/.zshrc linux/.tmux.conf linux/.vimrc $HOME/
 
 # set our working directory as the git projects directory
 WORKDIR $HOME/git-projects
