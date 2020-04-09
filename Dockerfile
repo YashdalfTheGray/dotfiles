@@ -16,6 +16,11 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   wget \
   zsh
 
+# install golang manually
+# RUN cd /tmp \
+#   && wget -q https://dl.google.com/go/go${GOVERSION}.${GOOS}-${GOARCH}.tar.gz \
+#   && tar -C /usr/local -xzf go${GOVERSION}.${GOOS}-${GOARCH}.tar.gz
+
 # set up home directory for users
 RUN mkdir -p /home
 
@@ -44,11 +49,6 @@ RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUS
 # install some other tools
 RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 RUN wget -qO- https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-
-# install golang manually
-RUN cd $HOME/tmp \
-  && wget -q https://dl.google.com/go/go1.13.linux-amd64.tar.gz \
-  && tar -C /usr/local xzf go1.13.linux-amd64.tar.gz
 
 # copy the files that need to be in place
 COPY linux/.zshrc linux/.tmux.conf linux/.vimrc $HOME/
