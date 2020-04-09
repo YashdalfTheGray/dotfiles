@@ -250,7 +250,6 @@ alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
