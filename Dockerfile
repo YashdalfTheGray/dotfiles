@@ -51,9 +51,9 @@ RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | 
 RUN wget -qO- https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 
 # copy the files that need to be in place
-COPY linux/.zshrc linux/.tmux.conf linux/.vimrc $HOME/
+COPY linux/.zshrc linux/.tmux.conf linux/.vimrc /home/${USERNAME}/
 
 # set our working directory as the git projects directory
-WORKDIR $HOME/git-projects
+WORKDIR /home/${USERNAME}/git-projects
 
 CMD [ "zsh" ]
