@@ -20,12 +20,10 @@ export PATH=$PATH:"/home/$USER/bin"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
-eval "$(rbenv init -)"
+export LANG=en_US.UTF-8
+export TERM=xterm-256color
 
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
 
 function show-npm-scripts() {
   FILE=package.json
