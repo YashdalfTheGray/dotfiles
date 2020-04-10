@@ -8,6 +8,7 @@ ARG USERPASSWORD=dev
 
 # pull down some dependencies
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+  exa \
   fzf \
   git \
   jq \
