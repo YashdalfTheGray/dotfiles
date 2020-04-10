@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/yash/.oh-my-zsh
+export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -15,8 +15,10 @@ plugins=(git golang node npm npx nvm zsh-autosuggestions zsh-syntax-highlighting
 
 # User configuration
 
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/home/$USER/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:"/home/$USER/bin"
+# set the GOPATH
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
 
 eval "$(rbenv init -)"
 
@@ -76,13 +78,6 @@ function go-doc-piped-to-less() {
   fi
 }
 
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vimrc"
