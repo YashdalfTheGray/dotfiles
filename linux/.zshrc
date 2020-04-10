@@ -81,13 +81,6 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
 
-# set the GOPATH
-export GOPATH="/home/$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
-
-export NVM_DIR="/home/$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli ndb"
 alias npm-dryrun-publish="npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
 
@@ -126,7 +119,10 @@ alias jqcurl="curl-pipe-to-jq"
 alias get-aws-account="aws sts get-caller-identity | jq -r '.Account'"
 alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+eval "$(rbenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
