@@ -21,9 +21,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   zsh
 
 # install golang manually
-# RUN cd /tmp \
-#   && wget -q https://dl.google.com/go/go${GOVERSION}.${GOOS}-${GOARCH}.tar.gz \
-#   && tar -C /usr/local -xzf go${GOVERSION}.${GOOS}-${GOARCH}.tar.gz
+RUN cd /tmp \
+  && wget -q https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz \
+  && tar -C /usr/local -xzf go${GOVERSION}.linux-amd64.tar.gz
 
 # set up home directory for users
 RUN mkdir -p /home
