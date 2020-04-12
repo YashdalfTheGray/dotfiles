@@ -6,11 +6,10 @@ FROM debian:buster
 ARG USERNAME=dev
 ARG USERPASSWORD=dev
 ARG GOVERSION=1.13
-ARG NODEVERSION=13.12.0
-ARG RUBYVERSION=2.7.1
 
 # pull down some dependencies
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+  curl \
   exa \
   fzf \
   git \
