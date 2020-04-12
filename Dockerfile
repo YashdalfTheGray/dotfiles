@@ -1,7 +1,7 @@
 FROM debian:buster
 
-# This Dockerfile contains the entire development
-# environment, set up to the best approximation
+# This Dockerfile contains the entire development environment
+# Some of this is potentially best effort
 
 ARG USERNAME=dev
 ARG USERPASSWORD=dev
@@ -50,6 +50,7 @@ ENV USER=${USERNAME} \
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install some other tools
 RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
@@ -61,4 +62,5 @@ COPY linux/.zshrc linux/.tmux.conf linux/.vimrc /home/${USERNAME}/
 # set our working directory as the git projects directory
 WORKDIR /home/${USERNAME}/git-projects
 
+# start in zsh instead of bash
 CMD [ "zsh" ]
