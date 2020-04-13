@@ -46,8 +46,9 @@ RUN mkdir -p /home/${USERNAME}/git-projects \
   && mkdir -p /home/${USERNAME}/tmp \
   && mkdir -p /home/${USERNAME}/go
 
-# Setup our env - gopath, goroot, and path
-ENV USER=${USERNAME} \
+# setup our env - user, goroot, and path
+ENV \
+  USER=${USERNAME} \
   USERNAME=${USERNAME} \
   GOROOT="/usr/local/go/bin" \
   PATH="/home/${USERNAME}/.rbenv/bin:/home/${USERNAME}/.rbenv/shims:${PATH}"
