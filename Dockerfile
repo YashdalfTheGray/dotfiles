@@ -9,14 +9,21 @@ ARG GOVERSION=1.13
 
 # pull down some dependencies
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+  build-essential \
   curl \
   exa \
   fzf \
   git \
   jq \
+  libreadline-dev \
+  libsqlite3-dev \
+  libssl-dev \
+  locales \
+  sqlite3 \
   tmux \
   vim \
   wget \
+  zlib1g-dev \
   zsh
 
 # install golang manually
