@@ -1,6 +1,6 @@
 # dotfiles
 
-My terminal config files, grouped by os
+My terminal config files, grouped by os. With a little Docker surprise.
 
 ## macOS
 
@@ -9,20 +9,21 @@ My terminal config files, grouped by os
 Expects [`rbenv`](https://github.com/rbenv/rbenv), [`nvm`](https://github.com/nvm-sh/nvm), [`fzf`](https://github.com/junegunn/fzf), and [iTerm2](https://iterm2.com/) to be used in conjunction with this file. You can also just comment those pieces out.
 
 Installed plugins
-* autojump
-* docker
-* docker-compose
-* git
-* golang
-* kubectl
-* lol
-* node
-* npm
-* npx
-* nvm
-* osx
-* zsh-autosuggestions
-* zsh-syntax-highlighting
+
+- autojump
+- docker
+- docker-compose
+- git
+- golang
+- kubectl
+- lol
+- node
+- npm
+- npx
+- nvm
+- osx
+- zsh-autosuggestions
+- zsh-syntax-highlighting
 
 Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme.
 
@@ -40,5 +41,5 @@ Uses [`tpm`](https://github.com/tmux-plugins/tpm) for installing plugins.
 
 ## Resources
 
-* [tmux cheat sheet](https://gist.github.com/MohamedAlaa/2961058)
-* [tmux color sheet](https://i.stack.imgur.com/e63et.png)
+- [tmux cheat sheet](https://gist.github.com/MohamedAlaa/2961058)
+- [tmux color sheet](https://i.stack.imgur.com/e63et.png)
