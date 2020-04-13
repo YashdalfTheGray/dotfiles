@@ -2,6 +2,14 @@
 
 My terminal config files, grouped by os. With a little Docker surprise.
 
+## Dockerfile?
+
+The dockerfile in this repo represents a best effort image that has most of the tooling that is configured in the dotfiles here. Specifically it targets the linux dotfiles, builds out a full image with the requisite tools, all that remains to do is
+
+- configure git with your credentials
+- select and install a version of ruby and/or node if you're gonna use those
+- configure the AWS CLI
+
 ## macOS
 
 ### `oh-my-zsh`
