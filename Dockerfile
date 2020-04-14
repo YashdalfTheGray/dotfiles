@@ -21,6 +21,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   locales \
   sqlite3 \
   tmux \
+  unzip \
   vim \
   wget \
   zlib1g-dev \
