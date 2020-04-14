@@ -10,6 +10,10 @@ The dockerfile in this repo represents a best effort image that has most of the 
 - select and install a version of ruby and/or node if you're gonna use those
 - configure the AWS CLI
 
+Since the container already has `rbenv` and `nvm`, you should just be able to run `rbenv install <ruby_version>` and/or `nvm install <node_version>` to install the right things.
+
+To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
+
 ## macOS
 
 ### `oh-my-zsh`
