@@ -32,6 +32,7 @@ RUN cd /tmp \
   && wget -q https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz \
   && tar -C /usr/local -xzf go${GOVERSION}.linux-amd64.tar.gz
 
+# install the AWS CLI v2
 RUN cd /tmp \
   && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
   && unzip awscliv2.zip \
@@ -71,6 +72,9 @@ RUN wget -qO- https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-inst
 
 # copy the files that need to be in place
 COPY linux/.zshrc linux/.tmux.conf linux/.vimrc /home/${USERNAME}/
+
+# install the vim plugins
+RUN vim +PlugInstall +qall > /dev/null
 
 # set our working directory as the git projects directory
 WORKDIR /home/${USERNAME}/git-projects
