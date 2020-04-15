@@ -55,6 +55,10 @@ The `.tmux.conf` file sets some shortcuts and a theme for `tmux`. This has been 
 
 Uses [`tpm`](https://github.com/tmux-plugins/tpm) for installing plugins.
 
+## What are these other folders about?
+
+Most of the other folders in this repo are modifications on the macOS versions of the files, for example, linux doesn't have homebrew.
+
 ## Resources
 
 - [tmux cheat sheet](https://gist.github.com/MohamedAlaa/2961058)
