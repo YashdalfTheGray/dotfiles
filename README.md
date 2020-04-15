@@ -14,6 +14,10 @@ Since the container already has `rbenv` and `nvm`, you should just be able to ru
 
 To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
 
+### Cool. How do I run it?
+
+You can pull down this repository and just run `docker build -t <image_name> .` which will build an image out of the files. You'll need the internet to build the image. Then running a `docker run --rm -it --name <container_name> <image_name>:latest` will run the container.
+
 ## macOS
 
 ### `oh-my-zsh`
