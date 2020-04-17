@@ -19,7 +19,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   libsqlite3-dev \
   libssl-dev \
   locales \
-  openssh-server \
   sqlite3 \
   tmux \
   unzip \
@@ -27,6 +26,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   wget \
   zlib1g-dev \
   zsh
+
+# Set up a message of the day to tell the user about this container
+COPY motd /etc/
 
 # install golang manually
 RUN cd /tmp \
