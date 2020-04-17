@@ -1,0 +1,22 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: AWS CloudFormation template to create a full development environment on ECS
+Parameters:
+
+Resources:
+  DevEnvTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      RequiresCompatibilities:
+        - FARGATE
+      Volumes: []
+      NetworkMode: awsvpc
+      Memory: 2048
+      Cpu: 512
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/ecsTaskExecutionRole"
+      PlacementConstraints: []
+      Family: devenv
+      ContainerDefinitions:
+        - Name: devenv-instance
+          Image: yashdalfthegray/devenv
+          Essential: true
