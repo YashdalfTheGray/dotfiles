@@ -1,0 +1,22 @@
+# Docker Devenv
+
+This container is a fully configured development environment. This means that it has git, vim, tmux, oh-my-zsh, fzf, and a couple of other tools all ready to go. It also comes with support for the following languages
+
+- Golang
+- JavaScript (Node.js)
+- Ruby
+
+A version of go is already installed but the container only contains rbenv and nvm but no installed versions of Ruby or Node.js. Install versions as you see fit using the following commands.
+
+```
+rbenv install <version>
+nvm install <version>
+```
+
+The other thing to do is configure the AWS CLI and git the way you want. You can do that using the following commands.
+
+```
+aws configure
+git config --global user.name "<your_username>"
+git config --global user.email <your_email>
+```
