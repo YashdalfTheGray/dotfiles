@@ -19,6 +19,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   libsqlite3-dev \
   libssl-dev \
   locales \
+  openssh-server \
   sqlite3 \
   tmux \
   unzip \
