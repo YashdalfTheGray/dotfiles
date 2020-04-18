@@ -25,6 +25,10 @@ export TERM=xterm-256color
 
 source $ZSH/oh-my-zsh.sh
 
+function running_in_docker() {
+  awk -F/ '$2 == "docker"' /proc/self/cgroup | read
+}
+
 function show-npm-scripts() {
   FILE=package.json
   if [ -f "$FILE" ]; then
