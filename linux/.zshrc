@@ -131,4 +131,6 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-cat /etc/motd
+if running_in_docker ; then
+  cat /etc/motd
+fi
