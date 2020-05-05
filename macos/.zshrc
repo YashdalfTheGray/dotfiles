@@ -236,6 +236,8 @@ alias docker-exit-code="docker inspect --format='{{.State.ExitCode}}'"
 
 alias c="clear"
 alias l="exa -abhHlS"
+alias tree="tree -C"
+alias t="tree"
 alias weather="curl http://wttr.in/"
 
 alias sourcream="source ~/.zshrc"

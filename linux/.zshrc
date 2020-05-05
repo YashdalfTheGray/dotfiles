@@ -112,6 +112,8 @@ alias gdocl="go-doc-piped-to-less"
 
 alias c="clear"
 alias l="exa -abhHlS"
+alias tree="tree -C"
+alias t="tree"
 alias weather="curl http://wttr.in/"
 
 alias sourcream="source ~/.zshrc"
