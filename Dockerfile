@@ -20,6 +20,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   libssl-dev \
   locales \
   sqlite3 \
+  tree \
   tmux \
   unzip \
   vim \
