@@ -48,7 +48,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump docker docker-compose git golang gradle kubectl lol node npm npx nvm osx zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(autojump docker docker-compose git golang gradle gradle-completion kubectl lol node npm npx nvm osx zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
