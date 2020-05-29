@@ -18,7 +18,8 @@ plugins=(git golang node npm npx nvm zsh-autosuggestions zsh-syntax-highlighting
 export PATH=$PATH:"/home/$USER/bin"
 # set the GOPATH
 export GOPATH="$HOME/go"
-export PATH="$PATH:$GOROOT:$GOPATH/bin"
+export GOROOT="/usr/local/go"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
