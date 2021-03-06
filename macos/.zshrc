@@ -52,7 +52,7 @@ plugins=(autojump docker docker-compose git golang gradle gradle-completion kube
 
 # User configuration
 
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin:/Users/yash/bin:/Users/yash/flutter/bin:/Users/yash/Library/Python/3.7/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yash/bin:/Users/yash/Library/Android/sdk/tools:/Users/yash/Library/Android/sdk/tools/bin:/Users/yash/Library/Android/sdk/platform-tools:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:/Users/yash/Library/Python/3.6/bin:/Users/yash/bin:/Users/yash/flutter/bin:/Users/yash/Library/Python/3.7/bin:/Users/yash/.cargo/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 eval "$(rbenv init -)"
@@ -173,6 +173,23 @@ function go-doc-piped-to-less() {
   fi
 }
 
+function uuidgen() {
+  /usr/bin/uuidgen | awk '{print tolower($0)}'
+}
+
+function generate-uuids() {
+  if [ $# -eq 0 ]; then
+    uuidgen
+    return 0
+  fi
+
+  if (( $1 <= 1 )); then
+    uuidgen
+    return 0
+  fi
+
+  for i in {1..$1}; do /usr/bin/uuidgen; done | awk '{print tolower($0)}'
+}
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -188,6 +205,10 @@ alias tmuxconfig="vim ~/.tmux.conf"
 # set the GOPATH
 export GOPATH="/Users/yash/go"
 export PATH="$PATH:$GOPATH/bin"
+
+# set the Java_HOME
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+export PATH="$PATH:$JAVA_HOME/bin"
 
 export NVM_DIR="/Users/yash/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -248,6 +269,11 @@ alias gcurl="curl-from-github-and-save"
 alias jqcurl="curl-pipe-to-jq"
 alias get-aws-account="aws sts get-caller-identity | jq -r '.Account'"
 alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy"
+
+alias getuuid="generate-uuids"
+alias getuuids="generate-uuids"
+
+alias now-in-unix="node -p 'Date.now()'"
 
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
