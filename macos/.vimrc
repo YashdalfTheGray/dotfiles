@@ -33,6 +33,7 @@ Plug 'palantir/tslint'
 Plug 'quramy/tsuquyomi'
 Plug 'frazrepo/vim-rainbow'
 Plug '/usr/local/opt/fzf'
+Plug 'rust-lang/rust.vim'
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
@@ -101,18 +102,18 @@ let g:tsuquyomi_completion_detail = 1
 
 " Linting
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'typescript': ['tsserver', 'tslint'],
-\   'vue': ['eslint']
-\}
+    \'javascript': ['eslint'],
+    \'typescript': ['tsserver', 'tslint'],
+    \'vue': ['eslint']
+    \}
 
 let g:ale_fixers = {
-\    'javascript': ['eslint'],
-\    'typescript': ['prettier'],
-\    'vue': ['eslint'],
-\    'scss': ['prettier'],
-\    'html': ['prettier']
-\}
+    \ 'javascript': ['eslint'],
+    \ 'typescript': ['prettier'],
+    \ 'vue': ['eslint'],
+    \ 'scss': ['prettier'],
+    \ 'html': ['prettier']
+    \}
 let g:ale_fix_on_save = 1
 
 " NERDTress File highlighting
