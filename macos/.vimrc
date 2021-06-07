@@ -106,18 +106,18 @@ let g:tsuquyomi_completion_detail = 1
 
 " Linting
 let g:ale_linters = {
-    \'javascript': ['eslint'],
-    \'typescript': ['tsserver', 'tslint'],
-    \'vue': ['eslint']
-    \}
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'tslint'],
+\   'vue': ['eslint']
+\}
 
 let g:ale_fixers = {
-    \ 'javascript': ['eslint'],
-    \ 'typescript': ['prettier'],
-    \ 'vue': ['eslint'],
-    \ 'scss': ['prettier'],
-    \ 'html': ['prettier']
-    \}
+\    'javascript': ['eslint'],
+\    'typescript': ['prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\}
 let g:ale_fix_on_save = 1
 
 " NERDTress File highlighting
@@ -141,7 +141,7 @@ call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 " NERDTree git plugin
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
