@@ -34,6 +34,9 @@ Plug 'quramy/tsuquyomi'
 Plug 'frazrepo/vim-rainbow'
 Plug '/usr/local/opt/fzf'
 Plug 'rust-lang/rust.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
@@ -58,6 +61,7 @@ set omnifunc=syntaxcomplete#Complete
 " vim options that make plugins better
 set updatetime=100
 set laststatus=2
+let g:deoplete#enable_at_startup = 1
 
 " indentation stuff
 set autoindent
