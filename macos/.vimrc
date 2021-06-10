@@ -93,6 +93,10 @@ map ,v :vs <C-R>=expand("%:p:h") . "/" <CR>
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
 
+" deoplete tab completion
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
 " invoke FZF when <C-p> is pressed
 nnoremap <C-p> :FZF <CR>
 
