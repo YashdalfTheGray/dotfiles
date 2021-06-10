@@ -1,4 +1,5 @@
 set nocompatible
+set hidden
 
 " autoload Plug if needed
 if empty(glob('~/.vim/autoload/plug.vim'))
