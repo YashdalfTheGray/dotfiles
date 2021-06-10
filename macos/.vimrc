@@ -61,6 +61,7 @@ set omnifunc=syntaxcomplete#Complete
 " vim options that make plugins better
 set updatetime=100
 set laststatus=2
+let g:prettier#autoformat_require_pragma = 0
 let g:deoplete#enable_at_startup = 1
 
 " indentation stuff
