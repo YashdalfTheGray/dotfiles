@@ -10,7 +10,7 @@ The dockerfile in this repo represents a best effort image that has most of the 
 - select and install a version of ruby and/or node if you're gonna use those
 - configure the AWS CLI
 
-Since the container already has `rbenv` and `nvm`, you should just be able to run `rbenv install <ruby_version>` and/or `nvm install <node_version>` to install the right things.
+Since the container already has `rbenv` and `nvm`, you should just be able to run `rbenv install <ruby_version>` and/or `nvm install <node_version>` to install the right things. Additionally, a (at the time of writing) recent version of Golang as well as the Rust toolchain are also installed into the container.
 
 To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
 
@@ -49,7 +49,7 @@ Uses the [ys](https://github.com/robbyrussell/oh-my-zsh/wiki/themes#ys) theme.
 
 Uses [vim-plug](https://github.com/junegunn/vim-plug) as the package manager.
 
-Pulls the theme from the terminal color scheme, has mouse support, NERDTree and FZF support, as well as git markers for files and the gutter.
+Pulls the theme from the terminal color scheme, has mouse support, NERDTree and FZF support, as well as git markers for files and the gutter. Additionally, for systems that have Python3 interface support, there is also deoplete automcompletion. Separately, a language server client is also installed and enabled for Rust and Ruby.
 
 ### `tmux`
 
@@ -59,7 +59,7 @@ Uses [`tpm`](https://github.com/tmux-plugins/tpm) for installing plugins.
 
 ## What are these other folders about?
 
-Most of the other folders in this repo are modifications on the macOS versions of the files, for example, linux doesn't have homebrew.
+Most of the other folders in this repo are modifications on the macOS versions of the files.
 
 ## Resources
 
