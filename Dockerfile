@@ -1,11 +1,11 @@
-FROM debian:buster
+FROM debian:latest
 
 # This Dockerfile contains the entire development environment
 # Some of this is potentially best effort
 
 ARG USERNAME=dev
 ARG USERPASSWORD=dev
-ARG GOVERSION=1.13
+ARG GOVERSION=1.16.5
 
 # pull down some dependencies
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
