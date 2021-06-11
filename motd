@@ -3,6 +3,7 @@
 This container is a fully configured development environment. This means that it has git, vim, tmux, oh-my-zsh, fzf, and a couple of other tools all ready to go. It also comes with support for the following languages
 
 - Golang
+- Rust
 - JavaScript (Node.js)
 - Ruby
 

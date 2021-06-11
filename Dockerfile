@@ -65,7 +65,10 @@ ENV \
   USER=${USERNAME} \
   USERNAME=${USERNAME} \
   GOROOT="/usr/local/go/bin" \
-  PATH="/home/${USERNAME}/.rbenv/bin:/home/${USERNAME}/.rbenv/shims:${PATH}"
+  PATH="/home/${USERNAME}/.rbenv/bin:/home/${USERNAME}/.rbenv/shims:${PATH}:/home/${USERNAME}/.cargo/bin"
+
+# run a quick rust update to get the latest stable version
+RUN rustup update
 
 # install oh-my-zsh and a couple of added tools, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
