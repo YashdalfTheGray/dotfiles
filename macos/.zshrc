@@ -48,7 +48,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump docker docker-compose git golang gradle gradle-completion kubectl lol node npm npx nvm osx zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(autojump docker docker-compose git golang gradle gradle-completion kubectl lol node npm nvm osx zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -191,6 +191,12 @@ function generate-uuids() {
   for i in {1..$1}; do /usr/bin/uuidgen; done | awk '{print tolower($0)}'
 }
 
+function rename-files-from-kebob-to-pascal() {
+  for entry in *.gcode; do
+    mv $entry $(echo $entry | perl -p -e 's/(-)([a-z0-9])/\U\2/g' | perl -p -e 's/^(.)/\U\1/g')
+  done
+}
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -217,7 +223,7 @@ export NVM_DIR="/Users/yash/.nvm"
 # You can use whatever you want as an alias, like for Mondays:
 # eval "$(thefuck --alias FUCK)"
 
-alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli ndb"
+alias setup-npm="npm install --global typescript ava eslint babel-cli prettier"
 alias npm-dryrun-publish="npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
 
 alias playground="~/playground"
@@ -278,6 +284,7 @@ alias now-in-unix="node -p 'Date.now()'"
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
