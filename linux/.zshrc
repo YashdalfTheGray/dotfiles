@@ -137,3 +137,9 @@ export NVM_DIR="$HOME/.nvm"
 if running_in_docker ; then
   cat /etc/motd
 fi
+
+tmux attach &> /dev/null
+
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
