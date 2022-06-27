@@ -61,6 +61,30 @@ Uses [`tpm`](https://github.com/tmux-plugins/tpm) for installing plugins.
 
 Most of the other folders in this repo are modifications on the macOS versions of the files.
 
+## How do I fix the vim deoplete issue that I keep running into?
+
+While using vim, if you want autocomplete, one of the packages you can use is [`deoplete`](https://github.com/Shougo/deoplete.nvim). Deoplete has a hard dependency on a python package called `pynvim` and basically requires Python3 support. Though you can get around it if you have `pynvim` installed. But since managing versions of python can be difficult, you can figure out which version of python your vim is looking at by running the following code
+
+```
+:pythonx import sys; print(sys.path)
+```
+
+From here, figure out how to get access to the python executable that vim is looking at. On modern \*nix style OSes, it likely exists at a path similar to `/usr/local/opt/python@3.y/bin/python3` though it may be different. This path is specific to macOS and Homebrew.
+
+You can validate that you have the right path by running
+
+```
+<path_to_python> --version
+```
+
+Once you have the path, run
+
+```
+<path_to_python> -m pip install --user --upgrade pynvim
+```
+
+This will install `pynvim` and allow vim, thus deoplete, to find `pynvim`.
+
 ## Resources
 
 - [tmux cheat sheet](https://gist.github.com/MohamedAlaa/2961058)
