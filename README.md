@@ -69,7 +69,11 @@ While using vim, if you want autocomplete, one of the packages you can use is [`
 :pythonx import sys; print(sys.path)
 ```
 
-From here, figure out how to get access to the python executable that vim is looking at. On modern \*nix style OSes, it likely exists at a path similar to `/usr/local/opt/python@3.y/bin/python3` though it may be different. This path is specific to macOS and Homebrew.
+The step after this becomes a bit of a choose your own adventure depending on the major version of Python vim has found. Refer below.
+
+### Python3
+
+Figure out how to get access to the python executable that vim is looking at. On modern \*nix style OSes, it likely exists at a path similar to `/usr/local/opt/python@3.y/bin/python3` though it may be different. This path is specific to macOS and Homebrew.
 
 You can validate that you have the right path by running
 
@@ -77,7 +81,23 @@ You can validate that you have the right path by running
 <path_to_python> --version
 ```
 
-Once you have the path, run
+If you don't have `pip`, you'll need to pull that down next. Starting with Python 3.4, `pip` is included in the bundle. Otherwise, head [here](https://pip.pypa.io/en/stable/installation/) to install.
+
+Once you have the path and `pip`, run
+
+```
+<path_to_python> -m pip install --user --upgrade pynvim
+```
+
+This will install `pynvim` and allow vim, thus deoplete, to find `pynvim`.
+
+### Python2
+
+Figure out how to get access to the python executable that vim is looking at. This is likely at a system path like `/usr/bin` or `/usr/local/bin` but your mileage may vary on this.
+
+If you don't have `pip`, you'll need to pull that down next. Starting with Python 2.7, `pip` is included in the bundle. Otherwise, head [here](https://pip.pypa.io/en/stable/installation/) to install. Though I have also found that `pip` wasn't boostrapped properly even on installations reporting version 2.7 or higher.
+
+Once you have the path and `pip`, run
 
 ```
 <path_to_python> -m pip install --user --upgrade pynvim
