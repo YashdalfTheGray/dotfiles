@@ -48,7 +48,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump docker docker-compose git golang gradle gradle-completion kubectl lol node npm nvm osx zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(autojump deno docker docker-compose git golang gradle gradle-completion kubectl lol macos node npm nvm rust zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -223,7 +223,7 @@ export NVM_DIR="/Users/yash/.nvm"
 # You can use whatever you want as an alias, like for Mondays:
 # eval "$(thefuck --alias FUCK)"
 
-alias setup-npm="npm install --global typescript ava eslint babel-cli prettier"
+alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli prettier"
 alias npm-dryrun-publish="npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
 
 alias playground="~/playground"
@@ -241,7 +241,7 @@ alias fbo="firebase open"
 alias crad="cordova run android --device"
 alias crid="cordova run ios --device"
 
-alias serve-pwd="python -m SimpleHTTPServer"
+alias serve-pwd="python3 -m http.server"
 
 alias adblog="adb logcat jxcore-log:v cordova*:v *:s"
 alias adblog-chrome="adb logcat jxcore-log:v cordova*:v chrom*:v *:s"
