@@ -5,7 +5,7 @@ FROM debian:latest
 
 ARG USERNAME=dev
 ARG USERPASSWORD=dev
-ARG GOVERSION=1.16.5
+ARG GOVERSION=1.18.4
 
 # pull down some dependencies
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
@@ -77,7 +77,7 @@ RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUS
 RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install some other tools
-RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN wget -qO- https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 
 # copy the files that need to be in place
