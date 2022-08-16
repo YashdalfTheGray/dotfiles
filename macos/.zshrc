@@ -223,7 +223,7 @@ export NVM_DIR="/Users/yash/.nvm"
 # You can use whatever you want as an alias, like for Mondays:
 # eval "$(thefuck --alias FUCK)"
 
-alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli prettier"
+alias setup-npm="npm install --global typescript ava prettier"
 alias npm-dryrun-publish="npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
 
 alias playground="~/playground"
