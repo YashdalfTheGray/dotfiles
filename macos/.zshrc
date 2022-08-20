@@ -197,6 +197,11 @@ function rename-files-from-kebob-to-pascal() {
   done
 }
 
+function ffmeg-default-convert() {
+  local filename=$1
+  ffmpeg -i filename -vn -b:a 192k $filename.mp3
+}
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -280,6 +285,7 @@ alias getuuid="generate-uuids"
 alias getuuids="generate-uuids"
 
 alias now-in-unix="node -p 'Date.now()'"
+alias qffmpeg="ffmeg-default-convert"
 
 # added by travis gem
 [ -f /Users/yash/.travis/travis.sh ] && source /Users/yash/.travis/travis.sh
