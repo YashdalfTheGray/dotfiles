@@ -4,6 +4,9 @@
 # Colors: black, red, green, yellow, *blue, magenta, cyan, and white.
 #
 # Mar 2013 Yad Smood
+#
+# work ongoing to customize the colors a little bit
+# Sep 2022 @YashdalfTheGray
 
 if [[ $terminfo[colors] -ge 256 ]]; then
     turquoise="%F{81}"
