@@ -48,7 +48,25 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump deno docker docker-compose git golang gradle gradle-completion kubectl lol macos node npm nvm rust zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  autojump
+  deno
+  docker
+  docker-compose
+  git
+  golang
+  gradle
+  gradle-completion
+  kubectl
+  lol
+  macos
+  node
+  npm
+  nvm
+  rust
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 # User configuration
 
@@ -209,7 +227,7 @@ function ffmeg-default-convert() {
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias omzconfig="vim $ZSH"
 alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
 
