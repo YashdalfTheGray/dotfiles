@@ -57,3 +57,21 @@ Resources:
       RouteTableId: !Ref RouteViaIgw
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: !Ref InternetGateway
+
+  PubSubnet1RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PubSubnetAz1
+      RouteTableId: !Ref RouteViaIgw
+
+  EcsSecurityGroup:
+    Condition: CreateNewSecurityGroup
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ECS Allowed Ports
+      VpcId: !Ref Vpc
+      SecurityGroupIngress:
+        IpProtocol: tcp
+        FromPort: !Ref SecurityIngressFromPort
+        ToPort: !Ref SecurityIngressToPort
+        CidrIp: !Ref SecurityIngressCidrIp
