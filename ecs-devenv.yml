@@ -2,6 +2,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: AWS CloudFormation template to create a full development environment on ECS
 Parameters:
+  VpcAvailabilityZone:
+    Type: String
+    Description: the availability zone to put the subnet in
 
 Resources:
   DevEnvTaskDefinition:
@@ -33,7 +36,7 @@ Resources:
     Properties:
       VpcId: !Ref Vpc
       CidrBlock: !Ref SubnetCidr1
-      AvailabilityZone: !Select [0, !Ref VpcAvailabilityZones]
+      AvailabilityZone: !Ref VpcAvailabilityZones
       MapPublicIpOnLaunch: true
 
   InternetGateway:
@@ -63,15 +66,3 @@ Resources:
     Properties:
       SubnetId: !Ref PubSubnetAz1
       RouteTableId: !Ref RouteViaIgw
-
-  EcsSecurityGroup:
-    Condition: CreateNewSecurityGroup
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: ECS Allowed Ports
-      VpcId: !Ref Vpc
-      SecurityGroupIngress:
-        IpProtocol: tcp
-        FromPort: !Ref SecurityIngressFromPort
-        ToPort: !Ref SecurityIngressToPort
-        CidrIp: !Ref SecurityIngressCidrIp
