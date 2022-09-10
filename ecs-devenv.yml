@@ -13,7 +13,7 @@ Resources:
       NetworkMode: awsvpc
       Memory: 2048
       Cpu: 512
-      ExecutionRoleArn: !Sub 'arn:aws:iam::${AWS::AccountId}:role/ecsTaskExecutionRole'
+      ExecutionRoleArn: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:role/ecsTaskExecutionRole'
       PlacementConstraints: []
       Family: devenv
       ContainerDefinitions:
