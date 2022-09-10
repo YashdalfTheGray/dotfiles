@@ -24,45 +24,7 @@ Resources:
           Image: yashdalfthegray/devenv
           Essential: true
 
-  Vpc:
-    Type: AWS::EC2::VPC
+  DevEnvCluster:
+    Type: AWS::ECS::Cluster
     Properties:
-      CidrBlock: !Ref VpcCidr
-      EnableDnsSupport: true
-      EnableDnsHostnames: true
-
-  PubSubnetAz:
-    Type: AWS::EC2::Subnet
-    Properties:
-      VpcId: !Ref Vpc
-      CidrBlock: !Ref SubnetCidr1
-      AvailabilityZone: !Ref VpcAvailabilityZones
-      MapPublicIpOnLaunch: true
-
-  InternetGateway:
-    Type: AWS::EC2::InternetGateway
-
-  AttachGateway:
-    Type: AWS::EC2::VPCGatewayAttachment
-    Properties:
-      VpcId: !Ref Vpc
-      InternetGatewayId: !Ref InternetGateway
-
-  RouteViaIgw:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId: !Ref Vpc
-
-  PublicRouteViaIgw:
-    Type: AWS::EC2::Route
-    DependsOn: AttachGateway
-    Properties:
-      RouteTableId: !Ref RouteViaIgw
-      DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: !Ref InternetGateway
-
-  PubSubnet1RouteTableAssociation:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      SubnetId: !Ref PubSubnetAz1
-      RouteTableId: !Ref RouteViaIgw
+      ClusterName: 'dev-env-cluster'
