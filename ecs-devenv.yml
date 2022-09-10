@@ -7,6 +7,11 @@ Parameters:
     Description: Whether to create the network infrastructure or not
     AllowedValues: ['true', 'false']
     Default: 'true'
+  DesiredEnvironmentCount:
+    Type: Number
+    Description: The number of environments to spin up
+    MinValue: 1
+    Default: 1
 
 Conditions:
   CreateNetworkResources: !Equals
@@ -96,3 +101,31 @@ Resources:
         Ref: PublicSubnet
       RouteTableId:
         Ref: RouteViaIgw
+
+  DevEnvSecurityGroup:
+    Condition: CreateNetworkResources
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for the load test tasks
+      VpcId:
+        Ref: Vpc
+
+  DevEnvService:
+    Condition: CreateNetworkResources
+    Type: AWS::ECS::Service
+    Properties:
+      Cluster:
+        Ref: DevEnvCluster
+      DesiredCount:
+        Ref: DesiredEnvironmentCount
+      LaunchType: FARGATE
+      ServiceName: load-test-service
+      TaskDefinition:
+        Ref: DevEnvTaskDefinition
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          SecurityGroups:
+            - Ref: DevEnvSecurityGroup
+          Subnets:
+            - Ref: PublicSubnet
