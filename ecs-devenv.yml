@@ -2,6 +2,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: AWS CloudFormation template to create a full development environment on ECS
 Parameters:
+  ShouldCreateNetworkInfrastructure:
+    Type: String
+    Description: Whether to create the network infrastructure or not
+    AllowedValues: ['true', 'false']
+    Default: 'true'
+
+Conditions:
+  CreateNetworkResources: !Equals
+    - !Ref ShouldCreateNetworkInfrastructure
+    - 'true'
 
 Resources:
   DevEnvTaskDefinition:
@@ -27,6 +37,7 @@ Resources:
       ClusterName: 'dev-env-cluster'
 
   Vpc:
+    Condition: CreateNetworkResources
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
@@ -34,6 +45,7 @@ Resources:
       EnableDnsHostnames: 'true'
 
   PublicSubnet:
+    Condition: CreateNetworkResources
     Type: AWS::EC2::Subnet
     Properties:
       VpcId:
@@ -46,9 +58,11 @@ Resources:
               Ref: AWS::Region
 
   InternetGateway:
+    Condition: CreateNetworkResources
     Type: AWS::EC2::InternetGateway
 
   AttachGateway:
+    Condition: CreateNetworkResources
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
       VpcId:
@@ -57,12 +71,14 @@ Resources:
         Ref: InternetGateway
 
   RouteViaIgw:
+    Condition: CreateNetworkResources
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId:
         Ref: Vpc
 
   PublicRouteViaIgw:
+    Condition: CreateNetworkResources
     Type: AWS::EC2::Route
     DependsOn: AttachGateway
     Properties:
@@ -73,6 +89,7 @@ Resources:
         Ref: InternetGateway
 
   PublicSubnetRouteTableAssociation:
+    Condition: CreateNetworkResources
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       SubnetId:
