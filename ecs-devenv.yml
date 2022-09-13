@@ -36,12 +36,20 @@ Parameters:
     Type: String
     Description: The CIDR block to use while creating the public subnet
     Default: 10.0.0.0/24
+  PreferredAvailabilityZone:
+    Type: AWS::EC2::AvailabilityZone::Name
+    Description: The availability zone to use for the public subnet
 
 Conditions:
   CreateNetworkResourcesAndFargateService:
     Fn::Equals:
       - !Ref ShouldCreateNetworkInfraAndService
       - 'true'
+  AvailabilityZoneSpecified:
+    Fn::Not:
+      - Fn::Equals:
+          - !Ref PreferredAvailabilityZone
+          - ''
 
 Resources:
   DevEnvTaskDefinition:
@@ -81,9 +89,12 @@ Resources:
       VpcId: !Ref Vpc
       CidrBlock: !Ref PublicSubnetCidrBlock
       AvailabilityZone:
-        Fn::Select:
-          - '0'
-          - Fn::GetAZs: !Ref AWS::Region
+        Fn::If:
+          - AvailabilityZoneSpecified
+          - !Ref PreferredAvailabilityZone
+          - Fn::Select:
+              - '0'
+              - Fn::GetAZs: !Ref AWS::Region
 
   InternetGateway:
     Condition: CreateNetworkResourcesAndFargateService
