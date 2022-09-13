@@ -12,6 +12,10 @@ Parameters:
     Description: The number of environments to spin up
     MinValue: 1
     Default: 1
+  DevEnvContainerImage:
+    Type: String
+    Description: The image to use to spin up a devenv
+    Default: yashdalfthegray/devenv
 
 Conditions:
   CreateNetworkResourcesAndFargateService: !Equals
@@ -30,10 +34,10 @@ Resources:
       Cpu: 512
       ExecutionRoleArn: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:role/ecsTaskExecutionRole'
       PlacementConstraints: []
-      Family: devenv
+      Family: devenv-taskdef
       ContainerDefinitions:
         - Name: devenv-instance
-          Image: yashdalfthegray/devenv
+          Image: !Ref DevEnvContainerImage
           Essential: true
 
   DevEnvCluster:
