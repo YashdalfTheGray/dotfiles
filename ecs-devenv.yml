@@ -30,9 +30,10 @@ Parameters:
     Default: devenv-service
 
 Conditions:
-  CreateNetworkResourcesAndFargateService: !Equals
-    - !Ref ShouldCreateNetworkInfraAndService
-    - 'true'
+  CreateNetworkResourcesAndFargateService:
+    Fn::Equals:
+      - !Ref ShouldCreateNetworkInfraAndService
+      - 'true'
 
 Resources:
   DevEnvTaskDefinition:
@@ -69,14 +70,12 @@ Resources:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId:
-        Ref: Vpc
+      VpcId: !Ref Vpc
       CidrBlock: 10.0.0.0/24
       AvailabilityZone:
         Fn::Select:
           - '0'
-          - Fn::GetAZs:
-              Ref: AWS::Region
+          - Fn::GetAZs: !Ref AWS::Region
 
   InternetGateway:
     Condition: CreateNetworkResourcesAndFargateService
@@ -86,62 +85,51 @@ Resources:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      VpcId:
-        Ref: Vpc
-      InternetGatewayId:
-        Ref: InternetGateway
+      VpcId: !Ref Vpc
+      InternetGatewayId: !Ref InternetGateway
 
   RouteViaIgw:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::RouteTable
     Properties:
-      VpcId:
-        Ref: Vpc
+      VpcId: !Ref Vpc
 
   PublicRouteViaIgw:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::Route
     DependsOn: AttachGateway
     Properties:
-      RouteTableId:
-        Ref: RouteViaIgw
+      RouteTableId: !Ref RouteViaIgw
       DestinationCidrBlock: 0.0.0.0/0
-      GatewayId:
-        Ref: InternetGateway
+      GatewayId: !Ref InternetGateway
 
   PublicSubnetRouteTableAssociation:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      SubnetId:
-        Ref: PublicSubnet
-      RouteTableId:
-        Ref: RouteViaIgw
+      SubnetId: !Ref PublicSubnet
+      RouteTableId: !Ref RouteViaIgw
 
   DevEnvSecurityGroup:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security group for the load test tasks
-      VpcId:
-        Ref: Vpc
+      VpcId: !Ref Vpc
 
   DevEnvService:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::ECS::Service
     Properties:
-      Cluster:
-        Ref: DevEnvCluster
-      DesiredCount:
-        Ref: DesiredEnvironmentCount
+      Cluster: !Ref DevEnvCluster
+      DesiredCount: !Ref DesiredEnvironmentCount
       LaunchType: FARGATE
       ServiceName: !Ref DevEnvServiceName
-      TaskDefinition:
-        Ref: DevEnvTaskDefinition
+      TaskDefinition: !Ref DevEnvTaskDefinition
       NetworkConfiguration:
         AwsvpcConfiguration:
           AssignPublicIp: ENABLED
           SecurityGroups:
             - !GetAtt DevEnvSecurityGroup.GroupId
           Subnets:
-            - Ref: PublicSubnet
+            - !Ref PublicSubnet
