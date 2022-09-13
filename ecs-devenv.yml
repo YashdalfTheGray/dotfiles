@@ -28,6 +28,14 @@ Parameters:
     Type: String
     Description: The name of the ECS service for the development environments
     Default: devenv-service
+  VpcCidrBlock:
+    Type: String
+    Description: The CIDR block to use while creating the VPC
+    Default: 10.0.0.0/16
+  PublicSubnetCidrBlock:
+    Type: String
+    Description: The CIDR block to use while creating the public subnet
+    Default: 10.0.0.0/24
 
 Conditions:
   CreateNetworkResourcesAndFargateService:
@@ -62,7 +70,7 @@ Resources:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: 10.0.0.0/16
+      CidrBlock: !Ref VpcCidrBlock
       EnableDnsSupport: 'true'
       EnableDnsHostnames: 'true'
 
@@ -71,7 +79,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref Vpc
-      CidrBlock: 10.0.0.0/24
+      CidrBlock: !Ref PublicSubnetCidrBlock
       AvailabilityZone:
         Fn::Select:
           - '0'
@@ -114,7 +122,7 @@ Resources:
     Condition: CreateNetworkResourcesAndFargateService
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Security group for the load test tasks
+      GroupDescription: Security group for the development environment fargate tasks
       VpcId: !Ref Vpc
 
   DevEnvService:
