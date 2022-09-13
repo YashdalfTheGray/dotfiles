@@ -12,10 +12,22 @@ Parameters:
     Description: The number of environments to spin up
     MinValue: 1
     Default: 1
+  DevEnvTaskDefFamilyName:
+    Type: String
+    Description: The family name to give the task definition
+    Default: devenv-taskdef
   DevEnvContainerImage:
     Type: String
     Description: The image to use to spin up a devenv
     Default: yashdalfthegray/devenv
+  DevEnvClusterName:
+    Type: String
+    Description: The name of the cluster to put the service in
+    Default: devenv-cluster
+  DevEnvServiceName:
+    Type: String
+    Description: The name of the ECS service for the development environments
+    Default: devenv-service
 
 Conditions:
   CreateNetworkResourcesAndFargateService: !Equals
@@ -34,7 +46,7 @@ Resources:
       Cpu: 512
       ExecutionRoleArn: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:role/ecsTaskExecutionRole'
       PlacementConstraints: []
-      Family: devenv-taskdef
+      Family: !Ref DevEnvTaskDefFamilyName
       ContainerDefinitions:
         - Name: devenv-instance
           Image: !Ref DevEnvContainerImage
@@ -43,7 +55,7 @@ Resources:
   DevEnvCluster:
     Type: AWS::ECS::Cluster
     Properties:
-      ClusterName: 'dev-env-cluster'
+      ClusterName: !Ref DevEnvClusterName
 
   Vpc:
     Condition: CreateNetworkResourcesAndFargateService
@@ -123,13 +135,13 @@ Resources:
       DesiredCount:
         Ref: DesiredEnvironmentCount
       LaunchType: FARGATE
-      ServiceName: load-test-service
+      ServiceName: !Ref DevEnvServiceName
       TaskDefinition:
         Ref: DevEnvTaskDefinition
       NetworkConfiguration:
         AwsvpcConfiguration:
           AssignPublicIp: ENABLED
           SecurityGroups:
-            - Ref: DevEnvSecurityGroup
+            - !GetAtt DevEnvSecurityGroup.GroupId
           Subnets:
             - Ref: PublicSubnet
