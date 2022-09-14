@@ -68,6 +68,8 @@ Resources:
         - Name: devenv-instance
           Image: !Ref DevEnvContainerImage
           Essential: true
+          LinuxParameters:
+            InitProcessEnabled: true
 
   DevEnvCluster:
     Type: AWS::ECS::Cluster
@@ -145,6 +147,7 @@ Resources:
       LaunchType: FARGATE
       ServiceName: !Ref DevEnvServiceName
       TaskDefinition: !Ref DevEnvTaskDefinition
+      EnableExecuteCommand: true
       NetworkConfiguration:
         AwsvpcConfiguration:
           AssignPublicIp: ENABLED
