@@ -52,6 +52,21 @@ Conditions:
           - ''
 
 Resources:
+  DevEnvTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub 'ecs-devenv-task-role-${AWS::Region}'
+      Description: An ECS task role for devenv tasks
+      MaxSessionDuration: 7200
+      AssumeRolePolicyDocument:
+        Version: '2008-10-17'
+        Statement:
+          - Sid: 'Allow ECS Tasks to assume role'
+            Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+
   DevEnvTaskDefinition:
     Type: AWS::ECS::TaskDefinition
     Properties:
@@ -62,6 +77,7 @@ Resources:
       Memory: 2048
       Cpu: 512
       ExecutionRoleArn: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:role/ecsTaskExecutionRole'
+      TaskRoleArn: !GetAtt DevEnvTaskRole.Arn
       PlacementConstraints: []
       Family: !Ref DevEnvTaskDefFamilyName
       ContainerDefinitions:
