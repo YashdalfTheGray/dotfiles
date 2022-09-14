@@ -67,7 +67,27 @@ Resources:
               Service: ecs-tasks.amazonaws.com
             Action: sts:AssumeRole
 
+  EcsExecSsmPermissionsPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: 'Allow SSM permissions for ECS Exec'
+            Effect: Allow
+            Action:
+              - ssmmessages:CreateControlChannel
+              - ssmmessages:CreateDataChannel
+              - ssmmessages:OpenControlChannel
+              - ssmmessages:OpenDataChannel
+            Resource: '*'
+      PolicyName: EcsExecSsmPermissionsPolicy
+      Roles:
+        - !Ref DevEnvTaskRole
+
   DevEnvTaskDefinition:
+    DependsOn:
+      - EcsExecSsmPermissionsPolicy
     Type: AWS::ECS::TaskDefinition
     Properties:
       RequiresCompatibilities:
