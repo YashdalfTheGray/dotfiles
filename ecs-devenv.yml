@@ -28,6 +28,10 @@ Parameters:
     Type: String
     Description: The name of the ECS service for the development environments
     Default: devenv-service
+  DevEnvEcsTaskRoleNamePrefix:
+    Type: String
+    Description: The role name prefix to use for the ECS task role, the AWS region will be suffixed to it using a dash
+    Default: ecs-devenv-task-role
   VpcCidrBlock:
     Type: String
     Description: The CIDR block to use while creating the VPC
@@ -55,7 +59,7 @@ Resources:
   DevEnvTaskRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub 'ecs-devenv-task-role-${AWS::Region}'
+      RoleName: !Sub '${DevEnvEcsTaskRoleNamePrefix}-${AWS::Region}'
       Description: An ECS task role for devenv tasks
       MaxSessionDuration: 7200
       AssumeRolePolicyDocument:
