@@ -55,7 +55,7 @@ USER ${USERNAME}
 
 # install the rust toolchain installer too, but it installs in $HOME/.cargo
 # So we need to handle that after we switch users
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile=minimal
 
 # make some directories
 RUN mkdir -p /home/${USERNAME}/git-projects \
@@ -68,9 +68,6 @@ ENV \
   USERNAME=${USERNAME} \
   GOROOT="/usr/local/go/bin" \
   PATH="/home/${USERNAME}/.rbenv/bin:/home/${USERNAME}/.rbenv/shims:${PATH}:/home/${USERNAME}/.cargo/bin"
-
-# run a quick rust update to get the latest stable version
-RUN rustup update
 
 # install oh-my-zsh and a couple of added tools, because otherwise, what's the point
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
