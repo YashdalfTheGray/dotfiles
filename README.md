@@ -16,6 +16,8 @@ To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACC
 
 ### Cool. How do I run it?
 
+You can just run it by pulling `docker run --rm -it --name <container_name> yashdalfthegray/devenv`.
+
 You can pull down this repository and just run `docker build -t <image_name> .` which will build an image out of the files. You'll need the internet to build the image. Then running a `docker run --rm -it --name <container_name> <image_name>:latest` will run the container.
 
 The container will print out a message to tell you the all of the things that you can configure before getting started working on the container itself.
