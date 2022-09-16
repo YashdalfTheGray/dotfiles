@@ -37,9 +37,6 @@ RUN cd /tmp \
   && wget -q https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz \
   && tar -C /usr/local -xzf go${GOVERSION}.linux-amd64.tar.gz
 
-# install the rust toolchain installer too
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 # install the AWS CLI v2
 RUN cd /tmp \
   && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
@@ -55,6 +52,10 @@ RUN adduser --quiet --disabled-password --shell /bin/zsh --home /home/${USERNAME
 
 # switch to the user so that everything is installed for it
 USER ${USERNAME}
+
+# install the rust toolchain installer too, but it installs in $HOME/.cargo
+# So we need to handle that after we switch users
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # make some directories
 RUN mkdir -p /home/${USERNAME}/git-projects \
