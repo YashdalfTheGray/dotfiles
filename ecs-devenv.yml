@@ -65,11 +65,17 @@ Resources:
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
-          - Sid: TrustCurrentAccountRolesAndUsers
+          - Sid: AllowECSTasksAccessToAssumeRole
             Effect: Allow
             Principal:
-              AWS: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'
+              Service:
+                - ecs-tasks.amazonaws.com
             Action: sts:AssumeRole
+            Condition:
+              ArnLike:
+                aws:SourceArn: !Sub 'arn:${AWS::Partition}:ecs:${AWS::Region}:${AWS::AccountId}:*'
+              StringEquals:
+                aws:SourceAccount: !Ref AWS::AccountId
 
   EcsExecSsmPermissionsPolicy:
     Type: AWS::IAM::Policy
