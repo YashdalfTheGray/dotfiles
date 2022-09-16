@@ -77,7 +77,7 @@ Resources:
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
-          - Sid: 'Allow SSM permissions for ECS Exec'
+          - Sid: AllowSSMPermissionsForECSExec
             Effect: Allow
             Action:
               - ssmmessages:CreateControlChannel
