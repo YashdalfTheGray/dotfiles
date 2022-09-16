@@ -63,12 +63,12 @@ Resources:
       Description: An ECS task role for devenv tasks
       MaxSessionDuration: 7200
       AssumeRolePolicyDocument:
-        Version: '2008-10-17'
+        Version: '2012-10-17'
         Statement:
-          - Sid: 'Allow ECS Tasks to assume role'
+          - Sid: TrustCurrentAccountRolesAndUsers
             Effect: Allow
             Principal:
-              Service: ecs-tasks.amazonaws.com
+              AWS: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'
             Action: sts:AssumeRole
 
   EcsExecSsmPermissionsPolicy:
