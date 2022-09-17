@@ -35,13 +35,15 @@ COPY motd /etc/
 # install golang manually
 RUN cd /tmp \
   && wget -q https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz \
-  && tar -C /usr/local -xzf go${GOVERSION}.linux-amd64.tar.gz
+  && tar -C /usr/local -xzf go${GOVERSION}.linux-amd64.tar.gz \
+  && rm -rf go${GOVERSION}.linux-amd64.tar.gz
 
 # install the AWS CLI v2
 RUN cd /tmp \
   && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
   && unzip awscliv2.zip \
-  && ./aws/install
+  && ./aws/install \
+  && rm awscliv2.zip
 
 # set up home directory for users
 RUN mkdir -p /home
