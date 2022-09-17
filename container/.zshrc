@@ -29,9 +29,11 @@ export PATH=$PATH:"$HOME/bin"
 # set the GOPATH
 export GOPATH="$HOME/go"
 export GOROOT="/usr/local/go"
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 
-export LANG=en_US.UTF-8
+# Set the actual PATH envvar
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims"
+
+# set terminal color support
 export TERM=xterm-256color
 
 source $ZSH/oh-my-zsh.sh
@@ -102,6 +104,14 @@ function setup-go() {
   tar -C /usr/local -xzf ${GOVERSION}.linux-amd64.tar.gz
   rm -rf ${GOVERSION}.linux-amd64.tar.gz
   popd
+  set +x
+}
+
+function setup-ruby() {
+  set -x
+  git clone --depth 1 https://github.com/rbenv/rbenv.git ~/.rbenv
+  git clone --depth 1 https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
   set +x
 }
 
