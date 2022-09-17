@@ -87,6 +87,24 @@ function go-doc-piped-to-less() {
   fi
 }
 
+function setup-go() {
+  set -x
+  local GOVERSION=""
+
+  if [ $# -eq 0 ]; then
+    GOVERSION=$(curl https://go.dev/VERSION\?m\=text)
+  else
+    GOVERSION="go${1/v/}"
+  fi
+
+  pushd /tmp
+  wget -q https://dl.google.com/go/${GOVERSION}.linux-amd64.tar.gz
+  tar -C /usr/local -xzf ${GOVERSION}.linux-amd64.tar.gz
+  rm -rf ${GOVERSION}.linux-amd64.tar.gz
+  popd
+  set +x
+}
+
 alias zshconfig="vim $HOME/.zshrc"
 alias ohmyzsh="vim $HOME/.oh-my-zsh"
 alias vimconfig="vim $HOME/.vimrc"
