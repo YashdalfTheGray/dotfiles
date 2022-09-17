@@ -5,7 +5,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   build-essential \
   curl \
   exa \
-  fzf \
   git \
   jq \
   libreadline-dev \
@@ -30,6 +29,9 @@ RUN git clone --depth 1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # copy the files that need to be in place
 COPY container/.zshrc container/.tmux.conf container/.vimrc /root/
+
+# install fzf once the right files are in place
+RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 # install the vim plugins
 RUN vim +PlugInstall +qall > /dev/null

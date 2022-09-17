@@ -133,6 +133,6 @@ alias get-aws-account="aws sts get-caller-identity | jq -r '.Account'"
 alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy"
 
 # install fzf keybindings
-. /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 cat /etc/motd
