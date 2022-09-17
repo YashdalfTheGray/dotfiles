@@ -26,9 +26,13 @@ plugins=(
 # User configuration
 
 export PATH=$PATH:"$HOME/bin"
+
 # set the GOPATH
 export GOPATH="$HOME/go"
 export GOROOT="/usr/local/go"
+
+# NVM setup
+export NVM_DIR="$HOME/.nvm"
 
 # Set the actual PATH envvar
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims"
@@ -115,6 +119,14 @@ function setup-ruby() {
   set +x
 }
 
+function setup-node() {
+  set -x
+  local NVMVERSION="${1:-v0.39.1}"
+  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/${NVMVERSION}/install.sh | bash
+  echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> ~/.zshrc
+  set +x
+}
+
 alias zshconfig="vim $HOME/.zshrc"
 alias ohmyzsh="vim $HOME/.oh-my-zsh"
 alias vimconfig="vim $HOME/.vimrc"
@@ -162,5 +174,3 @@ alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy
 
 # install fzf keybindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-cat /etc/motd
