@@ -127,6 +127,18 @@ function setup-node() {
   set +x
 }
 
+function setup-rust() {
+  set -x
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  set +x
+}
+
+function setup-deno() {
+  set -x
+  curl -fsSL https://deno.land/install.sh | sh
+  set +x
+}
+
 alias zshconfig="vim $HOME/.zshrc"
 alias ohmyzsh="vim $HOME/.oh-my-zsh"
 alias vimconfig="vim $HOME/.vimrc"
