@@ -35,8 +35,11 @@ export GOROOT="/usr/local/go"
 # NVM setup
 export NVM_DIR="$HOME/.nvm"
 
+# Deno setup
+export DENO_INSTALL="/root/.deno"
+
 # Set the actual PATH envvar
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.cargo/bin:$DENO_INSTALL/bin"
 
 # set terminal color support
 export TERM=xterm-256color
