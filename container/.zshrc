@@ -24,6 +24,10 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# set default editor for all sorts of things
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # User configuration
 
 export PATH=$PATH:"$HOME/bin"
