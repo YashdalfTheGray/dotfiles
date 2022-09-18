@@ -12,12 +12,13 @@ ZSH_THEME="ys"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  autojump
   deno
   git
   golang
   node
   nvm
+  rbenv
+  ruby
   rust
   zsh-autosuggestions
   zsh-syntax-highlighting
