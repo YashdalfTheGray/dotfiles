@@ -39,7 +39,10 @@ RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/ins
 RUN vim +PlugInstall +qall > /dev/null
 
 # Set up a message of the day to tell the user about this container
-COPY motd.md /etc/
+COPY container/motd.md /etc/
 
-# start in zsh instead of bash
-CMD [ "zsh" ]
+# Copy our start script
+COPY container/start /etc/
+
+# start a script that sleeps forever
+ENTRYPOINT [ "/etc/start" ]
