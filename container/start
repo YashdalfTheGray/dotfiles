@@ -1,0 +1,20 @@
+#! /bin/bash
+
+# a function that waits forever without needinf sleep
+# to serve as the entry point when we're running in
+# detached mode and will use docker exec to access
+# our dev container
+function sleep_forever() {
+  while :; do :; done & kill -STOP $! && wait $!
+}
+
+# ${1:-false} means to check the first passed in argument
+# and default to the string "false" if it is not defined
+# we are making the assumption here that whether we need
+# to run in detatched mode will be passed in as an
+# argument, specifically the first one.
+if [[ "${1:-false}" == "true" ]]; then
+  sleep_forever
+else
+  /bin/zsh
+fi
