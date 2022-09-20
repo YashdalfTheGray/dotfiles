@@ -1,6 +1,6 @@
 # Docker Devenv
 
-Welcome to the devenv container. This combines common developer tooling like tmux+vim+zsh into a single container image and it includes commands to set up different languages as the user desires.
+Welcome to the devenv container. This combines common developer tooling like tmux+vim+zsh into a single container image and it includes commands to set up different languages as the user desires. This container is intended to be stateless, it is suggested that you either upload all your work to version control, or mount a volume to save it on the host or in the cloud.
 
 The following commands to set up language support are available
 
