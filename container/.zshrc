@@ -29,7 +29,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # User configuration
-
 export PATH=$PATH:"$HOME/bin"
 
 # set the GOPATH
@@ -101,6 +100,23 @@ function go-doc-piped-to-less() {
   fi
 }
 
+function install-awscli() {
+  set -x
+  pushd /tmp
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  ./aws/install
+  rm awscliv2.zip
+  popd
+  set +x
+}
+
+function setup-deno() {
+  set -x
+  curl -fsSL https://deno.land/install.sh | sh
+  set +x
+}
+
 function setup-go() {
   set -x
   local GOVERSION=""
@@ -119,13 +135,6 @@ function setup-go() {
   set +x
 }
 
-function setup-ruby() {
-  set -x
-  git clone --depth 1 https://github.com/rbenv/rbenv.git ~/.rbenv
-  git clone --depth 1 https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
-  set +x
-}
 
 function setup-node() {
   set -x
@@ -135,35 +144,33 @@ function setup-node() {
   set +x
 }
 
+function setup-ruby() {
+  set -x
+  git clone --depth 1 https://github.com/rbenv/rbenv.git ~/.rbenv
+  git clone --depth 1 https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+  set +x
+}
+
 function setup-rust() {
   set -x
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   set +x
 }
 
-function setup-deno() {
-  set -x
-  curl -fsSL https://deno.land/install.sh | sh
-  set +x
-}
+# install fzf keybindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-function install-awscli() {
-  set -x
-  pushd /tmp
-  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-  unzip awscliv2.zip
-  ./aws/install
-  rm awscliv2.zip
-  popd
-  set +x
-}
+# only echo the motd once
+[ ! -f /etc/disable-motd-cat ] && { cat /etc/motd.md && touch /etc/disable-motd-cat }
 
 alias zshconfig="vim $HOME/.zshrc"
 alias ohmyzsh="vim $HOME/.oh-my-zsh"
 alias vimconfig="vim $HOME/.vimrc"
 alias tmuxconfig="vim $HOME/.tmux.conf"
+alias show-devenv-help="vim -M /etc/motd.md"
 
-alias setup-npm="npm install --global typescript ava eslint babel-cli firebase-tools particle-cli elm elm-github-install vue-cli ndb"
+alias setup-npm="npm install --global typescript ava eslint"
 alias npm-dryrun-publish="npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
 
 alias gitdir="$HOME/git-projects"
@@ -202,6 +209,3 @@ alias gcurl="curl-from-github-and-save"
 alias jqcurl="curl-pipe-to-jq"
 alias get-aws-account="aws sts get-caller-identity | jq -r '.Account'"
 alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy"
-
-# install fzf keybindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
