@@ -13,6 +13,10 @@ ZSH_THEME="ys"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git golang node npm npx nvm zsh-autosuggestions zsh-syntax-highlighting)
 
+# set default editor for all sorts of things
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # User configuration
 
 export PATH=$PATH:"/home/$USER/bin"
