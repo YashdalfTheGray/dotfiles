@@ -11,6 +11,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   libsqlite3-dev \
   libssl-dev \
   locales \
+  procps \
   sqlite3 \
   tree \
   tmux \
@@ -18,7 +19,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   vim \
   wget \
   zlib1g-dev \
-  zsh
+  zsh \
+  && rm -rf /var/lib/apt/lists/*
 
 # install oh-my-zsh and a couple of added tools, because otherwise, what's the point
 ENV ZSH="/root/.oh-my-zsh"
