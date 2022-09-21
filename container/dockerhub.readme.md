@@ -6,6 +6,8 @@ The dockerfile in this repo represents a best effort image that has most of the 
 - configure git with your credentials
 - configure the AWS CLI
 
+Note that this is meant to be a stateless container. It is recommended that each session be ended with saving your work either using a version control system or saving to a volume mounted within the container.
+
 The container includes commands that start with `setup-` that enable quick setups for the following languages and runtimes
 
 - Deno via `setup-deno`
@@ -22,7 +24,9 @@ The container will print a message out on first login with this information and 
 
 ### Cool. How do I run it?
 
-You can just run it by pulling `docker run --rm -it --name <container_name> yashdalfthegray/devenv`.
+You can just run it by pulling `docker run --rm -it --name <container_name> yashdalfthegray/devenv:latest`.
+
+The image is also available on [public ECR](https://gallery.ecr.aws/yashdalfthegray/devenv) and can be pulled using `docker run --rm -it --name <container_name> public.ecr.aws/yashdalfthegray/devenv:latest`
 
 Alternatively, you can pull down the repository linked below and run `docker build -t <image_name> .` which will build an image out of the files. You'll need acces to the internet to build the image. Then running a `docker run --rm -it --name <container_name> <image_name>:latest` will run the container.
 
