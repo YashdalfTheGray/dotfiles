@@ -18,12 +18,12 @@ All of the language setup commands are configured to either pull down the latest
 
 To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
 
+The container will print a message out on first login with this information and the message can be recalled by running `show-devenv-help`.
+
 ### Cool. How do I run it?
 
 You can just run it by pulling `docker run --rm -it --name <container_name> yashdalfthegray/devenv`.
 
-You can pull down the repository linked below and just run `docker build -t <image_name> .` which will build an image out of the files. You'll need the internet to build the image. Then running a `docker run --rm -it --name <container_name> <image_name>:latest` will run the container.
-
-The container will print out a message to tell you the all of the things that you can configure before getting started working on the container itself.
+Alternatively, you can pull down the repository linked below and run `docker build -t <image_name> .` which will build an image out of the files. You'll need acces to the internet to build the image. Then running a `docker run --rm -it --name <container_name> <image_name>:latest` will run the container.
 
 [Repository](https://github.com/YashdalfTheGray/dotfiles)
