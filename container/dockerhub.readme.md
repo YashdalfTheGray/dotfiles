@@ -1,12 +1,20 @@
 ## devenv
 
-The dockerfile in this repo represents a best effort image that has most of the tooling that is configured in the dotfiles here. Specifically it targets the linux dotfiles, builds out a full image with the requisite tools, all that remains to do is
+The dockerfile in this repo represents a best effort image that has most of the tooling that is configured in the dotfiles here. Specifically it targets the container dotfiles, builds out a full image with the requisite tools, all that remains to do is
 
+- pick a language to set up, or pick multiple
 - configure git with your credentials
-- select and install a version of ruby and/or node if you're gonna use those
 - configure the AWS CLI
 
-Since the container already has `rbenv` and `nvm`, you should just be able to run `rbenv install <ruby_version>` and/or `nvm install <node_version>` to install the right things. Additionally, a (at the time of writing) recent version of Golang as well as the Rust toolchain are also installed into the container.
+The container includes commands that start with `setup-` that enable quick setups for the following languages and runtimes
+
+- Deno via `setup-deno`
+- Golang via `setup-golang`
+- Node.js via `setup-node`
+- Ruby via `setup-ruby`
+- Rust via `setup-rust`
+
+All of the language setup commands are configured to either pull down the latest version of the compiler or install a version manager, in the case of Node.js, Ruby, and Rust. You can optionally pass in a version in the format v1.19.1 to the `setup-go` command.
 
 To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
 
