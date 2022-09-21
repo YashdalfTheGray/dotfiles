@@ -31,3 +31,9 @@ The image is also available on [public ECR](https://gallery.ecr.aws/yashdalftheg
 Alternatively, you can pull down the repository linked below and run `docker build -t <image_name> .` which will build an image out of the files. You'll need acces to the internet to build the image. Then running a `docker run --rm -it --name <container_name> <image_name>:latest` will run the container.
 
 [Repository](https://github.com/YashdalfTheGray/dotfiles)
+
+There is another mode that this container can be run to support workflows where the need is to launch the container and then connect to it at a later point of time via a `docker exec` or similar command. This can be done by simply passing a `true` to the container entrypoint script as seen below,
+
+```
+docker run -it --rm --name <container_name> <image_name>:latest true`
+```
