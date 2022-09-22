@@ -13,6 +13,7 @@ The container includes commands that start with `setup-` that enable quick setup
 - Deno via `setup-deno`
 - Golang via `setup-golang`
 - Node.js via `setup-node`
+- Python via `setup-python`
 - Ruby via `setup-ruby`
 - Rust via `setup-rust`
 

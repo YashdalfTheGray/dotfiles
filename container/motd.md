@@ -7,6 +7,7 @@ The following commands to set up language support are available
 - `setup-deno`: sets up Deno (https://deno.land/)
 - `setup-go`: sets up Go (https://go.dev/)
 - `setup-node`: sets up nvm (https://github.com/nvm-sh/nvm)
+- `setup-python` - sets up python (https://www.python.org/)
 - `setup-ruby`: sets up rbenv and ruby-build (https://github.com/rbenv/rbenv)
 - `setup-rust`: sets up rustup (https://rustup.rs/)
 
