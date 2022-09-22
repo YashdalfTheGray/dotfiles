@@ -144,6 +144,12 @@ function setup-node() {
   set +x
 }
 
+function setup-python() {
+  set -x
+  apt update && apt install -y python3 python3-venv
+  set +x
+}
+
 function setup-ruby() {
   set -x
   git clone --depth 1 https://github.com/rbenv/rbenv.git ~/.rbenv
