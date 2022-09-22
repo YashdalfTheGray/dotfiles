@@ -35,5 +35,5 @@ Alternatively, you can pull down the repository linked below and run `docker bui
 There is another mode that this container can be run to support workflows where the need is to launch the container and then connect to it at a later point of time via a `docker exec` or similar command. This can be done by simply passing a `true` to the container entrypoint script as seen below,
 
 ```
-docker run -it --rm --name <container_name> <image_name>:latest true`
+docker run -d --rm --name <container_name> <image_name>:latest true`
 ```
