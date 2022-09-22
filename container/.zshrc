@@ -17,9 +17,11 @@ plugins=(
   golang
   node
   nvm
+  python
   rbenv
   ruby
   rust
+  virtualenv
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
