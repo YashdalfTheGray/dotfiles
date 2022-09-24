@@ -113,6 +113,12 @@ function install-awscli() {
   set +x
 }
 
+function install-vim-plugins() {
+  set -x
+  vim +PlugInstall +qall > /dev/null
+  set +x
+}
+
 function setup-deno() {
   set -x
   curl -fsSL https://deno.land/install.sh | sh
