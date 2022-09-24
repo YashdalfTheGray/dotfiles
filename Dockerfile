@@ -16,7 +16,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   tree \
   tmux \
   unzip \
-  vim \
+  vim-nox \
   wget \
   zlib1g-dev \
   zsh \
@@ -34,9 +34,6 @@ COPY container/.zshrc container/.tmux.conf container/.vimrc /root/
 
 # install fzf once the right files are in place
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-
-# install the vim plugins
-RUN vim +PlugInstall +qall > /dev/null
 
 # Set up a message of the day to tell the user about this container
 COPY container/motd.md /etc/
