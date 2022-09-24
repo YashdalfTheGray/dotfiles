@@ -33,6 +33,8 @@ Plug 'palantir/tslint'
 Plug 'quramy/tsuquyomi'
 Plug 'frazrepo/vim-rainbow'
 Plug '~/.fzf'
+Plug 'rust-lang/rust.vim'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
