@@ -32,7 +32,7 @@ Plug 'dense-analysis/ale'
 Plug 'palantir/tslint'
 Plug 'quramy/tsuquyomi'
 Plug 'frazrepo/vim-rainbow'
-Plug '/usr/local/opt/fzf'
+Plug '~/.fzf'
 
 " Themes
 Plug 'nlknguyen/papercolor-theme'
