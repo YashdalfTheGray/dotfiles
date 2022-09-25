@@ -8,6 +8,8 @@ The dockerfile in this repo represents a best effort image that has most of the 
 
 Note that this is meant to be a stateless container. It is recommended that each session be ended with saving your work either using a version control system or saving to a volume mounted within the container.
 
+### Configuration
+
 The container includes commands that start with `setup-` that enable quick setups for the following languages and runtimes
 
 - Deno via `setup-deno`
@@ -17,11 +19,17 @@ The container includes commands that start with `setup-` that enable quick setup
 - Ruby via `setup-ruby`
 - Rust via `setup-rust`
 
-All of the language setup commands are configured to either pull down the latest version of the compiler or install a version manager, in the case of Node.js, Ruby, and Rust. You can optionally pass in a version in the format v1.19.1 to the `setup-go` command.
-
-To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
+All of the language setup commands are configured to either pull down the latest version of the compiler. To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
 
 The container will print a message out on first login with this information and the message can be recalled by running `show-devenv-help`.
+
+#### Language specific notes
+
+- You can optionally pass a version into the the `setup-go` command, like `setup-go v1.19.1`. It will try to fetch the latest version from the go website though.
+- The node setup actually installs [`nvm`](https://github.com/nvm-sh/nvm) so the additional step there is to run `nvm install <desired_version_of_node>` to install an actual runtime.
+- The python setup installs both python 3 and virtualenv, we don't bother with python 2.
+- The ruby setup actually installs [rbenv with ruby-build as a plugin](https://github.com/rbenv/rbenv). The additional setup required is to install a ruby version.
+- The rust setup installs `rustup` which is the rust toolchain manager.
 
 ### Cool. How do I run it?
 
