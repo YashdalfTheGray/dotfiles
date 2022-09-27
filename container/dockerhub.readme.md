@@ -19,7 +19,9 @@ The container includes commands that start with `setup-` that enable quick setup
 - Ruby via `setup-ruby`
 - Rust via `setup-rust`
 
-All of the language setup commands are configured to either pull down the latest version of the compiler. To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
+Additionally, the GNU C/C++ compiler and `make` are already installed. All of the language setup commands are configured to either pull down the latest version of the compiler. To configure the AWS CLI, you can either run `aws configure` or pass in `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` variables during runtime to embed credentials into the container.
+
+Lastly, vim is configured to install plugins on first start but does not use an autocomplete plugin because the most common ones need a language runtime to be installed.
 
 The container will print a message out on first login with this information and the message can be recalled by running `show-devenv-help`.
 
