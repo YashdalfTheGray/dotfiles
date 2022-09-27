@@ -23,6 +23,10 @@ git config --global user.name "<your_username>"
 git config --global user.email <your_email>
 ```
 
-Lastly, vim is configured to install plugins on first start but does not use an autocomplete plugin because the most common ones need a language runtime to be installed.
+Lastly, vim is configured to install plugins on first start but does not use an autocomplete plugin because the most common ones need a language runtime to be installed. Follow the guides below to get started with autocomplete
+
+- https://github.com/neoclide/coc.nvim
+- https://github.com/Shougo/deoplete.nvim
+- https://github.com/ycm-core/YouCompleteMe
 
 You can run `show-devenv-help` to read this message again.
