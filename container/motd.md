@@ -11,7 +11,7 @@ The following commands to set up language support are available
 - `setup-ruby`: sets up rbenv and ruby-build (https://github.com/rbenv/rbenv)
 - `setup-rust`: sets up rustup (https://rustup.rs/)
 
-All of the language setup commands are configured to either pull down the latest version of the compiler or install a version manager, in the case of Node.js, Ruby, and Rust. You can optionally pass in a version in the format v1.19.1 to the `setup-go` command.
+Additionally, the GNU C/C++ compiler and `make` are already installed. All of the language setup commands are configured to either pull down the latest version of the compiler or install a version manager, in the case of Node.js, Ruby, and Rust. You can optionally pass in a version in the format v1.19.1 to the `setup-go` command.
 
 There is also a command called `install-awscli` that will install AWS CLI v2.
 
