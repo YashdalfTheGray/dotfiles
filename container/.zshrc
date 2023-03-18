@@ -103,9 +103,19 @@ function go-doc-piped-to-less() {
 }
 
 function install-awscli() {
+  local ARCH=$(uname -m)
+  local CLI_SUFFIX=""
+
+  case "$ARCH" in
+    "amd64") CLI_SUFFIX="x86_64"
+    ;;
+    "arm64") CLI_SUFFIX="aarch64"
+    ;;
+  esac
+
   set -x
   pushd /tmp
-  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-${CLI_SUFFIX}.zip" -o "awscliv2.zip"
   unzip awscliv2.zip
   ./aws/install
   rm awscliv2.zip
