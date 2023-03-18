@@ -13,6 +13,7 @@ ZSH_THEME="ys"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   deno
+  fast-syntax-highlighting
   git
   golang
   node
@@ -23,7 +24,6 @@ plugins=(
   rust
   virtualenv
   zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
 # set default editor for all sorts of things
