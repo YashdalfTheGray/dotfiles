@@ -128,6 +128,7 @@ function setup-deno() {
 function setup-go() {
   set -x
   local GOVERSION=""
+  local ARCH=$(uname -m)
 
   if [ $# -eq 0 ]; then
     GOVERSION=$(curl https://go.dev/VERSION\?m\=text)
@@ -136,9 +137,9 @@ function setup-go() {
   fi
 
   pushd /tmp
-  wget -q https://dl.google.com/go/${GOVERSION}.linux-amd64.tar.gz
-  tar -C /usr/local -xzf ${GOVERSION}.linux-amd64.tar.gz
-  rm -rf ${GOVERSION}.linux-amd64.tar.gz
+  wget -q https://dl.google.com/go/${GOVERSION}.linux-${ARCH}.tar.gz
+  tar -C /usr/local -xzf ${GOVERSION}.linux-${ARCH}.tar.gz
+  rm -rf ${GOVERSION}.linux-${ARCH}.tar.gz
   popd
   set +x
 }
