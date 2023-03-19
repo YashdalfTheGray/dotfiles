@@ -6,7 +6,9 @@ This repository uses a multiarch build system to publish both `arm64` and `amd64
 
 You can create a new buildx builder using `docker buildx create --name <some_memorable_name>` and then start it up immediately it by inspecting it through `docker use <that_same_name> && docker buildx inspect --bootstrap`.
 
-Once you have that going, run a docker build by running `docker buildx build --platform amd64,arm64 -t <your_dockerhub_repo>:<tag> . --push`. You have to push the images right away since if you don't use the `--push` flag, the images are built but they sit in the docker build cache.
+Once you have that going, run a docker build by running `docker buildx build --platform linux/amd64,linux/arm64 -t <your_dockerhub_repo>:<tag> . --push`. You can push the images right away since if you don't use the `--push` flag, the images are built but they sit in the docker build cache.
+
+Alternatively, you can use the `--load` option to pull the images into the Docker image list but it only works when you specify a single platform, like `docker buildx build --platform linux/amd64 -t <your_dockerhub_repo>:<tag> . --load`.
 
 ## Running
 
