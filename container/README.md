@@ -20,7 +20,7 @@ First we're going to build the different images one by one and load them into Do
 
 To push the images up, use the standard `docker push` commands. To create a manifest, run `docker manifest create <manifest_name> <image_variant_1> <image_variant_2> ...`. Here the variants correspond to the image tags of the images we built with `docker buildx` and loaded into Docker.
 
-To push the manifest up, use `docker manifest push <manifest_name>`.
+To push the manifest up, use `docker manifest push <manifest_name>`. If you ever wanted to tag the same manifest with something else, just create another local manifest using the commands above but with a different tag and then push that manifest. The key to note here is that since they'll be composed of the same images, they'll generate the same hash, which would retag the already uploaded manifest. You can check that the two manifests are the same by running a quick diff using `diff <(docker manifest inspect <manifest_1>) <(docker manifest inspect <manifest_2)`.
 
 ## Running
 
