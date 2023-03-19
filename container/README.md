@@ -16,7 +16,7 @@ Alternatively, you can use the `--load` option to pull the images into the Docke
 
 Swapping the tag in the command above for the ECR public tag doesn't quite work Docker buildx ends up pushing multiple images that are part of the manifest and then tagging the manifest. Which means that if you push the same image with a different tag again, you're going to end up with a new manifest. So we have to do a bit of manual work to make sure everything pushes right.
 
-First we're going to build the different images one by one and load them into Docker using `docker buildx build --platform <platform> -t <your_ecr_repo>:<tag> . --load`.
+First we're going to build the different images one by one and load them into Docker using `docker buildx build --platform <platform> -t <your_ecr_repo>:<tag> . --load`. Once all the images for the different platforms are in place, we're going to create a Docker manifest for all the images, and then push that up.
 
 ## Running
 
