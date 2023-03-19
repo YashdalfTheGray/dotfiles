@@ -18,6 +18,10 @@ Swapping the tag in the command above for the ECR public tag doesn't quite work 
 
 First we're going to build the different images one by one and load them into Docker using `docker buildx build --platform <platform> -t <your_ecr_repo>:<tag> . --load`. Once all the images for the different platforms are in place, we're going to create a Docker manifest for all the images, and then push that up.
 
+To push the images up, use the standard `docker push` commands. To create a manifest, run `docker manifest create <manifest_name> <image_variant_1> <image_variant_2> ...`. Here the variants correspond to the image tags of the images we built with `docker buildx` and loaded into Docker.
+
+To push the manifest up, use `docker manifest push <manifest_name>`.
+
 ## Running
 
 See [running instructions in the main readme](../README.md#cool-how-do-i-run-it)
