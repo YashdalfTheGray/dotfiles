@@ -10,6 +10,14 @@ Once you have that going, run a docker build by running `docker buildx build --p
 
 Alternatively, you can use the `--load` option to pull the images into the Docker image list but it only works when you specify a single platform, like `docker buildx build --platform linux/amd64 -t <your_dockerhub_repo>:<tag> . --load`.
 
+## Pushing to ECR public
+
+(I assume the same instructions would apply to a private ECR repo but I keep my images in public repos so that's the only case I've tested)
+
+Swapping the tag in the command above for the ECR public tag doesn't quite work Docker buildx ends up pushing multiple images that are part of the manifest and then tagging the manifest. Which means that if you push the same image with a different tag again, you're going to end up with a new manifest. So we have to do a bit of manual work to make sure everything pushes right.
+
+First we're going to build the different images one by one and load them into Docker using `docker buildx build --platform <platform> -t <your_ecr_repo>:<tag> . --load`.
+
 ## Running
 
 See [running instructions in the main readme](../README.md#cool-how-do-i-run-it)
