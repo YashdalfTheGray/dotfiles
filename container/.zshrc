@@ -205,11 +205,6 @@ alias gms="git merge --squash"
 alias gaom="git ls-files --modified | xargs git add"
 alias gfsd="git file-size-diff"
 
-alias fbd="firebase deploy:hosting"
-alias fbo="firebase open"
-alias crad="cordova run android --device"
-alias crid="cordova run ios --device"
-
 alias serve-pwd="python -m SimpleHTTPServer"
 
 alias tmux="tmux -2"
