@@ -53,6 +53,7 @@ plugins=(
   deno
   docker
   docker-compose
+  fast-syntax-highlighting
   git
   golang
   gradle
@@ -64,7 +65,6 @@ plugins=(
   nvm
   rust
   zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
 # User configuration
