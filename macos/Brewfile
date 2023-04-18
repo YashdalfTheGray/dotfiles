@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+brew 'arduino-cli'
 brew 'autojump'
 brew 'bat'
 brew 'deno'
@@ -25,3 +26,4 @@ brew 'sqlite'
 brew 'tree'
 brew 'tmux'
 brew 'vim'
+brew 'wget'
