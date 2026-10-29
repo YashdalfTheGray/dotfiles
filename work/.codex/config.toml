@@ -1,0 +1,30 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "medium"
+
+[desktop]
+followUpQueueMode = "steer"
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = true
+toys-confetti-enabled = true
+appearanceDarkCodeThemeId = "github"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#1f6feb"
+accentSource = "custom"
+contrast = 50
+ink = "#e6edf3"
+opaqueWindows = true
+surface = "#0d1117"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Geist Mono", ui-monospace, "SFMono-Regular"'
+ui = "Geist, Inter"
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#3fb950"
+diffRemoved = "#f85149"
+skill = "#bc8cff"
+
+[tui]
+screen_reader_detection_done = true
+pet = "codex"

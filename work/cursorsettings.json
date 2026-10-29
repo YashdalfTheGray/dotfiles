@@ -1,0 +1,16 @@
+{
+  "window.autoDetectColorScheme": true,
+  "editor.renderWhitespace": "all",
+  "window.newWindowDimensions": "inherit",
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "editor.fontFamily": "'Monaspace Argon NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.inlineSuggest.fontFamily": "'Monaspace Krypton NF', monospace",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "terminal.integrated.fontFamily": "'Monaspace Argon', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.fontLigatures.featureSettings": "'calt' on, 'liga' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'cv60' on, 'cv61' on, 'cv62' on",
+  "editor.wordWrap": "on",
+}

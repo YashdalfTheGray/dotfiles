@@ -1,0 +1,16 @@
+anysphere.remote-containers	1.0.41
+anysphere.remote-ssh	1.1.16
+dbaeumer.vscode-eslint	3.0.34
+eamodio.gitlens	19.5.0
+editorconfig.editorconfig	0.18.2
+enkia.tokyo-night	1.1.2
+esbenp.prettier-vscode	12.4.0
+golang.go	0.58.0
+hashicorp.terraform	2.40.0
+liviuschera.noctis	10.43.3
+ms-azuretools.vscode-containers	2.4.5
+ms-azuretools.vscode-docker	2.0.0
+rust-lang.rust	0.7.8
+shopify.ruby-extensions-pack	0.1.14
+shopify.ruby-lsp	0.10.6
+sorbet.sorbet-vscode-extension	0.3.47
