@@ -1,0 +1,2077 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b"
+    },
+    "amazon-aurora-mysql": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/amazon-aurora-mysql/SKILL.md",
+      "skillFolderHash": "0e3f93d02d0bff4d76ae31f425527441989717e1"
+    },
+    "amazon-aurora-postgresql": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/amazon-aurora-postgresql/SKILL.md",
+      "skillFolderHash": "eb9414ad02354efaa482cb24003af763030ec00d"
+    },
+    "amazon-bedrock": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/amazon-bedrock/SKILL.md",
+      "skillFolderHash": "c42da7de285e29c0cf99ebfc9c77ae84343f265c"
+    },
+    "amazon-braket": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/quantum-computing-skills/amazon-braket/SKILL.md",
+      "skillFolderHash": "6d5f4fcb33154dd55ff6414fcee74e57801aacb8"
+    },
+    "amazon-documentdb": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/amazon-documentdb/SKILL.md",
+      "skillFolderHash": "ba1014791442ba28638d9eafb89743ebab71c0c1"
+    },
+    "amazon-dynamodb": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/amazon-dynamodb/SKILL.md",
+      "skillFolderHash": "bb6942ff3dbee4dae93c36288145e414271a9423"
+    },
+    "amazon-ec2-image-builder": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/ec2-skills/amazon-ec2-image-builder/SKILL.md",
+      "skillFolderHash": "4f89123ef4c18675cae279bce0b29c181d99730e"
+    },
+    "amazon-elasticache": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/amazon-elasticache/SKILL.md",
+      "skillFolderHash": "97d2c76562c21fcba986b4757cedff9ac4ca264d"
+    },
+    "amazon-eventbridge-event-bus": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/amazon-eventbridge-event-bus/SKILL.md",
+      "skillFolderHash": "f65bd04dd0780858ea98f1ca01f94ab815fceb0b"
+    },
+    "amazon-keyspaces": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/amazon-keyspaces/SKILL.md",
+      "skillFolderHash": "a20b245aecdf8532d6c04e0b760cc2932833b4c8"
+    },
+    "amazon-neptune": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/amazon-neptune/SKILL.md",
+      "skillFolderHash": "bd0dfb99d14ff1d9516c33de52463e18420b8bf5"
+    },
+    "amazon-opensearch-service": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/amazon-opensearch-service/SKILL.md",
+      "skillFolderHash": "649758c661a01a0cc20f526b831b9279c6ced552"
+    },
+    "amazon-ses": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/customer-communications-skills/amazon-ses/SKILL.md",
+      "skillFolderHash": "b55294c0c262272070d8e650ec17be13942cdea0"
+    },
+    "amazon-workspaces-agent-access": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/end-user-computing-skills/amazon-workspaces-agent-access/SKILL.md",
+      "skillFolderHash": "435b7bc846968db614b2af2fba9c60ad87911c45"
+    },
+    "arc-region-switch": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/arc-region-switch/SKILL.md",
+      "skillFolderHash": "ceea3ab08459f308a502231eb314a5843906971a"
+    },
+    "aurora-dsql": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/aurora-dsql/SKILL.md",
+      "skillFolderHash": "254a60139d64cdc667f97566caafa5e181a3118c"
+    },
+    "authoring-mwaa-workflow": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/authoring-mwaa-workflow/SKILL.md",
+      "skillFolderHash": "de28de218e00fcfaba7400bb206a3ffee258e9b9"
+    },
+    "aws-ai-ml": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-ai-ml/SKILL.md",
+      "skillFolderHash": "cc593afe22e98646e47ef71970d6d241c139db76"
+    },
+    "aws-amplify": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/web-and-mobile-development/aws-amplify/SKILL.md",
+      "skillFolderHash": "659d33648afb2138c762e0acdbcb4a4229342457"
+    },
+    "aws-auth": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-auth/SKILL.md",
+      "skillFolderHash": "09b054c0e3f930fc986d69c309909ffa3db7edf2"
+    },
+    "aws-billing-and-cost-management": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-billing-and-cost-management/SKILL.md",
+      "skillFolderHash": "efd1a857f5c0dff1d8bad534590ba662694d02c4"
+    },
+    "aws-blocks": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-blocks/SKILL.md",
+      "skillFolderHash": "3b99b8f25fa86e316a11edac229cd34bab5d215d"
+    },
+    "aws-cdk": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-cdk/SKILL.md",
+      "skillFolderHash": "00e2f27fa111c0430ee9024cbaf68cb5f36fc2b5"
+    },
+    "aws-cleanrooms": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/aws-cleanrooms/SKILL.md",
+      "skillFolderHash": "2a92787a1f614fb3813f50037a544925d510fcc0"
+    },
+    "aws-cloudformation": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-cloudformation/SKILL.md",
+      "skillFolderHash": "794fe9db246c60cab7724b05950d61d1ac1745e0"
+    },
+    "aws-compute": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-compute/SKILL.md",
+      "skillFolderHash": "07c3b93ea27627db199c49b9f1ed3050db3ddf24"
+    },
+    "aws-containers": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-containers/SKILL.md",
+      "skillFolderHash": "dad459c6e50103d5e14f512ab53349366cbeb680"
+    },
+    "aws-database": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-database/SKILL.md",
+      "skillFolderHash": "6a4bd1eda7e43cc7c34ffdd374252dac75873392"
+    },
+    "aws-deployment": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-deployment/SKILL.md",
+      "skillFolderHash": "643f7dc0a70a5fa2168ef19acd7b5e07a37d19bb"
+    },
+    "aws-fault-injection-service": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/aws-fault-injection-service/SKILL.md",
+      "skillFolderHash": "c91befdb129c81f416c45c9f51de7b69a43587fb"
+    },
+    "aws-iam": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-iam/SKILL.md",
+      "skillFolderHash": "5e1f56c0e6418455b9b11bfefd098b61f01cc287"
+    },
+    "aws-lambda-durable-functions": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/aws-lambda-durable-functions/SKILL.md",
+      "skillFolderHash": "ebecaf1ed596c432cea2f18cd7bfa4fa0786c03c"
+    },
+    "aws-lambda-managed-instances": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/aws-lambda-managed-instances/SKILL.md",
+      "skillFolderHash": "6da9d23685b084b4b0d7a72be637a5da63c6ee0b"
+    },
+    "aws-lambda-microvms": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/aws-lambda-microvms/SKILL.md",
+      "skillFolderHash": "57a3a027235f5819bebecf44a21b9648df24eef8"
+    },
+    "aws-lambda-web-functions": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/aws-lambda-web-functions/SKILL.md",
+      "skillFolderHash": "4170827df988f0de867a360957720098b910168f"
+    },
+    "aws-marketplace-metering": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/aws-marketplace-skills/aws-marketplace-metering/SKILL.md",
+      "skillFolderHash": "e8f407ea95e48f02fb5b878c0c3aad4268a3bcd2"
+    },
+    "aws-messaging-and-streaming": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-messaging-and-streaming/SKILL.md",
+      "skillFolderHash": "f5b1a4251023348ec2cafc7983347ade6dd94206"
+    },
+    "aws-network-monitoring": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/operations-skills/aws-network-monitoring/SKILL.md",
+      "skillFolderHash": "3b47557bbdae2ba7ab4b79defe275cdd8565c754"
+    },
+    "aws-networking": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-networking/SKILL.md",
+      "skillFolderHash": "8f23b9485c9454b10f5abc47a00356b7db340d51"
+    },
+    "aws-observability": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-observability/SKILL.md",
+      "skillFolderHash": "7bb3fb10c27b5e8cf53d7a3ae6d9bcd5c9918942"
+    },
+    "aws-resilience-lifecycle": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/aws-resilience-lifecycle/SKILL.md",
+      "skillFolderHash": "a4c72637fab9f0f03d45a4d2df12c140f9da1841"
+    },
+    "aws-sdk-js-v3-usage": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-sdk-js-v3-usage/SKILL.md",
+      "skillFolderHash": "be717dce9bb7d1da787cd4ebcb2b736831b490f5"
+    },
+    "aws-sdk-python-usage": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-sdk-python-usage/SKILL.md",
+      "skillFolderHash": "b5a86516c050d6ff82d964d2e1105c34095e4ad6"
+    },
+    "aws-sdk-swift-usage": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-sdk-swift-usage/SKILL.md",
+      "skillFolderHash": "b09094fc5e414983df038fe40a2d34c433ca2d14"
+    },
+    "aws-security": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-security/SKILL.md",
+      "skillFolderHash": "73fbfabb801bccf792e2e962b19e6af334a5d0ce"
+    },
+    "aws-serverless": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-serverless/SKILL.md",
+      "skillFolderHash": "aebb7e2613ba3cf42e8f5701370cfaeafdcbde1e"
+    },
+    "aws-sms-voice": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/customer-communications-skills/aws-sms-voice/SKILL.md",
+      "skillFolderHash": "c397d72eccb24cd652e1f5bb76a74f70c37d2709"
+    },
+    "aws-social-messaging": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/customer-communications-skills/aws-social-messaging/SKILL.md",
+      "skillFolderHash": "ef74f6c0460f4eebe7236805660d235b9c08d0d8"
+    },
+    "aws-step-functions": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/aws-step-functions/SKILL.md",
+      "skillFolderHash": "6e6bc4ab94569c2c42c6e075fc271aa1e33cdbda"
+    },
+    "aws-storage": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-storage/SKILL.md",
+      "skillFolderHash": "a6fe28a3b0387e38f42f377ee941f92a145ea955"
+    },
+    "aws-transform": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/migration-and-modernization-skills/aws-transform/SKILL.md",
+      "skillFolderHash": "19d719b83327293bcd98072b8e93e7774f4122c3"
+    },
+    "aws-well-architected-review": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/aws-well-architected-review/SKILL.md",
+      "skillFolderHash": "84c63e1a264f3be88da04a5884d9cbdd52be1194"
+    },
+    "cloudfront": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/cloudfront/SKILL.md",
+      "skillFolderHash": "eb2245594bad5e7edf65eed577c207f3f3e24355"
+    },
+    "configuring-vpc-endpoints-for-private-aws-service-access": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/configuring-vpc-endpoints-for-private-aws-service-access/SKILL.md",
+      "skillFolderHash": "94ab274fb3503595c22fb491767572173146ba01"
+    },
+    "connecting-lambda-to-api-gateway": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/connecting-lambda-to-api-gateway/SKILL.md",
+      "skillFolderHash": "37fd366b778dd51cb687853930c887634cbe9f15"
+    },
+    "connecting-lambda-to-dynamodb": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/connecting-lambda-to-dynamodb/SKILL.md",
+      "skillFolderHash": "10baad456594507d16b877ac64518103d2bc89a6"
+    },
+    "connecting-to-data-source": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/connecting-to-data-source/SKILL.md",
+      "skillFolderHash": "383d2b10bda92f39f8225199b43de5d26933d554"
+    },
+    "connecting-vpcs-with-peering": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/connecting-vpcs-with-peering/SKILL.md",
+      "skillFolderHash": "0ee1e3d9a95d1f7b7df244f996a00d2ac2bd7e96"
+    },
+    "creating-amazon-aurora-db-cluster-with-instances": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/creating-amazon-aurora-db-cluster-with-instances/SKILL.md",
+      "skillFolderHash": "8b2110593210cf5bb7b3c0f426e61eb3eb5c22b5"
+    },
+    "creating-api-gateway-stage": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/creating-api-gateway-stage/SKILL.md",
+      "skillFolderHash": "227d5d909d3d510602d2ec83381240cd81ba5221"
+    },
+    "creating-data-lake-table": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/storage-skills/creating-data-lake-table/SKILL.md",
+      "skillFolderHash": "29c9ce5f4ac684e7dbef67ef1be13385ed0be734"
+    },
+    "creating-production-vpc-multi-az": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/creating-production-vpc-multi-az/SKILL.md",
+      "skillFolderHash": "0a4bcb33ed8cbf2c38768eea13ac6d2200e59446"
+    },
+    "creating-secrets-using-best-practices": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/security-and-identity-skills/creating-secrets-using-best-practices/SKILL.md",
+      "skillFolderHash": "17d5979e5af4f39b3cc0b8e29f83f6f0b662fc79"
+    },
+    "debugging-lambda-timeouts": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/debugging-lambda-timeouts/SKILL.md",
+      "skillFolderHash": "0b5c7ec0264a041242a7c815f0304969413fc92b"
+    },
+    "debugging-mwaa-workflow": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/debugging-mwaa-workflow/SKILL.md",
+      "skillFolderHash": "258e814dcfcfeac2c3b56388da3df880b9417f4a"
+    },
+    "deploying-containers-to-amazon-lightsail": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/web-and-mobile-development/deploying-containers-to-amazon-lightsail/SKILL.md",
+      "skillFolderHash": "a37d159a382ebebfd3aa70c3347bd7a44983502c"
+    },
+    "deploying-custom-domain-rest-api": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/deploying-custom-domain-rest-api/SKILL.md",
+      "skillFolderHash": "3d2ecacf1abfe8cfb6661ff04cba16558cd4c1c6"
+    },
+    "developing-applications-on-managed-service-for-apache-flink": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/developing-applications-on-managed-service-for-apache-flink/SKILL.md",
+      "skillFolderHash": "d4afa26a9019d32bf0a2e36164bf506eb744c672"
+    },
+    "directconnect": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/directconnect/SKILL.md",
+      "skillFolderHash": "f2b88df68a8636a1f26969cd9c73a3aa1ff03dad"
+    },
+    "dms-schema-conversion": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/migration-and-modernization-skills/dms-schema-conversion/SKILL.md",
+      "skillFolderHash": "3a87fdfee0bcfb09ceea6e327e0977ab9aea0374"
+    },
+    "enabling-lambda-vpc-internet-access": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/enabling-lambda-vpc-internet-access/SKILL.md",
+      "skillFolderHash": "aeeb93a185086fc2a816c95022dc4077f2153c73"
+    },
+    "exploring-data-catalog": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/exploring-data-catalog/SKILL.md",
+      "skillFolderHash": "0fab758f973ef934cc78324c434045a8d5945d59"
+    },
+    "exporting-rds-to-s3": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/exporting-rds-to-s3/SKILL.md",
+      "skillFolderHash": "12260f68d015ba4c10be09bb431f8da62864d915"
+    },
+    "finding-data-lake-assets": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/finding-data-lake-assets/SKILL.md",
+      "skillFolderHash": "f252a2bed280654a973299b7c2a7d2fa8d869a9d"
+    },
+    "ingesting-into-data-lake": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/ingesting-into-data-lake/SKILL.md",
+      "skillFolderHash": "6f318d4a153321d39f9d5485a400196f2da949b3"
+    },
+    "launch-with-aws": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/launch-with-aws/SKILL.md",
+      "skillFolderHash": "6ed18446b13fbbab00f4709597ea9f564d09fdbc"
+    },
+    "launching-ec2-instance-with-best-practices": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/ec2-skills/launching-ec2-instance-with-best-practices/SKILL.md",
+      "skillFolderHash": "73282bc12f3061da6dc9554d013651858595ecda"
+    },
+    "managing-amazon-kinesis-data-streams": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/managing-amazon-kinesis-data-streams/SKILL.md",
+      "skillFolderHash": "86001b3741c65b8fcd0de07b2937dc05a9ce1dae"
+    },
+    "managing-amazon-msk": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/managing-amazon-msk/SKILL.md",
+      "skillFolderHash": "542a98ff62540b51502595bfa0026790026a5446"
+    },
+    "managing-data-asset-access": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/managing-data-asset-access/SKILL.md",
+      "skillFolderHash": "cf09aa87d71ddecf4f9bd9eb2f931bdc0fe2629c"
+    },
+    "managing-data-catalog": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/managing-data-catalog/SKILL.md",
+      "skillFolderHash": "23e77ee09601ccd961e8eed97c2597a89b1707fd"
+    },
+    "migrate-to-msk": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/migrate-to-msk/SKILL.md",
+      "skillFolderHash": "08297bb871abf59bbccf91ebb5ec00f9e407a23a"
+    },
+    "migrating-to-amazon-redshift": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/migrating-to-amazon-redshift/SKILL.md",
+      "skillFolderHash": "759ce2a58ad318dcd67f851ccde6768d21395236"
+    },
+    "processing-s3-uploads-with-step-functions": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/serverless-skills/processing-s3-uploads-with-step-functions/SKILL.md",
+      "skillFolderHash": "bc1445074f17f20547fdeb82ef2502fd355796b1"
+    },
+    "querying-aws-cloudwatch": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/system-table-skills/querying-aws-cloudwatch/SKILL.md",
+      "skillFolderHash": "ff34d53794e8f703a088f527c4361305dcac772d"
+    },
+    "querying-aws-redshift": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/system-table-skills/querying-aws-redshift/SKILL.md",
+      "skillFolderHash": "91dfbe04d6d625a0c560e50ef0222e0ca8734357"
+    },
+    "querying-aws-s3": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/system-table-skills/querying-aws-s3/SKILL.md",
+      "skillFolderHash": "bd942552b303cf65e2623b5e437122772d4fcb33"
+    },
+    "querying-aws-sagemaker-catalog": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/system-table-skills/querying-aws-sagemaker-catalog/SKILL.md",
+      "skillFolderHash": "43c2466d8273ab986787caa07c03085f9f7da46d"
+    },
+    "querying-data-lake": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/querying-data-lake/SKILL.md",
+      "skillFolderHash": "21a223bafc143f0b47b916a468a8882e1033e2db"
+    },
+    "rds-db2": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/rds-db2/SKILL.md",
+      "skillFolderHash": "8c875037cc000e02e89c2f742b52a0f0b3e4d220"
+    },
+    "rds-oracle": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/rds-oracle/SKILL.md",
+      "skillFolderHash": "f209347769fdd7223cd2a21f6a9ac269d4be1e9b"
+    },
+    "rds-oss": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/rds-oss/SKILL.md",
+      "skillFolderHash": "925e34fdde6ced10dc8c97cc3343c066003ffc00"
+    },
+    "rds-sqlserver": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/rds-sqlserver/SKILL.md",
+      "skillFolderHash": "78bbb5ff4b1c4d877b7b9b289ebea6e5db456b02"
+    },
+    "recovery-controller-setup": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/recovery-controller-setup/SKILL.md",
+      "skillFolderHash": "14b87dffcac10a22723992c778114f362e7809c3"
+    },
+    "redshift-guide": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/redshift-guide/SKILL.md",
+      "skillFolderHash": "d5b46cfb37b28df813c8fea340f3e1d51674471f"
+    },
+    "resilience-hub-failure-mode-assessment": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/resilience-hub-failure-mode-assessment/SKILL.md",
+      "skillFolderHash": "651f8fdadc3208b401d0350ee108f0f34ffe4e77"
+    },
+    "resilience-hub-getting-started": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/resilience-hub-getting-started/SKILL.md",
+      "skillFolderHash": "b0463022cb73fa08ee255b25f3348a77440fee46"
+    },
+    "resilience-hub-multi-account": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/resilience-hub-multi-account/SKILL.md",
+      "skillFolderHash": "7de9a14bde78f70ec4e350e7046ec343e65a6571"
+    },
+    "resilience-program-design": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/resilience-skills/resilience-program-design/SKILL.md",
+      "skillFolderHash": "97568cdd987837caf12095cf7acd11dfb86449c5"
+    },
+    "route53": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/route53/SKILL.md",
+      "skillFolderHash": "dabf0df68600d59c810632ed87e534b46ebcd1e6"
+    },
+    "routing-traffic-with-route53-and-cloudfront": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/routing-traffic-with-route53-and-cloudfront/SKILL.md",
+      "skillFolderHash": "d90bbc41109b0667dbc79be2165d8e6399190b14"
+    },
+    "securing-s3-buckets": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/storage-skills/securing-s3-buckets/SKILL.md",
+      "skillFolderHash": "71eaab6372c6763e792deff8cd6ab6880a21b352"
+    },
+    "setting-up-cloudtrail-multi-region": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/operations-skills/setting-up-cloudtrail-multi-region/SKILL.md",
+      "skillFolderHash": "435e05bc03480c56c2a7032e6cab026295ca1d77"
+    },
+    "setting-up-cloudwatch-alarm-notifications": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/operations-skills/setting-up-cloudwatch-alarm-notifications/SKILL.md",
+      "skillFolderHash": "8b19ae185f986da60aaf1cfc8659cfe137f6f950"
+    },
+    "setting-up-cloudwatch-observability": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/operations-skills/setting-up-cloudwatch-observability/SKILL.md",
+      "skillFolderHash": "2afa6b48f4d7d7bec914d5177045c39a2619ce2e"
+    },
+    "setting-up-ec2-instance-profiles": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/ec2-skills/setting-up-ec2-instance-profiles/SKILL.md",
+      "skillFolderHash": "0873a68481f12e575b07be67b376ba00bd81fb43"
+    },
+    "shieldadvanced": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/shieldadvanced/SKILL.md",
+      "skillFolderHash": "698ba80d83ddbedb35fccfd02390b836e6662143"
+    },
+    "signing-in-to-aws": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/core-skills/signing-in-to-aws/SKILL.md",
+      "skillFolderHash": "ee531e3e75bc80420fa93a7cec433cc3cdb3340f"
+    },
+    "sitetositevpn": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/sitetositevpn/SKILL.md",
+      "skillFolderHash": "63fcf4f7efec80178ed3842d1ccf4ecaf56dbc3c"
+    },
+    "storing-and-querying-vectors": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/storage-skills/storing-and-querying-vectors/SKILL.md",
+      "skillFolderHash": "23ae3f70559dbf353ba134b9c75dbe3cd087e189"
+    },
+    "testing-mwaa-workflow": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/testing-mwaa-workflow/SKILL.md",
+      "skillFolderHash": "c52ba0c269b0293625c0407e777c4f5263d2f316"
+    },
+    "timestream-influxdb": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/database-skills/timestream-influxdb/SKILL.md",
+      "skillFolderHash": "350448231c7c1fcc6a9a617208cbfe5fb70dc5da"
+    },
+    "transitgateway": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/transitgateway/SKILL.md",
+      "skillFolderHash": "ea8558b0bbbffcb0fa193fcfed71a69ab092eb38"
+    },
+    "troubleshooting-application-failures": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/operations-skills/troubleshooting-application-failures/SKILL.md",
+      "skillFolderHash": "3af55f740d57731ff8504eeba28f71adb41274d6"
+    },
+    "troubleshooting-efs": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/storage-skills/troubleshooting-efs/SKILL.md",
+      "skillFolderHash": "eed46ff1bb476cf5acae18ac4e4182531a94b1af"
+    },
+    "troubleshooting-s3-files": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/storage-skills/troubleshooting-s3-files/SKILL.md",
+      "skillFolderHash": "6848c5b4eeff962f1d541c7a8f1c1a44c854ef33"
+    },
+    "upgrading-mwaa-environments": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/analytics-skills/upgrading-mwaa-environments/SKILL.md",
+      "skillFolderHash": "d332d35479d3c29ff71a904bc0c62d1d12c0f495"
+    },
+    "waf": {
+      "source": "aws/agent-toolkit-for-aws",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aws/agent-toolkit-for-aws.git",
+      "skillPath": "skills/specialized-skills/networking-and-content-delivery-skills/waf/SKILL.md",
+      "skillFolderHash": "d40f319e37c2afbcc28535f7986546fec3532dc3"
+    },
+    "agent-platform-alert-configuration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-alert-configuration/SKILL.md",
+      "skillFolderHash": "cd152e0bbc1e7ae32d429cb6504016386e53ed29"
+    },
+    "agent-platform-deploy": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-deploy/SKILL.md",
+      "skillFolderHash": "60e0889968e3ac11fe22953a2c5cba593ab15f69"
+    },
+    "agent-platform-endpoint-management": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-endpoint-management/SKILL.md",
+      "skillFolderHash": "c153d59d95b933bd66cb5e48dfa86530774b7e10"
+    },
+    "agent-platform-eval-flywheel": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-eval-flywheel/SKILL.md",
+      "skillFolderHash": "157b613b2fbbe860c1b87120d70eed29ba88b9af"
+    },
+    "agent-platform-inference": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-inference/SKILL.md",
+      "skillFolderHash": "ad156b85858436b7b78b7f8b677ed3eba1ed519d"
+    },
+    "agent-platform-migrate-from-ai-studio": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-migrate-from-ai-studio/SKILL.md",
+      "skillFolderHash": "869afd2600723b1ec6e4fdedabf0d3bce7ea226f"
+    },
+    "agent-platform-model-registry": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-model-registry/SKILL.md",
+      "skillFolderHash": "af87307e9a7f8c99c30691661e176bd709f80be2"
+    },
+    "agent-platform-prompt-management": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-prompt-management/SKILL.md",
+      "skillFolderHash": "42eda1c6cd2d5fa0949331bc1c43c003a8b4fc38"
+    },
+    "agent-platform-rag-engine-management": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-rag-engine-management/SKILL.md",
+      "skillFolderHash": "9340b65568ce658e5d025f2d02d19ac09a2e8034"
+    },
+    "agent-platform-skill-registry": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-skill-registry/SKILL.md",
+      "skillFolderHash": "7bb45151e40b635b68d3368b8ed5764ac9f834ba"
+    },
+    "agent-platform-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-troubleshooting/SKILL.md",
+      "skillFolderHash": "bf4f15fc4dfa8de4cb5ce1c7ad1c97716a6d405a"
+    },
+    "agent-platform-tuning": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-tuning/SKILL.md",
+      "skillFolderHash": "a7c8dee32420433981bbee0630afeba619ad8ac5"
+    },
+    "agent-platform-tuning-management": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/agent-platform-tuning-management/SKILL.md",
+      "skillFolderHash": "77e2617044181d619a95330ac694bff1a4cdddce"
+    },
+    "alloydb-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/alloydb-basics/SKILL.md",
+      "skillFolderHash": "666e04a085a06f8d2bd65fbc67b34a4f842be5b5"
+    },
+    "api-gateway-backend-security-and-rate-limiting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/api-gateway-backend-security-and-rate-limiting/SKILL.md",
+      "skillFolderHash": "c068fb6d31f8465d45f80b5bcde33e9c3a564753"
+    },
+    "api-gateway-mcp-server": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/api-gateway-mcp-server/SKILL.md",
+      "skillFolderHash": "fceb137219279691d801eb07d40770f3e8bb8e59"
+    },
+    "apigee-agent-gateway-governance": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/apigee-agent-gateway-governance/SKILL.md",
+      "skillFolderHash": "5a39ee2c6d483ef23c1fe1f4bff09f75533c2516"
+    },
+    "application-design-center-design-deploy": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/application-design-center-design-deploy/SKILL.md",
+      "skillFolderHash": "ab5350854be59a5f5d87c5515c6e53697de58c80"
+    },
+    "application-integration-authoring": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/application-integration-authoring/SKILL.md",
+      "skillFolderHash": "90ec606404df65afd20ae8d3b23eb244bd312f6b"
+    },
+    "application-integration-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/application-integration-basics/SKILL.md",
+      "skillFolderHash": "c087cf177e8c6d2b2bd57547fa8aca83f30e48c3"
+    },
+    "application-integration-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/application-integration-troubleshooting/SKILL.md",
+      "skillFolderHash": "165a5e3c8676c1b188b4d0614bff041115712869"
+    },
+    "assured-workloads-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/assured-workloads-basics/SKILL.md",
+      "skillFolderHash": "f94631cf8f1c803335d714cd64b4d217aee0e494"
+    },
+    "assuredworkloads-environment-assessor": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/assuredworkloads-environment-assessor/SKILL.md",
+      "skillFolderHash": "c26ea0a891a8e62b6f4d994695edf1ecd1d60853"
+    },
+    "assuredworkloads-frameworks-author": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/assuredworkloads-frameworks-author/SKILL.md",
+      "skillFolderHash": "f9f432a49347e1af95068af230fd946488817b4f"
+    },
+    "assuredworkloads-frameworks-navigator": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/assuredworkloads-frameworks-navigator/SKILL.md",
+      "skillFolderHash": "5089204bc785a014d8f8ff3a93e0f3a7b237ff5f"
+    },
+    "bigquery-ai-ml": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-ai-ml/SKILL.md",
+      "skillFolderHash": "856a08dfd70d0c509436a1935ff3d7a839afd89a"
+    },
+    "bigquery-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-basics/SKILL.md",
+      "skillFolderHash": "de6ab5e07db729fb6907c449df5b612613e6355b"
+    },
+    "bigquery-bigframes": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-bigframes/SKILL.md",
+      "skillFolderHash": "9adc638838107b24e53a195ba75767197902b3cf"
+    },
+    "bigquery-migration-sql-translator": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-migration-sql-translator/SKILL.md",
+      "skillFolderHash": "bc7b55c8edf120d4eaffe642ad1af4ac6160bee1"
+    },
+    "bigquery-observability": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-observability/SKILL.md",
+      "skillFolderHash": "a3a5b818b610802f954386a01f564ab9570df610"
+    },
+    "bigquery-optimization": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-optimization/SKILL.md",
+      "skillFolderHash": "6f406a47d36137a476661ab16763b9eb32c5ddf2"
+    },
+    "bigquery-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-troubleshooting/SKILL.md",
+      "skillFolderHash": "9240ec3db368ba1ba693eb12159b81916b14cbb7"
+    },
+    "bigquery-udfs": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigquery-udfs/SKILL.md",
+      "skillFolderHash": "1bf15bc49af3a24136084989aa43c10688a927ac"
+    },
+    "bigtable-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/bigtable-basics/SKILL.md",
+      "skillFolderHash": "d475e657952d4e6a04d95e4bcf8d57b9bc80a39b"
+    },
+    "cloud-armor-crs-rule-upgrader": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-armor-crs-rule-upgrader/SKILL.md",
+      "skillFolderHash": "22351e2149a11abf76f772a7f41e83eeb49c7f9c"
+    },
+    "cloud-build-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-build-basics/SKILL.md",
+      "skillFolderHash": "fbbfa243198cbf25703931e1b4576ec21cc4ec94"
+    },
+    "cloud-databases-onboarding": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-databases-onboarding/SKILL.md",
+      "skillFolderHash": "aad6c3353ed1ce12318a1bcaf3c2947926db2d82"
+    },
+    "cloud-logging-configuration-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-logging-configuration-basics/SKILL.md",
+      "skillFolderHash": "b7108d395150a4fafc5aea14c4989e4d447d1a1c"
+    },
+    "cloud-logging-cross-project-configuration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-logging-cross-project-configuration/SKILL.md",
+      "skillFolderHash": "5d31e05818dab49cd0a636e216035cc8b11ee9b6"
+    },
+    "cloud-logging-finops": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-logging-finops/SKILL.md",
+      "skillFolderHash": "a9d491e2e9f663f082e3d2003fcfa2c9d5c0379e"
+    },
+    "cloud-logging-query-generation": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-logging-query-generation/SKILL.md",
+      "skillFolderHash": "75a8a3a86114c1ade309683b28bbe88166278268"
+    },
+    "cloud-monitoring-chart-generation": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-monitoring-chart-generation/SKILL.md",
+      "skillFolderHash": "b7779592355f6f302a34c759e0e5c16a30b50108"
+    },
+    "cloud-monitoring-list-time-series-request": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-monitoring-list-time-series-request/SKILL.md",
+      "skillFolderHash": "0cd56e66ebce2ad1c58723a384ee02a0edba1644"
+    },
+    "cloud-monitoring-metric-selection": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-monitoring-metric-selection/SKILL.md",
+      "skillFolderHash": "65f518e9b65c9bfe6a7df73b707184fe729e7485"
+    },
+    "cloud-monitoring-notification-channels-configuration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-monitoring-notification-channels-configuration/SKILL.md",
+      "skillFolderHash": "0bb048f85375423fee5cbc8ad3714703b891b9b2"
+    },
+    "cloud-monitoring-promql-query": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-monitoring-promql-query/SKILL.md",
+      "skillFolderHash": "5aa61580da57eff8b6be832b13ef17f291865101"
+    },
+    "cloud-network-insights": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-network-insights/SKILL.md",
+      "skillFolderHash": "866eeb0a19fe256d34a9ca108f0a45c82a1e66c6"
+    },
+    "cloud-run-alert-configuration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-run-alert-configuration/SKILL.md",
+      "skillFolderHash": "5eaf01e88f3065ff35ce31d9c4c4f2fb1055e017"
+    },
+    "cloud-run-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-run-basics/SKILL.md",
+      "skillFolderHash": "03d252816fc8e4d2444d2574ad53f0522ab744b2"
+    },
+    "cloud-sql-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-sql-basics/SKILL.md",
+      "skillFolderHash": "3a8cefbb70599a75a720bc581fd3bcaf9f7bdbc4"
+    },
+    "cloud-trace-querying": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/cloud-trace-querying/SKILL.md",
+      "skillFolderHash": "935dd489d415ac92c227c2e95db5d0ce2f0f2468"
+    },
+    "data-manager-api-audience-ingestion": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/data-manager-api-audience-ingestion/SKILL.md",
+      "skillFolderHash": "183264061a50278da8fc3f864bf1431c5ebaa85c"
+    },
+    "data-manager-api-event-ingestion": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/data-manager-api-event-ingestion/SKILL.md",
+      "skillFolderHash": "9fae2788736d1f4e24ab96c47b1f20970698f110"
+    },
+    "data-manager-api-setup": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/data-manager-api-setup/SKILL.md",
+      "skillFolderHash": "1c9aa4bdac6f553222a019d3e4986446f7cd3e17"
+    },
+    "datalineage-bigquery-asset-impact-analysis": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/datalineage-bigquery-asset-impact-analysis/SKILL.md",
+      "skillFolderHash": "85da22669e9ce40a4a0513ac5b6a1bfe4bec7aa9"
+    },
+    "datalineage-summary": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/datalineage-summary/SKILL.md",
+      "skillFolderHash": "155a780d1ac962d73d13182e0209c042c46e76fc"
+    },
+    "dbt-sf-to-bq-translator": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/dbt-sf-to-bq-translator/SKILL.md",
+      "skillFolderHash": "4b93bda263e220518201154e17131112123747ab"
+    },
+    "detection-engineering-coverage-evaluation": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/detection-engineering-coverage-evaluation/SKILL.md",
+      "skillFolderHash": "6ccccecaec70c19378e7d0838becdd1079b18d67"
+    },
+    "developer-device-platform-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/developer-device-platform-basics/SKILL.md",
+      "skillFolderHash": "ff796e6f42e02439a6ec9e077db2bb01311d5d8e"
+    },
+    "developing-genkit-dart": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/developing-genkit-dart/SKILL.md",
+      "skillFolderHash": "9da63583c7bfeda535516d9565a2b84c1ef3fee3"
+    },
+    "developing-genkit-go": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/developing-genkit-go/SKILL.md",
+      "skillFolderHash": "919f9bd9da8a66b66f31df253ed0765067cae717"
+    },
+    "developing-genkit-js": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/developing-genkit-js/SKILL.md",
+      "skillFolderHash": "78b6b374745bf4cefa3d9abed85e5587720105e8"
+    },
+    "developing-genkit-python": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/developing-genkit-python/SKILL.md",
+      "skillFolderHash": "0c055cbec43ce01c64938fb142e2054a9c0a9e6c"
+    },
+    "dpop-adoption": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/identity/dpop-adoption/SKILL.md",
+      "skillFolderHash": "8d2c0ff3aad88a8bc875e01a7d99b3d3dd4673d9"
+    },
+    "finding-google-skills": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/developers/finding-google-skills/SKILL.md",
+      "skillFolderHash": "0431b326490629a972bd9a242dba5334e3be786f"
+    },
+    "firebase-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/firebase-basics/SKILL.md",
+      "skillFolderHash": "ebe6a03411d41d7aff8251a1e1c56885fd8e7f4c"
+    },
+    "gcloud": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gcloud/SKILL.md",
+      "skillFolderHash": "058b2f1a90d9fe6b62f35704879f61dbcb122479"
+    },
+    "gemini-agents-api": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gemini-agents-api/SKILL.md",
+      "skillFolderHash": "a322e29e1e5dda36afc12403338926b46ae129da"
+    },
+    "gemini-api": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gemini-api/SKILL.md",
+      "skillFolderHash": "8225b0d46103cfdc3e1b80862bba5314338b9631"
+    },
+    "gemini-interactions-api": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gemini-interactions-api/SKILL.md",
+      "skillFolderHash": "e2cbcb88bf9aba335bc1e0bd5b27daba6a9d6b90"
+    },
+    "gemini-live-api": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gemini-live-api/SKILL.md",
+      "skillFolderHash": "d0388af51044d0f8b62cdce6ef8adf68b4b901fe"
+    },
+    "gke-ai-troubleshooting-handle-disruption-gpu-tpu": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-handle-disruption-gpu-tpu/SKILL.md",
+      "skillFolderHash": "b89178654d68b01b74279b4b16bf5e034950f21f"
+    },
+    "gke-ai-troubleshooting-jobset-interruption": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-jobset-interruption/SKILL.md",
+      "skillFolderHash": "adfe352d67a8c6f034f9c70f222c3602108f892b"
+    },
+    "gke-ai-troubleshooting-node-unresponsive-timeout": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-node-unresponsive-timeout/SKILL.md",
+      "skillFolderHash": "079d6b63e356c9c72c18610d320091287d6021c8"
+    },
+    "gke-ai-troubleshooting-tpu-dynamic-slices-monitoring": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-dynamic-slices-monitoring/SKILL.md",
+      "skillFolderHash": "4c2632fa65a14566da3380652c38da1c4a545e3a"
+    },
+    "gke-ai-troubleshooting-tpu-metrics-monitoring": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-metrics-monitoring/SKILL.md",
+      "skillFolderHash": "47dcb9f74fab7501e9fcb8bbbe031f20af76780a"
+    },
+    "gke-ai-troubleshooting-tpu-mxla-hang": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-mxla-hang/SKILL.md",
+      "skillFolderHash": "ee7386ee81dcdb3cc8e69d89e746e5a76a02bddd"
+    },
+    "gke-ai-troubleshooting-tpu-partition-overlap": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-partition-overlap/SKILL.md",
+      "skillFolderHash": "6858ee55a8a93c4e1a28be1bda21fb1329cde6ce"
+    },
+    "gke-ai-troubleshooting-tpu-performance-degradation": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-performance-degradation/SKILL.md",
+      "skillFolderHash": "e8172480210fbd64147b66ca93d0f0717ac7dabf"
+    },
+    "gke-ai-troubleshooting-tpu-reservation-stockout": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-reservation-stockout/SKILL.md",
+      "skillFolderHash": "fc02929693a2ff6692514bd7adbc971f16c8b41b"
+    },
+    "gke-ai-troubleshooting-tpu-slice-mig-stuck-updating": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-slice-mig-stuck-updating/SKILL.md",
+      "skillFolderHash": "8fd63d96d3c6dc4d3e62dca2bf67d09ee4742ac6"
+    },
+    "gke-ai-troubleshooting-tpu-vbar-oom": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-vbar-oom/SKILL.md",
+      "skillFolderHash": "d5d2d05f2421d6b4af3ba4619843f70dfbc3a147"
+    },
+    "gke-ai-troubleshooting-tpu-vm-repair-stuck": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-ai-troubleshooting-tpu-vm-repair-stuck/SKILL.md",
+      "skillFolderHash": "2c5cbbddaa8dc8d10207ce49b5c283a50105a95a"
+    },
+    "gke-alert-configuration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-alert-configuration/SKILL.md",
+      "skillFolderHash": "e61698693621342063e3b015d9c6663d14f413f5"
+    },
+    "gke-app-onboarding": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-app-onboarding/SKILL.md",
+      "skillFolderHash": "044623166667f178d8903d2108bc62d120cfc983"
+    },
+    "gke-backup-dr": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-backup-dr/SKILL.md",
+      "skillFolderHash": "003e2c47ca3e2f10e2be8f9550b681a00ade0004"
+    },
+    "gke-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-basics/SKILL.md",
+      "skillFolderHash": "499ea5e359d9fe95d326d6380343de061c468e4e"
+    },
+    "gke-batch-hpc": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-batch-hpc/SKILL.md",
+      "skillFolderHash": "6419665cbe169720679de5cde1a58042ff0a8aa3"
+    },
+    "gke-cluster-autoscaler": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-cluster-autoscaler/SKILL.md",
+      "skillFolderHash": "294c510bf437537e0c86ba9cf15b5ebde3495f16"
+    },
+    "gke-cluster-creation": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-cluster-creation/SKILL.md",
+      "skillFolderHash": "81c1bb8511c7b1a56d3d5ed6a86c4a8844ce998e"
+    },
+    "gke-compute-classes": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-compute-classes/SKILL.md",
+      "skillFolderHash": "3937d2c3b6f7e88cdf521056ec6db7e1b7e9d6d1"
+    },
+    "gke-cost-analysis": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-cost-analysis/SKILL.md",
+      "skillFolderHash": "3530a2d084a87e6646a359538e957bad51a57e5e"
+    },
+    "gke-cost-optimization": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-cost-optimization/SKILL.md",
+      "skillFolderHash": "d2426d41ceed8123132a2d959bf6fbe6da6024de"
+    },
+    "gke-custom-golden-image-discovery": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-custom-golden-image-discovery/SKILL.md",
+      "skillFolderHash": "0ab4232210442c01058f375e22b223b44159bee1"
+    },
+    "gke-golden-path": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-golden-path/SKILL.md",
+      "skillFolderHash": "413b038241569c4065dcd6d04580cfba7b580ed8"
+    },
+    "gke-inference": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-inference/SKILL.md",
+      "skillFolderHash": "5d622ff4bf489eff7708e04766704c3606f912e6"
+    },
+    "gke-manifest-generation": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-manifest-generation/SKILL.md",
+      "skillFolderHash": "6633b9bdc6c9d78892000f553064690c681cde92"
+    },
+    "gke-multitenancy": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-multitenancy/SKILL.md",
+      "skillFolderHash": "bd386851455c0a69d3fee2e64a67ad125329216b"
+    },
+    "gke-networking": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-networking/SKILL.md",
+      "skillFolderHash": "e21a834622a09363f7ed984d457a3406ae9b657b"
+    },
+    "gke-node-notready": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-node-notready/SKILL.md",
+      "skillFolderHash": "d0a81da272efe4e03caa76761f9d39b5971b235b"
+    },
+    "gke-observability": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-observability/SKILL.md",
+      "skillFolderHash": "4159a3c277ba00e7188743f7342aac13ffbf5bd4"
+    },
+    "gke-platform-security": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-platform-security/SKILL.md",
+      "skillFolderHash": "57220e48a5fbee2421c4a3a9f292d6c55609a433"
+    },
+    "gke-productionize": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-productionize/SKILL.md",
+      "skillFolderHash": "fd55fa0bafc09f6bfff51fd6b49bb58c0d0ab336"
+    },
+    "gke-reliability": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-reliability/SKILL.md",
+      "skillFolderHash": "209c3a0bd9bfe0183d4945f7b021b6610effab2d"
+    },
+    "gke-service-networking": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-service-networking/SKILL.md",
+      "skillFolderHash": "cb1fccc7b9afbc65a3b070d65b5d2c5f4a7cb58c"
+    },
+    "gke-storage": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-storage/SKILL.md",
+      "skillFolderHash": "8466421dc30efccce5d9fd03d96260418ca02d9b"
+    },
+    "gke-storage-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-storage-troubleshooting/SKILL.md",
+      "skillFolderHash": "92dee913db0afe666a73928355f3d9ba5ceb0a08"
+    },
+    "gke-upgrades": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-upgrades/SKILL.md",
+      "skillFolderHash": "2f334e7c648c8a441b9529c2d001895d2df4ea09"
+    },
+    "gke-workload-identity": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-workload-identity/SKILL.md",
+      "skillFolderHash": "92fc8bfbed9f8c682d1ec9f33c5f1b776fbfdc94"
+    },
+    "gke-workload-scaling": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-workload-scaling/SKILL.md",
+      "skillFolderHash": "2b995472c7dff56655ad518b16cab25f5d823e98"
+    },
+    "gke-workload-scaling-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-workload-scaling-troubleshooting/SKILL.md",
+      "skillFolderHash": "16b281a44070f1499e365d3843ff11458b7cbd2c"
+    },
+    "gke-workload-security": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-workload-security/SKILL.md",
+      "skillFolderHash": "83d814206e3999d7e83128a935de7fa674c126e6"
+    },
+    "gke-workload-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/gke-workload-troubleshooting/SKILL.md",
+      "skillFolderHash": "39e7c84dbd09d5465f96805b644778ac94dde60d"
+    },
+    "google-ads-api-account-diagnostics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-ads-api-account-diagnostics/SKILL.md",
+      "skillFolderHash": "9397dd7b51ca932855f97a4355482d9bc466b83f"
+    },
+    "google-ads-api-mcp-setup": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-ads-api-mcp-setup/SKILL.md",
+      "skillFolderHash": "f1751e581a66f3c19182a1d16eb74c9d6ffb5e82"
+    },
+    "google-ads-api-quickstart": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-ads-api-quickstart/SKILL.md",
+      "skillFolderHash": "9b4f9fc93e5b51c0f95cfea3b9cee5c55d68fe7a"
+    },
+    "google-agents-cli-onboarding": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-agents-cli-onboarding/SKILL.md",
+      "skillFolderHash": "dcd9fab7c5b5849cb4c7cf19ac0abcba24f36f6b"
+    },
+    "google-analytics-admin-api-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/analytics/google-analytics-admin-api-basics/SKILL.md",
+      "skillFolderHash": "47effaa1c37a04c70921be6763b7991f11d6dcfc"
+    },
+    "google-analytics-data-api-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/analytics/google-analytics-data-api-basics/SKILL.md",
+      "skillFolderHash": "ef34a306ac108dc9be2236c07e8386d86a163969"
+    },
+    "google-cloud-filestore-auditing": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-filestore-auditing/SKILL.md",
+      "skillFolderHash": "3b81ce615ddb59632df02e5ed3e441d23c8ad387"
+    },
+    "google-cloud-filestore-autoscale": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-filestore-autoscale/SKILL.md",
+      "skillFolderHash": "d3b79e0dd6f3822523cf73e12564239699ac7519"
+    },
+    "google-cloud-filestore-log-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-filestore-log-troubleshooting/SKILL.md",
+      "skillFolderHash": "b5b74dd1084993ed994042f8ab802cbd36c3955f"
+    },
+    "google-cloud-filestore-nfs-browser": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-filestore-nfs-browser/SKILL.md",
+      "skillFolderHash": "c57a7261b71c99c92eff86fdfb9c84ee5ba1006a"
+    },
+    "google-cloud-global-frontend-configuration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-global-frontend-configuration/SKILL.md",
+      "skillFolderHash": "2a9b946ca1e6fc059ecf4a55a132840faa4c011b"
+    },
+    "google-cloud-networking-observability": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-networking-observability/SKILL.md",
+      "skillFolderHash": "6b2c3f39ce8fe0686d1423081e8fe2050e536b14"
+    },
+    "google-cloud-recipe-auth": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-recipe-auth/SKILL.md",
+      "skillFolderHash": "d4d99becf3987748ca6b8221a9e76c724f216b9f"
+    },
+    "google-cloud-recipe-foundation-builder": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-recipe-foundation-builder/SKILL.md",
+      "skillFolderHash": "f38d60ab7f3c70796e7db0c07fb750170b906cc1"
+    },
+    "google-cloud-recipe-onboarding": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-recipe-onboarding/SKILL.md",
+      "skillFolderHash": "7734d0c82a97791a3e668dd1c6d33a929052e1cc"
+    },
+    "google-cloud-scc-query": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-scc-query/SKILL.md",
+      "skillFolderHash": "39324b8adebe758587263e43f8dfbb85410aebf7"
+    },
+    "google-cloud-scc-remediation": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-scc-remediation/SKILL.md",
+      "skillFolderHash": "cb75a6bba4fd780828072da1e65bda7ec6353a19"
+    },
+    "google-cloud-slo-alert-configuration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-slo-alert-configuration/SKILL.md",
+      "skillFolderHash": "388715c6b951940e4279648ef1999501487cd498"
+    },
+    "google-cloud-solution-agentic-ai-bidirectional-streaming": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-agentic-ai-bidirectional-streaming/SKILL.md",
+      "skillFolderHash": "6858e80ce4b1a30e921e42d64a1340c5128e91ea"
+    },
+    "google-cloud-solution-agentic-ai-borderless-data-lakehouse": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-agentic-ai-borderless-data-lakehouse/SKILL.md",
+      "skillFolderHash": "4b3bf7f1bee954e95cf86a2677dbc5f6606794ba"
+    },
+    "google-cloud-solution-agentic-ai-data-science-workflow": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-agentic-ai-data-science-workflow/SKILL.md",
+      "skillFolderHash": "246820c2f8a91b27cd2131db08010d721283597d"
+    },
+    "google-cloud-solution-agentic-analytics-spark-knowledge-catalog": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-agentic-analytics-spark-knowledge-catalog/SKILL.md",
+      "skillFolderHash": "7622ab6e51067c8644cff183c0e318c6289f87c0"
+    },
+    "google-cloud-solution-architecture": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-architecture/SKILL.md",
+      "skillFolderHash": "c2be63797638f62b216abb637c245bbb879db578"
+    },
+    "google-cloud-solution-build-deploy-agents": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-build-deploy-agents/SKILL.md",
+      "skillFolderHash": "935cca769d17c11f69ac16150f6a44749ec1f5a8"
+    },
+    "google-cloud-solution-guided-gke-ai-migration": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-guided-gke-ai-migration/SKILL.md",
+      "skillFolderHash": "2e934dff4c895f4f47569a71ec88fdc28d48fdf9"
+    },
+    "google-cloud-solution-hybrid-search-alloydb": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-hybrid-search-alloydb/SKILL.md",
+      "skillFolderHash": "becdd73f25b7595695b9d5c3a321b7358ba483d0"
+    },
+    "google-cloud-solution-multi-agent-security": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-multi-agent-security/SKILL.md",
+      "skillFolderHash": "378ec0f39c6508a2cce42e15c04333e617d5645b"
+    },
+    "google-cloud-solution-n-tier-serverless-web-app": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-n-tier-serverless-web-app/SKILL.md",
+      "skillFolderHash": "e90d7c9b1c3b8b32af2f3c0de731a87b4e44c783"
+    },
+    "google-cloud-solution-rag-enterprise-search-gke-sqldb": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-solution-rag-enterprise-search-gke-sqldb/SKILL.md",
+      "skillFolderHash": "6aba35afeae09f4041604fb0acd1f71c966c6581"
+    },
+    "google-cloud-storage-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-storage-basics/SKILL.md",
+      "skillFolderHash": "9aae81a6bb00935882f74a871c1d9b59ea29fce7"
+    },
+    "google-cloud-storage-bucket-architect": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-storage-bucket-architect/SKILL.md",
+      "skillFolderHash": "80ad04ea7f1ebcd552fc66358c2f373ddcb3603a"
+    },
+    "google-cloud-storage-fuse": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-storage-fuse/SKILL.md",
+      "skillFolderHash": "6e81ef207197f70e5b8b825bfc1a7f4a95c99100"
+    },
+    "google-cloud-waf-cost-optimization": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-waf-cost-optimization/SKILL.md",
+      "skillFolderHash": "3b98e5ce36c983a75c29b5bfbd942c99b6a3c25f"
+    },
+    "google-cloud-waf-operational-excellence": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-waf-operational-excellence/SKILL.md",
+      "skillFolderHash": "7fd3291dbb7e3eed1870def63c3dc6f8473b8565"
+    },
+    "google-cloud-waf-performance-optimization": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-waf-performance-optimization/SKILL.md",
+      "skillFolderHash": "8e28e9805004f46f5b486126fa127f5d0f90764e"
+    },
+    "google-cloud-waf-reliability": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-waf-reliability/SKILL.md",
+      "skillFolderHash": "20c153fc5e057546a85b5d0999b98f45325d3757"
+    },
+    "google-cloud-waf-security": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-waf-security/SKILL.md",
+      "skillFolderHash": "e154a69c8ccd69564af1245d88bc77ac12311b22"
+    },
+    "google-cloud-waf-sustainability": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/google-cloud-waf-sustainability/SKILL.md",
+      "skillFolderHash": "94571f44c2c3525d9b6e588bf3c9515546f22744"
+    },
+    "google-mobile-ads-android-migrate-to-next-gen": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-mobile-ads-android-migrate-to-next-gen/SKILL.md",
+      "skillFolderHash": "a563459a389f6c595ebb9d1179f3755eb4ad2d4f"
+    },
+    "google-mobile-ads-banner": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-mobile-ads-banner/SKILL.md",
+      "skillFolderHash": "0ee86b8f00a90632aee2b4a25a5d593a6fcb5a93"
+    },
+    "google-mobile-ads-get-started": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-mobile-ads-get-started/SKILL.md",
+      "skillFolderHash": "0bc3dfce1c92ecbac1431433d35254e17e684032"
+    },
+    "google-mobile-ads-interstitial": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-mobile-ads-interstitial/SKILL.md",
+      "skillFolderHash": "0667f435c543d5e312e7ef8fa483aa37cb698414"
+    },
+    "google-mobile-ads-rewarded": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-mobile-ads-rewarded/SKILL.md",
+      "skillFolderHash": "6541248e6ae415629c43bc7ed1544e92b29e43fb"
+    },
+    "google-mobile-ads-validate": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/google-mobile-ads-validate/SKILL.md",
+      "skillFolderHash": "39d90a0ee088a5a098d088cf558a3143465471ad"
+    },
+    "iam-helper-for-policy-management": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/iam-helper-for-policy-management/SKILL.md",
+      "skillFolderHash": "d9246ed9d6e17e775d16371a25f2266bfdd312ca"
+    },
+    "iam-helper-for-policy-simulator": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/iam-helper-for-policy-simulator/SKILL.md",
+      "skillFolderHash": "4d5a246b47b087da59a5919f47d1b493f8c58c11"
+    },
+    "iam-helper-for-privileged-access-management": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/iam-helper-for-privileged-access-management/SKILL.md",
+      "skillFolderHash": "3fd7618c7e623e0335fab03ef99ee2407964c5ec"
+    },
+    "iam-helper-for-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/iam-helper-for-troubleshooting/SKILL.md",
+      "skillFolderHash": "9196d7c731a4d34bb0f281538c5e23b043ebd7c2"
+    },
+    "ima-dai-sdk": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/ima-dai-sdk/SKILL.md",
+      "skillFolderHash": "3473f789a03815294e77a174edaf3d53b344333f"
+    },
+    "ima-sdk-client-side": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/ads/ima-sdk-client-side/SKILL.md",
+      "skillFolderHash": "e0c6883c2aa4174772624b5f6d2ae6080adbd1fb"
+    },
+    "managed-airflow-dag-authoring": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/managed-airflow-dag-authoring/SKILL.md",
+      "skillFolderHash": "3f54ce22cdd746eb58e6406c50c844feb713fe8c"
+    },
+    "managed-airflow-dag-troubleshooting": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/managed-airflow-dag-troubleshooting/SKILL.md",
+      "skillFolderHash": "b917066981f443c92e0c4844364fc4ef766123a3"
+    },
+    "managed-airflow-migrations": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/managed-airflow-migrations/SKILL.md",
+      "skillFolderHash": "0d3f4d0ea59b4c973b7009f13fe49dbb527de817"
+    },
+    "managed-airflow-recommendations": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/managed-airflow-recommendations/SKILL.md",
+      "skillFolderHash": "9ab5ab31564fc6751fffd8c1e529546e806dff63"
+    },
+    "migrate-to-rust": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/developers/migrate-to-rust/SKILL.md",
+      "skillFolderHash": "82b599f72fe900dca3f1432da1e7af6bf1a20452"
+    },
+    "retrieving-developer-knowledge": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/developers/retrieving-developer-knowledge/SKILL.md",
+      "skillFolderHash": "879976248c19a326c75b556d4ec79b6e6db925e2"
+    },
+    "secops-cases": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/secops-cases/SKILL.md",
+      "skillFolderHash": "588d8be987372dcbb31a64d73d4424012f9fec38"
+    },
+    "secops-detection-engineering": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/secops-detection-engineering/SKILL.md",
+      "skillFolderHash": "17387de137e902bee337ed8d8cf05eb0983fc800"
+    },
+    "secops-hunt": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/secops-hunt/SKILL.md",
+      "skillFolderHash": "c4e57d17dd0f4da51a2aefd63bb91ed02f198e18"
+    },
+    "secops-investigate": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/secops-investigate/SKILL.md",
+      "skillFolderHash": "9d9600a948f04f3a0367b8ca1f096e9f3e8ab527"
+    },
+    "secops-triage": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/secops-triage/SKILL.md",
+      "skillFolderHash": "f8d6e093d4116c0db787dc5a3e600497aa4806c0"
+    },
+    "sign-in-with-google-web": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/identity/sign-in-with-google-web/SKILL.md",
+      "skillFolderHash": "4e1c7b8b8a2f2da8d678290ab8861b679b692bf7"
+    },
+    "spanner-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/spanner-basics/SKILL.md",
+      "skillFolderHash": "8e0f0cc4dd94e65f0ad7c80a1c3f857786be6ab8"
+    },
+    "workload-manager-basics": {
+      "source": "google/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google/skills.git",
+      "skillPath": "skills/cloud/workload-manager-basics/SKILL.md",
+      "skillFolderHash": "dcea9e9bc10059003b998f6ea3b78c154bf02d7b"
+    }
+  }
+}

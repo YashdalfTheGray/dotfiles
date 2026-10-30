@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Cached manifest versions do not establish the active installed version.",
+    "Configured plugin enabled values come from config.toml. Remote plugin enabled values are unknown; only install marker presence is recorded.",
+    "Plugin accounts, connection identifiers, credentials, and cached payloads are excluded."
+  ],
+  "configured_plugins": [
+    {
+      "name": "azure",
+      "marketplace": "azure-skills",
+      "cached_versions": [
+        "1.2.108"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "browser",
+      "marketplace": "openai-bundled",
+      "cached_versions": [
+        "26.1027.30824"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "chrome",
+      "marketplace": "openai-bundled",
+      "cached_versions": [
+        "26.1027.30824"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "codex-app-tools",
+      "marketplace": "openai-bundled",
+      "cached_versions": [
+        "26.1027.30824"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "computer-use",
+      "marketplace": "openai-bundled",
+      "cached_versions": [
+        "1.0.1001641"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "unified-computer-use",
+      "marketplace": "openai-bundled",
+      "cached_versions": [
+        "26.1027.30824"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "visualize",
+      "marketplace": "openai-bundled",
+      "cached_versions": [
+        "1.0.66"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "documents",
+      "marketplace": "openai-primary-runtime",
+      "cached_versions": [
+        "26.1017.22136"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "pdf",
+      "marketplace": "openai-primary-runtime",
+      "cached_versions": [
+        "26.1017.22136"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "presentations",
+      "marketplace": "openai-primary-runtime",
+      "cached_versions": [
+        "26.1017.22136"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "spreadsheets",
+      "marketplace": "openai-primary-runtime",
+      "cached_versions": [
+        "26.1017.22136"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "template-creator",
+      "marketplace": "openai-primary-runtime",
+      "cached_versions": [
+        "26.1017.22136"
+      ],
+      "enabled": true
+    }
+  ],
+  "remote_plugins": [
+    {
+      "name": "github",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.13-77c10e110b37"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "gmail",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.10"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "google-calendar",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "1.2.7"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "google-drive",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.22"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "linear",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "5.0.1"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "notion",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "3.0.3"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "openai-templates",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.1"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "pages",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.26"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "plugin-creator",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.28"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "plugin-management",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.0"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "sites",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "1.1.2"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "slack",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.8"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "work-pets",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.6"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "write-like-me",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "0.1.1"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    }
+  ]
+}
