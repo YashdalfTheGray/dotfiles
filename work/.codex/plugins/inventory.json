@@ -7,14 +7,6 @@
   ],
   "configured_plugins": [
     {
-      "name": "azure",
-      "marketplace": "azure-skills",
-      "cached_versions": [
-        "1.2.108"
-      ],
-      "enabled": true
-    },
-    {
       "name": "browser",
       "marketplace": "openai-bundled",
       "cached_versions": [

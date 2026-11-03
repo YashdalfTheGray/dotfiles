@@ -62,12 +62,9 @@ enabled = true
 [plugins."chrome@openai-bundled"]
 enabled = true
 
-[plugins."azure@azure-skills"]
-enabled = true
-
 [tui]
 screen_reader_detection_done = true
 pet = "codex"
 
 [tui.model_availability_nux]
-"gpt-6.1-sol" = 2
+"gpt-6.1-sol" = 4

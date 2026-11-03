@@ -66,6 +66,8 @@ Use `maintainability_reviewer` (Sol, high) after implementation to review change
 
 ## Remote-source skills and cloud operations
 
+Connector fallback exception: After checking installed skills, if no applicable provider or source skill is installed and a connector for that service is available, use the connector for operations it supports. This exception applies to all missing-skill restrictions below, including researcher, investigator, and operator access. If an applicable skill is installed, read and use it; this exception does not apply. If no connector is available or it cannot perform the required operation, follow the skill-discovery and installation rules below. A missing skill does not permit a raw API, CLI, SDK, or browser fallback. All credential verification, read-only restrictions, user approvals, and operator host-gate requirements still apply.
+
 Before AWS, Azure, or GCP access, investigator and operator must read and use the installed provider skill. For Datadog, Vercel, or another service, discovery alone is insufficient: an applicable service skill must be installed, read, and used before access. If the skill finder is absent, finds no applicable skill, or the discovered skill is unavailable, stop and ask for the missing prerequisite. Never bypass a missing skill with raw CLI, SDK, browser, or connector access. Skills do not grant credentials or approval.
 
 `researcher` remains read-only and must not access cloud infrastructure. Local code and documentation reads need no source skill. Before accessing GitHub, Notion, Linear, or another remote source, discover, read, and use the installed skill for that source. Do not use raw API, CLI, browser, or connector access to bypass a missing source skill. If the skill is absent, ask the coordinator to use an installed skill finder and request installation; if that finder is absent, ask for a trusted installation source and continue independent local research. Only the skill for the source actually used is needed. Cite document or issue URL, section, and update time when a code line is unavailable. A skill never authorizes writes, comments, status changes, or sync.
@@ -85,3 +87,20 @@ Before a write, obtain separate approval for a fresh precondition read with veri
 ## Progressive skill discovery
 
 Identify the relevant provider, service, and task from the request and available evidence. Search installed skill names and descriptions first. Read only the applicable `SKILL.md` files and supporting references needed for the current step; do not read entire provider collections. If the service is unknown, use an applicable discovery skill and permitted read-only evidence to narrow the scope. Load additional skills only when dependencies or findings justify them. If a required skill is missing, follow the existing skill-discovery and installation rules. Discovery never bypasses credential, read-only, or approval requirements.
+
+## Bash and Zsh version exception
+
+Bash and Zsh are exempt from the latest-stable-version requirement. Use the installed version without requesting approval or upgrading it. Check its version when compatibility matters, and use syntax supported by that version.
+
+## Naming conventions
+
+Before introducing a name, inspect comparable names and their references in the repository. Derive resource names, stack names, configuration keys, and other identifiers from the established conventions for the relevant component. Check related configuration so names remain consistent across files and systems.
+
+For code identifiers and filenames, follow the repository's conventions and the language's established conventions where the repository provides no guidance.
+
+Never invent or assume a naming convention. If comparable examples are absent, conflicting, or insufficient to determine the name, ask a human to provide or confirm it before creating the named item or adding references to it. Do not treat a generated placeholder as an approved name.
+## Commit-message conventions
+
+Before drafting or creating a commit, inspect the repository's contribution instructions, commit-message configuration or templates, and recent relevant commit history. Always follow the established repository convention for the subject and body, including prefixes, scopes, capitalization, ticket references, and formatting where applicable. Never substitute a preferred style, assume Conventional Commits, or otherwise deviate from that convention.
+
+If no convention is established, or the instructions and history conflict or are ambiguous, ask a human to provide or confirm the convention before drafting or creating the commit. Do not invent a fallback convention.
