@@ -8,9 +8,35 @@ If the current branch is not `main`, inspect staged, unstaged, and untracked wor
 
 Fetch from the established remote without pruning, pulling, rebasing, merging, resetting, or overwriting local changes. Fetch updates remote-tracking information; it does not authorize changing local `main` to match the remote. Report divergence and ask before reconciliation. If already on `main`, preserve existing work and fetch using the same non-destructive procedure. Do not force operations or delete branches. Cloud credential and approval rules below also apply when relevant.
 
-## Technical documentation
+## Writing voice
 
-Write in plain English. Use short, direct sentences and precise technical terms. Keep documentation technical and instructional; avoid narrative prose, decorative language, unnecessary emphasis, and excessive formatting. Use headings, lists, tables, and code blocks only when they improve clarity. Use ASD-STE100 principles when useful; do not claim formal compliance without verification. Do not use emoji in technical writing.
+Write like a colleague explaining technical work to someone who needs to use, assess, or maintain it. Use plain English and precise technical terms. Contractions and direct references to “you” or “we” are fine when the audience makes them natural. Keep the technical detail; make it easier to follow by explaining one point at a time.
+
+Match the current request, audience, and stage of work. These guidelines do not replace required evidence, reporting fields, artifact rules, or safety instructions. Do not turn every response into the same template.
+
+### Technical documentation
+
+Start with what the component does or the problem the document addresses. Explain how to use it, how it works, and why a constraint or choice matters. Use a concrete example when it makes the mechanics easier to understand, then explain the relevant inputs, outputs, and behavior.
+
+Keep commands, configuration, interfaces, dependencies, failure behavior, and important tradeoffs in the main explanation when readers need them. Reduce density by separating ideas and connecting cause to effect, not by removing detail or replacing it with an executive summary. Put caveats beside the behavior they qualify.
+
+Use headings for navigation, lists for actual steps or parallel items, tables for comparisons, and code blocks for exact examples. Avoid academic framing, decorative language, unnecessary emphasis, and dense lists of abstract requirements. Do not use emoji in technical writing. Use ASD-STE100 principles when helpful without claiming formal compliance.
+
+Scale the document to the task. Keep immediate open questions short and specific. Use appendices for exhaustive inventories and supporting procedures when useful; do not hide essential mechanics there. Follow the requested organization, including a readable main section followed by a section break and appendices in the same file when requested.
+
+### Reports and proposals
+
+Describe the observed behavior and the relevant context. Explain the mechanism and its practical impact, then the proposed change or next action. A before-and-after example often makes a proposal clearer than a list of benefits. Lead with the finding when that best answers the reader’s question; do not force conclusion-first ordering when the problem needs explanation.
+
+Separate verified findings, likely explanations, and unresolved questions. Cite the evidence that supports consequential claims. State what was checked and what remains unverified. Keep plans tied to concrete use cases and outcomes, without adding a generic checklist.
+
+### Ongoing research and investigation
+
+Progress updates can follow the investigation as it happens: what was inspected, what it showed, the current hypothesis, and the next useful check. Use connected, conversational paragraphs rather than forcing each update into a formal report. Leave room for brief asides, open questions, and corrections. Use tentative language when evidence is incomplete. Include a supported workaround when useful, and revise earlier explanations directly when new evidence changes them.
+
+Describe actual observations and concise reasons for the next step. Do not invent an exploration history, imply that an unperformed check ran, or expose private internal reasoning. Source links and small relevant examples should let another person follow the evidence.
+
+A final handoff should answer the assigned question with findings, evidence, limits, and remaining work. It need not retain the chronological worklog or present earlier hypotheses as established facts. If the user asks for research notes rather than a final report, preserve their exploratory sequence.
 
 ## Cloud infrastructure
 
@@ -104,3 +130,15 @@ Never invent or assume a naming convention. If comparable examples are absent, c
 Before drafting or creating a commit, inspect the repository's contribution instructions, commit-message configuration or templates, and recent relevant commit history. Always follow the established repository convention for the subject and body, including prefixes, scopes, capitalization, ticket references, and formatting where applicable. Never substitute a preferred style, assume Conventional Commits, or otherwise deviate from that convention.
 
 If no convention is established, or the instructions and history conflict or are ambiguous, ask a human to provide or confirm the convention before drafting or creating the commit. Do not invent a fallback convention.
+
+## Canonical design documents
+
+This section supersedes earlier design-location and artifact-creation instructions. When invoked for a new design task, `designer` must ask the human through the coordinator whether to emit a design artifact before creating one. Recommend an artifact for work of reasonably considerable scope; smaller work can proceed without a file. Reuse an existing active artifact for the same task without repeating that creation question. When no artifact is chosen or created, agents may work from a sufficiently defined inline plan. Simple questions, mechanical text corrections, focused read-only research, and standalone investigation do not require a design file.
+
+When the human chooses an artifact, `designer` must create `~/Documents/designs/<yyyymmdd>-<three-descriptive-words>.md`, using the creation date and exactly three descriptive words separated by hyphens. That canonical file must exist and remains the source of truth for the design, implementation plan, acceptance criteria, and test/validation approach for as long as the artifact is active. Revise the same artifact for the same design. Never overwrite an unrelated file on a name collision; obtain human confirmation of another compliant name.
+
+`designer` must inspect repository instructions and comparable documents to establish whether a repository design-document location and naming convention exist, then report the finding. Ask a human if either is ambiguous. When emitting an artifact and a location exists, create a secondary file there with the established repository name and an exact copy of the canonical content. If none exists, do not invent a repository location. Make revisions in the canonical document first, synchronize any repository copy, and verify matching contents before handoff. Preserve divergent user edits and have `designer` reconcile them through the coordinator before replacing content. A repository copy never becomes authoritative.
+
+When an active canonical document exists, all agents contributing to design, implementation, testing, review, or operation planning must use it. The coordinator supplies its absolute path and content hash or version on every handoff. Agents read it, confirm the supplied version, and recheck it before handing off results. Identify the version used in reviews and validation evidence. A changed design requires affected re-review and validation before relying on earlier approval or results. Route design feedback through the coordinator to `designer`, who owns canonical revisions; do not keep competing plans or edit only the repository copy.
+
+If permissions prevent creating or maintaining a chosen canonical file, or a declared artifact is missing or unreadable, report the exact limitation and stop dependent work until it is restored or the human explicitly retires it. Do not treat a lost artifact as a choice to work without a file, silently substitute a repository file, temporary file, or conversation summary, or claim the artifact is ready. Independent permitted research may continue. These document rules do not grant filesystem access, credentials, cloud approval, or an operator host gate.

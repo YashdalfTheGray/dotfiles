@@ -1,0 +1,114 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "~/Documents/designs",
+      "~/Documents/investigations"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/yash/.config/iterm2/it2\" handle-agent-hook"
+          }
+        ]
+      }
+    ]
+  },
+  "theme": "auto",
+  "enabledPlugins": {
+    "ruby-lsp@claude-plugins-official": true
+  }
+}

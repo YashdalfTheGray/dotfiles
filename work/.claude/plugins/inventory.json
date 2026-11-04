@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Installed plugin versions and scopes come from installed_plugins.json; enabled values come from settings.json.",
+    "Public marketplace sources are retained. Account data, credentials, local install paths, timestamps, plugin caches, and payloads are excluded."
+  ],
+  "marketplaces": [
+    {
+      "name": "claude-plugins-official",
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    }
+  ],
+  "installed_plugins": [
+    {
+      "name": "ruby-lsp",
+      "marketplace": "claude-plugins-official",
+      "version": "1.0.0",
+      "scope": "user",
+      "enabled": true
+    }
+  ]
+}

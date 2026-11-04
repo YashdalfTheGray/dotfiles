@@ -5,7 +5,7 @@ description: Diagnose code failures, exceptions, and failing tests through focus
 
 # Debug
 
-The main coordinator owns scope, competing explanations, and agent handoffs. Use the installed roles with their configured models and efforts. Keep findings in the conversation unless the user requests an artifact; no investigation report is required.
+The main coordinator owns scope, competing explanations, and agent handoffs. Use the installed roles with their configured models and efforts. Keep diagnosis findings in the conversation unless the user requests an artifact; no investigation report is required. Requested implementation follows the canonical design-document workflow below.
 
 ## Establish the task
 
@@ -23,7 +23,7 @@ Capture the exact error, relevant input, expected and actual behavior, affected 
 
 ## Fix when requested
 
-Give `code_writer` a concise plan tied to the supported diagnosis and expected behavior. Preserve user edits and keep the fix focused. Use established helpers, clear control flow, repository formatting, and comments for non-obvious intent. Do not hide exceptions, weaken assertions, or remove checks merely to make tests pass.
+Give `code_writer` a plan tied to the supported diagnosis, expected behavior, acceptance criteria, and regression-test approach. Smaller fixes may use an inline plan without a file. For reasonably considerable scope, involve `designer`, who asks the human whether to emit an artifact. If an active artifact exists or is chosen, record the plan in the canonical `~/Documents/designs/<yyyymmdd>-<three-descriptive-words>.md` document and maintain an exact secondary repository copy when an established design-document location exists. Give `code_writer` and reviewers the canonical absolute path and current hash or version; do not replace an active artifact with a competing inline plan. A missing or inaccessible declared artifact blocks dependent implementation and validation until restoration or explicit human retirement. Route design revisions through the coordinator to designer and synchronize any repository copy before handoff. Preserve user edits and keep the fix focused. Use established helpers, clear control flow, repository formatting, and comments for non-obvious intent. Do not hide exceptions, weaken assertions, or remove checks merely to make tests pass.
 
 Add a regression test that fails for the original behavior and passes with the fix when practical. Name tests as observed behavior, such as `it('rejects an expired token')` or `test_rejects_expired_token`, without “should.” Run the affected checks and relevant surrounding tests; report exact outcomes and any checks not run. Explain any limitation that prevents demonstrating failure before and success after the fix.
 

@@ -1,6 +1,9 @@
 model = "gpt-6-astra"
 model_reasoning_effort = "medium"
 
+[sandbox_workspace_write]
+writable_roots = ["/Users/yash/Documents/designs"]
+
 [desktop]
 followUpQueueMode = "steer"
 conversationDetailMode = "STEPS_COMMANDS"
