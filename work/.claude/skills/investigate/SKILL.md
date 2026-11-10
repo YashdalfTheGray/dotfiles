@@ -5,13 +5,19 @@ description: Investigate incidents and unexplained system behavior using focused
 
 # Investigate
 
-The main coordinator owns the investigation record and all file writes. Keep questions and brief progress updates in conversation; maintain the report and worklog in the file below. Researcher and investigator return evidence in conversation and never write the record.
+The main coordinator owns the investigation directory, its README.md report and worklog, and all file writes. Keep questions and brief progress updates in conversation. Researcher and investigator return evidence in conversation and never write investigation files.
 
 ## Start or resume
 
 At the start of a new investigation, confirm `~/Documents/investigations` is an allowed working directory (it is listed in `permissions.additionalDirectories`, or add it with `/add-dir`). A shell `cd` alone does not grant access. Confirm the destination is permitted and writable before creating the record. If access is unavailable, ask the user to open that directory or grant access through the host; stop file writes and do not claim findings have been saved.
 
-For a new investigation, use `~/Documents/investigations/YYYYMMDD-three-descriptive-words.md`, with the actual UTC start date and exactly three lowercase descriptive words separated by hyphens. Example: `20261030-lambda-checkout-timeouts.md`. Check for collisions and create without overwriting; choose another descriptive three-word name if it exists. Resume an existing investigation only when it is identified as the intended record. Keep its original filename across dates.
+For a new investigation, create `~/Documents/investigations/YYYYMMDD-three-descriptive-words/`, using the actual UTC start date and exactly three lowercase descriptive words separated by hyphens. The report and permanent worklog live together in `README.md` inside that directory. For example: `~/Documents/investigations/20261030-lambda-checkout-timeouts/README.md`. Check for collisions before creating the directory; never overwrite or reuse an unrelated investigation. Follow the user's naming rules when an alternate name is needed.
+
+Resume an existing investigation only when it is identified as the intended record. Keep its original directory name and start date across sessions and dates. Read its README.md before resuming. If an identified record is missing or unreadable, report the limitation rather than creating an empty replacement.
+
+When migrating an identified legacy flat report, retain its existing date and descriptive basename: `<basename>.md` becomes `<basename>/README.md`. Read the latest source and check the destination for collisions. Preserve the report, all worklog entries, user edits, and linked artifacts; adjust relative links if their base changes. Verify the destination and unchanged prior worklog before removing the old flat source. Record the migration in a new timestamped worklog entry. If migration is interrupted, inspect both paths and reconcile them without overwriting either or silently creating a new record.
+
+Keep supporting files for the investigation inside the same directory and link them from README.md using relative paths. Follow existing or user-confirmed names and create subdirectories only when actual artifacts need them; do not create empty scaffolding or a duplicate report. Record the purpose, source or generating command, and validation status of artifacts so proposed scripts and unexecuted experiments cannot be mistaken for results. Keep credentials and sensitive payloads out of saved artifacts. This layout does not authorize diagnostics, cloud writes, or additional data collection.
 
 Establish the question, observed and expected behavior, impact, environment, affected resources, and time window. Ask for missing information only when it changes the investigation. Read the current record before resuming work.
 
@@ -50,6 +56,8 @@ Use these two top-level sections and report subsections:
 ```
 
 Update the Report when relevant information is validated. Include only confirmed or validated information, except that Next steps may contain proposed actions and further research. Attribute initial reports: confirmation that a person reported a symptom does not confirm the symptom itself. Under Investigation done, describe checks actually completed and their established results. Use `Not established` for an unknown root cause; do not promote a plausible hypothesis into the Report. If evidence invalidates a prior conclusion, correct the Report and document the change in a new worklog entry. Prefer source links beside claims as well as in Links/resources.
+
+Keep the executive summary current with the investigation status, validated findings, material unknowns, and next useful check. Include observation dates when evidence can become stale. Distinguish completed checks from proposed experiments and do not imply a harness, artifact, or test exists until it does.
 
 ## Worklog entries
 

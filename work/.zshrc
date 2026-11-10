@@ -74,24 +74,26 @@ ZSH_THEME="ys"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  autojump
+  brew
+  copypath
+  copyfile
+  copybuffer
   docker
   docker-compose
   fast-syntax-highlighting
+  fzf
   git
   golang
   kubectl
-  lol
   macos
   node
-  nvm
   rust
   zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
+typeset -U path PATH fpath FPATH
 
-typeset -U path PATH
+source $ZSH/oh-my-zsh.sh
 
 add_to_path() {
     local prioritize=false
@@ -142,12 +144,9 @@ add_to_path "/users/yash/.swiftly/bin"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+# editor configuration
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -160,6 +159,7 @@ add_to_path "/users/yash/.swiftly/bin"
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 
+# Functions
 function clean-containers() {
   docker rm $(docker ps -a -q)
 }
@@ -227,12 +227,14 @@ function generate-uuids() {
   for i in {1..$1}; do /usr/bin/uuidgen; done | awk '{print tolower($0)}'
 }
 
+# Aliases
 alias zshconfig="nvim ~/.zshrc"
 alias omzconfig="nvim $ZSH"
 alias vimconfig="nvim ~/.vimrc"
 alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias tmuxconfig="nvim ~/.tmux.conf"
 alias playground="~/playground"
+alias reload="exec zsh"
 alias serve-pwd="python3 -m http.server"
 
 alias gai="git add -i"
@@ -245,9 +247,12 @@ alias tmuxa="tmux attach -t"
 alias tmuxn="tmux new -s"
 alias tmuxk="tmux kill-session -t"
 alias tmuxl="tmux ls"
+alias tmuxc="tmux -CC new -A -s"
+alias tmuxca="tmux -CC attach -t"
 
 alias c="clear"
 alias l="eza -abhHlS"
+alias llg="eza -abhHlS --git --icons"
 alias tree="tree -CF"
 alias t="tree"
 alias weather="curl http://wttr.in/"
@@ -256,16 +261,29 @@ alias sourcream="source ~/.zshrc"
 alias sloc="git ls-files | xargs wc -l"
 alias gcurl="curl-from-github-and-save"
 alias jqcurl="curl-pipe-to-jq"
-alias get-aws-account="aws sts get-caller-identity | jq -r '.Account'"
-alias copy-aws-account="aws sts get-caller-identity | jq -jr '.Account' | pbcopy"
+alias get-sandbox-account="aws --profile sandbox sts get-caller-identity | jq -r '.Account'"
+alias copy-sandbox-account="aws --profile sandbox sts get-caller-identity | jq -jr '.Account' | pbcopy"
 
 alias getuuid="generate-uuids"
 alias getuuids="generate-uuids"
 
 alias now-in-unix="node -p 'Date.now()'"
+alias unixnow="now-in-unix"
+alias sanctum="if [[ -z \$VIRTUAL_ENV ]] || (( ! \$+functions[deactivate] )); then source .venv/bin/activate; fi"
+alias dispel="if [[ -n \$VIRTUAL_ENV ]] && (( \$+functions[deactivate] )); then deactivate; fi"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Other exports
+export DISABLE_TELEMETRY=1
+export DO_NOT_TRACK=1
 
+# rbenv trash
 eval "$(rbenv init - zsh)"
+
+# mise trash
+eval "$(mise activate zsh)"
+
+# fzf
+source <(fzf --zsh)
+
+# zoxide
+ eval "$(zoxide init zsh)"

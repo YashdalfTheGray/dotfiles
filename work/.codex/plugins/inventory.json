@@ -10,7 +10,7 @@
       "name": "browser",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.30824"
+        "26.1027.51404"
       ],
       "enabled": true
     },
@@ -18,7 +18,7 @@
       "name": "chrome",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.30824"
+        "26.1027.51404"
       ],
       "enabled": true
     },
@@ -26,7 +26,7 @@
       "name": "codex-app-tools",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.30824"
+        "26.1027.51404"
       ],
       "enabled": true
     },
@@ -42,7 +42,7 @@
       "name": "unified-computer-use",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.30824"
+        "26.1027.51404"
       ],
       "enabled": true
     },
@@ -58,7 +58,7 @@
       "name": "documents",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1017.22136"
+        "26.1104.22356"
       ],
       "enabled": true
     },
@@ -66,7 +66,7 @@
       "name": "pdf",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1017.22136"
+        "26.1104.22356"
       ],
       "enabled": true
     },
@@ -74,7 +74,7 @@
       "name": "presentations",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1017.22136"
+        "26.1104.22356"
       ],
       "enabled": true
     },
@@ -82,7 +82,7 @@
       "name": "spreadsheets",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1017.22136"
+        "26.1104.22356"
       ],
       "enabled": true
     },
@@ -90,7 +90,7 @@
       "name": "template-creator",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1017.22136"
+        "26.1104.22356"
       ],
       "enabled": true
     }
@@ -127,7 +127,7 @@
       "name": "google-drive",
       "marketplace": "openai-curated-remote",
       "cached_versions": [
-        "0.1.22"
+        "0.1.23"
       ],
       "enabled": null,
       "install_marker_present": true
@@ -145,7 +145,7 @@
       "name": "notion",
       "marketplace": "openai-curated-remote",
       "cached_versions": [
-        "3.0.5"
+        "3.0.8"
       ],
       "enabled": null,
       "install_marker_present": true
@@ -190,7 +190,7 @@
       "name": "sites",
       "marketplace": "openai-curated-remote",
       "cached_versions": [
-        "1.1.3"
+        "1.1.5"
       ],
       "enabled": null,
       "install_marker_present": true

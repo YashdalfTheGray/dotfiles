@@ -50,6 +50,12 @@ This applies to everything a person will read: READMEs, documentation, design do
 
 Do not copy the source READMEs' typos or inconsistent capitalization. Repository style guides and existing document conventions take precedence over this section.
 
+## Investigation records
+
+Use one directory per investigation: `~/Documents/investigations/<yyyymmdd>-<three-descriptive-words>/`. Use the original UTC start date and exactly three lowercase descriptive words separated by hyphens. Keep the report and permanent worklog in that directory's `README.md`, and keep supporting artifacts alongside it, organized as needed. Maintain the executive summary as findings change and distinguish dated observations from current state and proposed tests from completed work.
+
+Read and follow the installed `investigate` skill for creation, resumption, migration, evidence, and worklog rules. Preserve the original date when migrating a legacy flat report to `<same-basename>/README.md`; preserve its history and user edits, verify the new record, and never overwrite a collision. Investigation storage does not authorize cloud writes or weaken any role's read-only restrictions.
+
 ## Cloud infrastructure
 
 Always use read-only credentials to inspect cloud infrastructure or check its state. Verify that the credential role or permission scope is read-only before access; a read-only command executed with write-capable credentials does not satisfy this rule. If read-only credentials are unavailable or cannot be verified, stop and ask for them. Do not expose credentials in output or files.
