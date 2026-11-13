@@ -1,0 +1,90 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "DestructureObject": {
+    "prefix": "dobj",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "const { $2 } = $1;$0",
+    "description": "Destructure objects in ES"
+  },
+  "ESModuleNamedImport": {
+    "prefix": "imp",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "import { $2 } from '$1';$0",
+    "description": "Named imports from ES modules"
+  },
+  "ESModuleDefaultImport": {
+    "prefix": "impd",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "import $2 from '$1';$0",
+    "description": "Default import from ES modules"
+  },
+  "ESModuleWildcardImport": {
+    "prefix": "impw",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "import * as $2 from '$1';$0",
+    "description": "Wildcard import from ES modules"
+  },
+  "QuokkaLiveComment": {
+    "prefix": "qlive",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "/*? $0 */",
+    "description": "Quokka multi-line live comment"
+  },
+  "QuokkaLivePerfComment": {
+    "prefix": "qperf",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "/*?.*/$0",
+    "description": "Quokka multi-line live performance comment"
+  },
+  "ArrowFunctionShort": {
+    "prefix": "arrfs",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "($1) => $2;",
+    "description": "One-line arrow function"
+  },
+  "ArrowFunctionLong": {
+    "prefix": "arrfl",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "($1) => {$2};",
+    "description": "Multi-statement arrow function"
+  },
+  "ArrowFunctionParens": {
+    "prefix": "arrfp",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "($1) => ($2);",
+    "description": "Multi-line arrow function with single statement"
+  },
+  "DestructureProps": {
+    "prefix": "dprops",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "const { $1 } = this.props;",
+    "description": "Destructure props on a class component"
+  },
+  "DestructureState": {
+    "prefix": "dstate",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": "const { $1 } = this.state;",
+    "description": "Destructure state on a class component"
+  },
+  "DevelopmentOnlyCode": {
+    "prefix": "devonly",
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "body": ["if (process.env.NODE_ENV !== 'production') {", "\t$1", "}"],
+    "description": "Code that should only be run in development"
+  }
+}

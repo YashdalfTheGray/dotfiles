@@ -1,0 +1,258 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 14,
+  "editor.renderWhitespace": "boundary",
+  "editor.cursorBlinking": "phase",
+  "gitlens.advanced.messages": {},
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "editor.dragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "window.newWindowDimensions": "inherit",
+  "editor.fontFamily": "'Monaspace Argon NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
+  "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "go.useLanguageServer": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 0,
+  "[nginx]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false
+  },
+  "[NGINX]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "solargraph.formatting": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "yaml.customTags": [
+    "!And",
+    "!If",
+    "!Not",
+    "!Equals",
+    "!Or",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Join sequence",
+    "!And sequence",
+    "!If sequence",
+    "!Not sequence",
+    "!Equals sequence",
+    "!Or sequence",
+    "!FindInMap",
+    "!Join",
+    "!Sub sequence",
+    "!ImportValue sequence",
+    "!Split sequence"
+  ],
+  "yaml.format.enable": true,
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    {
+      "text": "// NOTE",
+      "color": "#fff",
+      "backgroundColor": "#00c853",
+      "isWholeLine": false,
+      "overviewRulerColor": "rgba(0, 199, 83, 0.5)"
+    },
+    {
+      "text": "// TODO",
+      "color": "#000",
+      "backgroundColor": "#ffc400",
+      "isWholeLine": false,
+      "overviewRulerColor": "rgba(255, 195, 0, 0.5)"
+    },
+    {
+      "text": "// FIXME",
+      "color": "#FFF",
+      "backgroundColor": "#f50057",
+      "isWholeLine": false,
+      "overviewRulerColor": "rgba(245, 0, 86, 0.5)"
+    },
+    {
+      "text": "// HACK",
+      "color": "#FFF",
+      "backgroundColor": "#ff0000",
+      "isWholeLine": false,
+      "overviewRulerColor": "rgba(255, 0, 0, 0.5)"
+    }
+  ],
+  "todohighlight.defaultStyle": {
+    "border": "1px solid #eee",
+    "borderRadius": "2px"
+  },
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.go",
+    "**/*.rb",
+    "**/Dockerfile",
+    "**/*.yaml",
+    "**/*.*rc"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+  "todohighlight.maxFilesForSearch": 5120,
+  "todohighlight.toggleURI": false,
+  "editor.linkedEditing": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "python.languageServer": "Pylance",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "editor.inlineSuggest.enabled": true,
+  "redhat.telemetry.enabled": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "prettier.enableDebugLogs": true,
+  "prettier.singleQuote": true,
+  "quokka.automaticRestart": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "workbench.productIconTheme": "feather-vscode",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.commandCenter": true,
+  "dev.containers.defaultExtensions": [
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "piotrpalarz.vscode-gitignore-generator"
+  ],
+  "remote.SSH.defaultExtensions": [
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "piotrpalarz.vscode-gitignore-generator"
+  ],
+  "npm.keybindingsChangedWarningShown": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "settingsSync.ignoredSettings": [
+    "editor.fontFamily",
+    "go.toolsEnvVars"
+  ],
+  "indentRainbow.indicatorStyle": "light",
+  "remote.SSH.remotePlatform": {
+    "sea64": "linux"
+  },
+  "go.toolsEnvVars": {
+    "GOOS": "darwin",
+    "GOARCH": "arm64"
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.associations": {
+    "*.tsx": "typescriptreact"
+  },
+  "rust-analyzer.procMacro.enable": true,
+  "editor.semanticHighlighting.enabled": true,
+  "[scad]": {
+    "editor.formatOnSave": false
+  },
+  "workbench.colorTheme": "Overnight Slumber Italics",
+  "makefile.configureOnOpen": true,
+  "go.coverOnSave": true,
+  "go.coverageDecorator": {
+    "type": "gutter",
+    "coveredHighlightColor": "rgba(64,128,128,0.5)",
+    "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+    "coveredGutterStyle": "verticalgreen",
+    "uncoveredGutterStyle": "verticalred"
+  },
+  "go.coverOnSingleTest": true,
+  "rubyLsp.featureFlags": {
+    "all": true
+  },
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "rbenv"
+  },
+  "rubyLsp.formatter": "auto",
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "docker.extension.enableComposeLanguageServer": false,
+  "aws.cloudformation.telemetry.enabled": false,
+  "editor.inlineSuggest.fontFamily": "'Monaspace Krypton NF', monospace",
+  "terminal.integrated.fontFamily": "'Monaspace Argon', Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.fontLigatures.featureSettings": "'calt' on, 'liga' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on, 'ss10' on, 'cv60' on, 'cv61' on, 'cv62' on"
+}
