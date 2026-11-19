@@ -10,7 +10,7 @@
       "name": "browser",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.51404"
+        "26.1111.21308"
       ],
       "enabled": true
     },
@@ -18,7 +18,7 @@
       "name": "chrome",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.51404"
+        "26.1111.21308"
       ],
       "enabled": true
     },
@@ -26,7 +26,7 @@
       "name": "codex-app-tools",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.51404"
+        "26.1111.21308"
       ],
       "enabled": true
     },
@@ -34,7 +34,7 @@
       "name": "computer-use",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "1.0.1001641"
+        "1.0.1001895"
       ],
       "enabled": true
     },
@@ -42,7 +42,7 @@
       "name": "unified-computer-use",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "26.1027.51404"
+        "26.1111.21308"
       ],
       "enabled": true
     },
@@ -50,7 +50,7 @@
       "name": "visualize",
       "marketplace": "openai-bundled",
       "cached_versions": [
-        "1.0.66"
+        "1.0.97"
       ],
       "enabled": true
     },
@@ -58,7 +58,7 @@
       "name": "documents",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1104.22356"
+        "26.1116.12010"
       ],
       "enabled": true
     },
@@ -66,7 +66,7 @@
       "name": "pdf",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1104.22356"
+        "26.1116.12010"
       ],
       "enabled": true
     },
@@ -74,7 +74,7 @@
       "name": "presentations",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1104.22356"
+        "26.1116.12010"
       ],
       "enabled": true
     },
@@ -82,7 +82,7 @@
       "name": "spreadsheets",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1104.22356"
+        "26.1116.12010"
       ],
       "enabled": true
     },
@@ -90,7 +90,7 @@
       "name": "template-creator",
       "marketplace": "openai-primary-runtime",
       "cached_versions": [
-        "26.1104.22356"
+        "26.1116.12010"
       ],
       "enabled": true
     }
@@ -127,7 +127,7 @@
       "name": "google-drive",
       "marketplace": "openai-curated-remote",
       "cached_versions": [
-        "0.1.23"
+        "0.1.27"
       ],
       "enabled": null,
       "install_marker_present": true
@@ -145,7 +145,7 @@
       "name": "notion",
       "marketplace": "openai-curated-remote",
       "cached_versions": [
-        "3.0.8"
+        "3.0.9"
       ],
       "enabled": null,
       "install_marker_present": true
@@ -190,7 +190,7 @@
       "name": "sites",
       "marketplace": "openai-curated-remote",
       "cached_versions": [
-        "1.1.5"
+        "1.1.7"
       ],
       "enabled": null,
       "install_marker_present": true
@@ -200,6 +200,15 @@
       "marketplace": "openai-curated-remote",
       "cached_versions": [
         "0.1.8"
+      ],
+      "enabled": null,
+      "install_marker_present": true
+    },
+    {
+      "name": "visualize",
+      "marketplace": "openai-curated-remote",
+      "cached_versions": [
+        "1.0.109"
       ],
       "enabled": null,
       "install_marker_present": true

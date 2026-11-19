@@ -1,9 +1,9 @@
-anysphere.cursorpyright	1.0.12
-anysphere.remote-containers	1.0.41
-anysphere.remote-ssh	1.1.17
+anysphere.cursorpyright	1.0.13
+anysphere.remote-containers	1.0.42
+anysphere.remote-ssh	1.1.18
 datadog.datadog-vscode	2.40.0
 dbaeumer.vscode-eslint	3.0.34
-eamodio.gitlens	19.5.0
+eamodio.gitlens	19.6.0
 editorconfig.editorconfig	0.18.2
 enkia.tokyo-night	1.1.2
 esbenp.prettier-vscode	12.4.0
@@ -19,11 +19,11 @@ ms-azuretools.vscode-docker	2.0.0
 ms-python.black-formatter	2025.2.0
 ms-python.debugpy	2026.6.0
 ms-python.python	2025.4.0
-ms-python.vscode-python-envs	1.42.0
+ms-python.vscode-python-envs	1.44.0
 rust-lang.rust	0.7.8
 shopify.ruby-extensions-pack	0.1.14
 shopify.ruby-lsp	0.10.6
 sorbet.sorbet-vscode-extension	0.3.47
 swiftlang.swift-vscode	2.18.0
-tldraw-org.tldraw-vscode	2.392.0
+tldraw-org.tldraw-vscode	2.404.0
 typescriptteam.native-preview	0.20261028.1

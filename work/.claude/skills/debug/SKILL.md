@@ -5,7 +5,7 @@ description: Diagnose code failures, exceptions, and failing tests through focus
 
 # Debug
 
-The main coordinator owns scope, competing explanations, and agent handoffs. Use the installed roles with their configured models and efforts. Keep diagnosis findings in the conversation unless the user requests an artifact; no investigation report is required. Requested implementation follows the canonical design-document workflow below.
+The main coordinator owns scope, competing explanations, and agent handoffs. Use the installed roles with their configured models and efforts, but delegate only as the global "Choosing whether to delegate" rules call for: a diagnosis you can do in one thread doesn't need agents. Keep diagnosis findings in the conversation unless the user requests an artifact; no investigation report is required. Requested implementation follows the canonical design-document workflow below.
 
 ## Establish the task
 

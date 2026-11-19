@@ -88,6 +88,7 @@ plugins=(
   macos
   node
   rust
+  terraform
   zsh-autosuggestions
 )
 
@@ -227,6 +228,28 @@ function generate-uuids() {
   for i in {1..$1}; do /usr/bin/uuidgen; done | awk '{print tolower($0)}'
 }
 
+qr() {
+  if [[ $# -ne 1 ]]; then
+    print -u2 "usage: qr <url>"
+    return 2
+  fi
+
+  # qrenco.de reads the text from the request path, so characters like
+  # ?, &, #, and / in the URL have to be percent-encoded first.
+  local LC_ALL=C encoded="" char
+  local input=$1
+  for (( i = 1; i <= ${#input}; i++ )); do
+    char=${input[i]}
+    if [[ $char == [A-Za-z0-9.~_-] ]]; then
+      encoded+=$char
+    else
+      encoded+=$(printf '%%%02X' "'$char")
+    fi
+  done
+
+  curl --fail --silent --show-error "https://qrenco.de/$encoded"
+}
+
 # Aliases
 alias zshconfig="nvim ~/.zshrc"
 alias omzconfig="nvim $ZSH"
@@ -255,7 +278,8 @@ alias l="eza -abhHlS"
 alias llg="eza -abhHlS --git --icons"
 alias tree="tree -CF"
 alias t="tree"
-alias weather="curl http://wttr.in/"
+alias weather="curl http://v2.wttr.in/"
+alias dadjoke="curl -H 'Accept: text/plain' https://icanhazdadjoke.com"
 
 alias sourcream="source ~/.zshrc"
 alias sloc="git ls-files | xargs wc -l"
@@ -280,10 +304,13 @@ export DO_NOT_TRACK=1
 eval "$(rbenv init - zsh)"
 
 # mise trash
-eval "$(mise activate zsh)"
+eval "$(/Users/yash/.local/bin/mise activate zsh)"
 
 # fzf
 source <(fzf --zsh)
 
 # zoxide
- eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
+
+# fuck you aws cli pager, shittest thing in the known universe
+export AWS_PAGER=""

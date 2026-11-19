@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "editor": {
+    "vimMode": false
+  },
+  "display": {
+    "showLineNumbers": false,
+    "showThinkingBlocks": false,
+    "showStatusIndicators": false,
+    "showStatusLineRunningTime": false,
+    "mode": "zen"
+  },
+  "notifications": true,
+  "hints": true,
+  "steering": true,
+  "rewind": true,
+  "model": {
+    "modelId": "default",
+    "displayModelId": "auto",
+    "displayName": "Auto",
+    "displayNameShort": "Auto",
+    "aliases": [
+      "auto"
+    ],
+    "maxMode": false
+  },
+  "modelParameters": {
+    "default": []
+  },
+  "selectedModel": {
+    "modelId": "default",
+    "parameters": []
+  },
+  "exploreSubagentModel": "default",
+  "approvalMode": "allowlist",
+  "autoAcceptWebSearch": false,
+  "sandbox": {
+    "mode": "disabled",
+    "networkAccess": "user_config_with_defaults"
+  },
+  "attribution": {
+    "attributeCommitsToAgent": true,
+    "attributePRsToAgent": true
+  },
+  "permissions": {
+    "allow": [
+      "Shell(ls)"
+    ],
+    "deny": []
+  },
+  "network": {
+    "useHttp1ForAgent": false
+  },
+  "modelSlashCommands": true
+}

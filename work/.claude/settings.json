@@ -109,6 +109,7 @@
   },
   "theme": "auto",
   "enabledPlugins": {
-    "ruby-lsp@claude-plugins-official": true
+    "ruby-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
   }
 }

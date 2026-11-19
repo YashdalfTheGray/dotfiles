@@ -1,4 +1,4 @@
-model = "gpt-6-astra"
+model = "gpt-6.2-astra"
 model_reasoning_effort = "medium"
 
 [sandbox_workspace_write]
